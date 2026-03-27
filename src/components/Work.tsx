@@ -104,10 +104,10 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
             </div>
             <div className="card-body">
               <div className="card-header">
-                <h3 className="card-title">NTT Data</h3>
+                <h3 className="card-title">Healio — NTT Data</h3>
                 <span className="card-arrow">→</span>
               </div>
-              <p className="card-desc">AI healthcare agent replacing 5 fragmented portals — onboarding, triage, provider matching, insurance verification, and booking in one conversation.</p>
+              <p className="card-desc">Conversational AI agent replacing 5 fragmented healthcare portals. Onboarding, symptom triage, provider matching, insurance verification, and booking — one conversation.</p>
               <div className="card-tags">
                 <span className="tag accent">AI Agent</span>
                 <span className="tag accent">Healthcare</span>
