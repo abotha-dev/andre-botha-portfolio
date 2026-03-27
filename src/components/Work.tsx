@@ -107,11 +107,11 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
                 <h3 className="card-title">NTT Data</h3>
                 <span className="card-arrow">→</span>
               </div>
-              <p className="card-desc">Unified mobile healthcare platform — consolidated fragmented services into a single product vision for enterprise client pitches.</p>
+              <p className="card-desc">AI healthcare agent replacing 5 fragmented portals — onboarding, triage, provider matching, insurance verification, and booking in one conversation.</p>
               <div className="card-tags">
+                <span className="tag accent">AI Agent</span>
                 <span className="tag accent">Healthcare</span>
                 <span className="tag">Enterprise</span>
-                <span className="tag">Mobile</span>
               </div>
             </div>
           </a>

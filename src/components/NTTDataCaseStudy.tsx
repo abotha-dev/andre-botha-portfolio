@@ -1,8 +1,14 @@
+import { useEffect } from 'react'
+
 interface NTTDataCaseStudyProps {
   onBack: () => void
 }
 
+const FIGMA_PROTOTYPE = 'https://www.figma.com/proto/gfvxvKMq84W3ZppaBk9ClE/Agentic-AI-Patient-Experience-2025?page-id=26%3A5198&node-id=133-6121&p=f&viewport=454%2C383%2C0.06&t=wDdJBJoxSJrI0MXA-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=133%3A6121&show-proto-sidebar=1'
+
 export function NTTDataCaseStudy({ onBack }: NTTDataCaseStudyProps) {
+  useEffect(() => { window.scrollTo(0, 0) }, [])
+
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', paddingTop: '80px' }}>
       <div className="container">
@@ -17,312 +23,262 @@ export function NTTDataCaseStudy({ onBack }: NTTDataCaseStudyProps) {
       {/* Hero */}
       <div className="cs-hero">
         <div className="container">
-          <span className="cs-label">Case Study · Healthcare · Enterprise Platforms</span>
-          <h1 className="cs-title">Rebuilding a Fragmented Healthcare<br/>Experience into a Unified Member Platform</h1>
-          <p className="cs-subtitle">Led the design of a unified mobile healthcare platform that consolidated fragmented services into a single product vision NTT Data used to pitch enterprise healthcare clients.</p>
+          <span className="cs-label">Case Study · AI Agent · Healthcare · Enterprise</span>
+          <h1 className="cs-title">Healio: Designing an AI Agent<br/>for the Entire Patient Journey</h1>
+          <p className="cs-subtitle">Replacing fragmented healthcare portals with a single conversational AI agent that handles onboarding, symptom triage, provider matching, insurance verification, and appointment booking — end to end.</p>
 
           <div className="metadata-table">
             <div className="meta-cell">
-              <span className="meta-label">Company</span>
+              <span className="meta-label">Client</span>
               <div className="meta-value">NTT Data</div>
             </div>
             <div className="meta-cell">
               <span className="meta-label">Role</span>
-              <div className="meta-value">Lead Product Designer</div>
+              <div className="meta-value">Lead Product<br/>Designer</div>
             </div>
             <div className="meta-cell">
-              <span className="meta-label">Tags</span>
-              <div className="meta-value" style={{fontSize:'13px'}}>Healthcare<br/>Enterprise Platforms<br/>Mobile · AI-enabled UX</div>
+              <span className="meta-label">Platform</span>
+              <div className="meta-value">iOS &amp; Android</div>
             </div>
             <div className="meta-cell">
               <span className="meta-label">Status</span>
-              <div className="meta-value" style={{display:'flex',alignItems:'center',gap:'8px'}}>
-                <span style={{width:'7px',height:'7px',borderRadius:'50%',background:'var(--accent)',flexShrink:0,display:'inline-block'}}></span>
-                Strategic Engagement
-              </div>
-            </div>
-          </div>
-
-          {/* Hero placeholder visual */}
-          <div style={{marginTop:'48px',borderRadius:'12px',overflow:'hidden',border:'1px solid var(--border)',background:'var(--surface)',aspectRatio:'16/7',position:'relative'}}>
-            <div className="placeholder-ntt" style={{position:'absolute',inset:0}}>
-              <div className="placeholder-grid"></div>
-              {/* Mobile healthcare platform illustration */}
-              <svg style={{position:'absolute',inset:0,width:'100%',height:'100%',opacity:0.22}} viewBox="0 0 900 394" preserveAspectRatio="xMidYMid meet">
-                {/* Left — nav sidebar */}
-                <rect x="80" y="60" width="140" height="280" rx="8" fill="none" stroke="#6366f1" strokeWidth="0.8"/>
-                <rect x="92" y="80" width="60" height="6" rx="3" fill="rgba(99,102,241,0.5)"/>
-                <rect x="92" y="100" width="100" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
-                <rect x="92" y="116" width="80" height="4" rx="2" fill="rgba(255,255,255,0.08)"/>
-                <rect x="92" y="132" width="90" height="4" rx="2" fill="rgba(255,255,255,0.08)"/>
-                <rect x="92" y="148" width="70" height="4" rx="2" fill="rgba(255,255,255,0.08)"/>
-                {/* Divider */}
-                <line x1="220" y1="60" x2="220" y2="340" stroke="#6366f1" strokeWidth="0.4"/>
-                {/* Center — dashboard */}
-                <rect x="240" y="60" width="420" height="280" rx="8" fill="none" stroke="#6366f1" strokeWidth="0.8"/>
-                {/* Dashboard header */}
-                <rect x="260" y="80" width="140" height="8" rx="4" fill="rgba(99,102,241,0.4)"/>
-                <rect x="260" y="100" width="200" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
-                {/* Stats row */}
-                <rect x="260" y="124" width="115" height="60" rx="6" fill="rgba(99,102,241,0.08)" stroke="rgba(99,102,241,0.25)" strokeWidth="0.8"/>
-                <rect x="390" y="124" width="115" height="60" rx="6" fill="rgba(99,102,241,0.06)" stroke="rgba(99,102,241,0.2)" strokeWidth="0.8"/>
-                <rect x="520" y="124" width="115" height="60" rx="6" fill="rgba(99,102,241,0.06)" stroke="rgba(99,102,241,0.2)" strokeWidth="0.8"/>
-                <rect x="272" y="138" width="50" height="8" rx="4" fill="rgba(99,102,241,0.5)"/>
-                <rect x="272" y="154" width="80" height="4" rx="2" fill="rgba(255,255,255,0.08)"/>
-                {/* Chart area */}
-                <rect x="260" y="200" width="370" height="100" rx="6" fill="rgba(99,102,241,0.04)" stroke="rgba(99,102,241,0.15)" strokeWidth="0.8"/>
-                <polyline points="280,280 320,250 370,260 420,230 470,240 520,210 570,220 610,200" fill="none" stroke="rgba(99,102,241,0.6)" strokeWidth="1.5"/>
-                <polyline points="280,280 320,250 370,260 420,230 470,240 520,210 570,220 610,200 610,300 280,300" fill="rgba(99,102,241,0.06)"/>
-                {/* Right — mobile frame */}
-                <rect x="690" y="50" width="130" height="290" rx="14" fill="none" stroke="#6366f1" strokeWidth="1"/>
-                <rect x="700" y="70" width="110" height="250" rx="6" fill="rgba(99,102,241,0.05)"/>
-                <rect x="712" y="84" width="60" height="6" rx="3" fill="rgba(99,102,241,0.4)"/>
-                <rect x="712" y="100" width="86" height="4" rx="2" fill="rgba(255,255,255,0.08)"/>
-                <rect x="712" y="118" width="86" height="36" rx="5" fill="rgba(99,102,241,0.1)" stroke="rgba(99,102,241,0.2)" strokeWidth="0.7"/>
-                <rect x="712" y="164" width="86" height="36" rx="5" fill="rgba(99,102,241,0.06)" stroke="rgba(99,102,241,0.15)" strokeWidth="0.7"/>
-                <rect x="712" y="210" width="86" height="36" rx="5" fill="rgba(99,102,241,0.06)" stroke="rgba(99,102,241,0.15)" strokeWidth="0.7"/>
-                <rect x="712" y="260" width="40" height="6" rx="3" fill="rgba(99,102,241,0.3)"/>
-                <rect x="762" y="260" width="36" height="6" rx="3" fill="rgba(255,255,255,0.08)"/>
-              </svg>
+              <div className="meta-value">Pre-launch<br/>Client Sales Tool</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Section 1: The Problem */}
-      <div className="cs-section">
-        <div className="container">
-          <div className="cs-two-col">
-            <div>
-              <span className="cs-section-number">01</span>
-              <h2 className="cs-section-title">The Problem</h2>
-              <div className="cs-body">
-                <p>Large healthcare systems rarely operate as a single product. They grow through acquisitions, legacy platforms, and disconnected services. The result is a fragmented experience where members must navigate multiple portals, tools, and workflows to accomplish basic tasks such as checking benefits, managing appointments, or understanding their health data.</p>
-                <p>The platform NTT Data was working with had exactly this problem. Core services — scheduling, messaging, health tracking, benefits, and care coordination — existed, but they lived across disconnected systems and inconsistent interfaces.</p>
-                <p>Members struggled to understand where to go, what actions to take, and how their health information connected across services. From a business perspective, this fragmentation suppressed engagement and limited the platform's ability to deliver proactive care experiences.</p>
-                <p>The challenge was to unify these services into a single coherent mobile product without rewriting the entire backend ecosystem that powered them.</p>
-              </div>
-            </div>
-            <div>
-              {/* Fragmentation diagram */}
-              <div style={{background:'var(--surface)',border:'1px solid var(--border)',borderRadius:'10px',padding:'28px',boxShadow:'inset 0 1px 0 rgba(255,255,255,0.05)'}}>
-                <div style={{fontFamily:'var(--font-mono)',fontSize:'11px',color:'var(--text-2)',letterSpacing:'0.1em',marginBottom:'20px',textTransform:'uppercase'}}>Fragmented Platform State</div>
-                <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
-                  {[
-                    { label: 'Scheduling', status: 'Separate portal', color: '#ef4444' },
-                    { label: 'Benefits', status: 'Separate portal', color: '#ef4444' },
-                    { label: 'Messaging', status: 'Separate portal', color: '#ef4444' },
-                    { label: 'Health Tracking', status: 'Separate portal', color: '#ef4444' },
-                    { label: 'Care Coordination', status: 'Separate portal', color: '#ef4444' },
-                  ].map(({ label, status, color }) => (
-                    <div key={label} style={{display:'flex',alignItems:'center',justifyContent:'space-between',padding:'10px 12px',background:'var(--surface-2)',borderRadius:'6px',border:'1px solid var(--border)'}}>
-                      <span style={{fontSize:'13px',color:'var(--text-1)'}}>{label}</span>
-                      <span style={{fontFamily:'var(--font-mono)',fontSize:'10px',color,letterSpacing:'0.04em'}}>{status}</span>
-                    </div>
-                  ))}
-                </div>
-                <div style={{marginTop:'16px',padding:'12px',borderRadius:'6px',border:'1px dashed rgba(99,102,241,0.35)',background:'rgba(99,102,241,0.04)',textAlign:'center'}}>
-                  <span style={{fontFamily:'var(--font-mono)',fontSize:'10px',color:'var(--accent)',letterSpacing:'0.08em'}}>TARGET → Unified member platform</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Section 2: What I Did */}
-      <div className="cs-section">
-        <div className="container">
-          <span className="cs-section-number">02</span>
-          <h2 className="cs-section-title">What I Did</h2>
-          <div className="cs-two-col">
-            <div className="cs-body">
-              <p>I led the design of a new mobile experience that consolidated the platform's core services into a single, structured member journey.</p>
-              <p>Instead of treating each service as a separate product, I reframed the system around <strong>member goals</strong> — managing health, understanding benefits, communicating with care teams, and staying on track with treatment or wellness plans.</p>
-            </div>
-            <div className="cs-body">
-              <p>I designed a mobile platform that introduced:</p>
-            </div>
-          </div>
-          <div style={{display:'flex',flexDirection:'column',gap:'12px',marginTop:'32px'}}>
-            {[
-              { num: '01', title: 'Centralized Health Dashboard', desc: 'Surfaces the most relevant information and actions in one place, replacing scattered portals with a single source of truth.' },
-              { num: '02', title: 'Integrated Care Communication', desc: 'Allows members to interact directly with providers through messaging and updates — no portal-switching required.' },
-              { num: '03', title: 'Structured Navigation Model', desc: 'Organizes complex healthcare functions into understandable categories built around member intent, not system architecture.' },
-              { num: '04', title: 'Contextual Health Insights', desc: 'Translates raw data into meaningful signals members can act on, reducing cognitive overhead and improving health literacy.' },
-            ].map(({ num, title, desc }) => (
-              <div key={num} className="decision-card">
-                <span className="decision-number">FEATURE {num}</span>
-                <h3 className="decision-title">{title}</h3>
-                <p className="decision-body">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Section 3: Key Decisions */}
-      <div className="cs-section">
-        <div className="container">
-          <span className="cs-section-number">03</span>
-          <h2 className="cs-section-title">Key Decisions and Tradeoffs</h2>
-          <p style={{fontSize:'17px',color:'var(--text-2)',maxWidth:'600px',marginBottom:'40px',lineHeight:1.7}}>Three architectural decisions shaped the product vision and determined what was achievable without a full platform rebuild.</p>
-
-          {/* Decision 1 */}
-          <div className="cs-two-col" style={{marginBottom:'64px'}}>
-            <div>
-              <span className="cs-section-number" style={{fontSize:'11px',letterSpacing:'0.12em'}}>DECISION 01</span>
-              <h3 className="cs-section-title" style={{fontSize:'clamp(18px, 2vw, 24px)'}}>Unifying the system without replacing it</h3>
-              <div className="cs-body">
-                <p>The underlying services were owned by different teams and systems. Replacing them outright would have required a multi-year engineering investment.</p>
-                <p>Instead of proposing a full rebuild, I designed the product layer to act as an <strong>orchestration layer</strong> above the existing services. The experience unifies the workflows even though the backend systems remain separate.</p>
-                <p>This approach allowed the team to dramatically improve the user experience without requiring a complete platform rewrite.</p>
-              </div>
-            </div>
-            <div>
-              <div style={{background:'var(--surface)',border:'1px solid var(--border)',borderRadius:'10px',padding:'28px',boxShadow:'inset 0 1px 0 rgba(255,255,255,0.05)'}}>
-                <div style={{fontFamily:'var(--font-mono)',fontSize:'10px',color:'var(--text-2)',letterSpacing:'0.1em',textTransform:'uppercase',marginBottom:'20px'}}>Architecture Approach</div>
-                <div style={{display:'flex',flexDirection:'column',gap:'0'}}>
-                  {/* Orchestration layer diagram */}
-                  <div style={{padding:'14px 16px',borderRadius:'6px',border:'1px solid rgba(99,102,241,0.35)',background:'rgba(99,102,241,0.08)',marginBottom:'8px',textAlign:'center'}}>
-                    <div style={{fontFamily:'var(--font-mono)',fontSize:'10px',color:'var(--accent)',letterSpacing:'0.06em'}}>UNIFIED PRODUCT LAYER</div>
-                    <div style={{fontSize:'12px',color:'var(--text-2)',marginTop:'4px'}}>Single mobile experience</div>
-                  </div>
-                  <div style={{textAlign:'center',color:'var(--text-2)',fontSize:'14px',padding:'4px 0'}}>↕</div>
-                  <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:'6px'}}>
-                    {['Scheduling', 'Benefits', 'Messaging'].map(s => (
-                      <div key={s} style={{padding:'10px 8px',borderRadius:'5px',border:'1px solid var(--border)',background:'var(--surface-2)',textAlign:'center'}}>
-                        <div style={{fontFamily:'var(--font-mono)',fontSize:'9px',color:'var(--text-2)',letterSpacing:'0.04em'}}>{s}</div>
-                      </div>
-                    ))}
-                  </div>
-                  <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'6px',marginTop:'6px'}}>
-                    {['Health Tracking', 'Care Coordination'].map(s => (
-                      <div key={s} style={{padding:'10px 8px',borderRadius:'5px',border:'1px solid var(--border)',background:'var(--surface-2)',textAlign:'center'}}>
-                        <div style={{fontFamily:'var(--font-mono)',fontSize:'9px',color:'var(--text-2)',letterSpacing:'0.04em'}}>{s}</div>
-                      </div>
-                    ))}
-                  </div>
-                  <div style={{textAlign:'center',color:'var(--text-2)',fontSize:'12px',padding:'8px 0',fontFamily:'var(--font-mono)'}}>Legacy backends remain separate</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Decision 2 */}
-          <div className="cs-two-col" style={{marginBottom:'64px'}}>
-            <div>
-              <span className="cs-section-number" style={{fontSize:'11px',letterSpacing:'0.12em'}}>DECISION 02</span>
-              <h3 className="cs-section-title" style={{fontSize:'clamp(18px, 2vw, 24px)'}}>Designing around member intent, not system architecture</h3>
-              <div className="cs-body">
-                <p>Most healthcare platforms mirror the structure of internal systems: claims, appointments, messaging, records. That model makes sense internally but fails for users.</p>
-                <p>I restructured the navigation model around <strong>member intent</strong> — what someone is trying to accomplish in their health journey. Navigation, dashboards, and flows were organized around outcomes rather than departments.</p>
-                <p>This reduced cognitive load and made the platform significantly easier to understand despite the complexity of the underlying healthcare services.</p>
-              </div>
-            </div>
-            <div>
-              <div className="before-after" style={{marginTop:0}}>
-                <div className="ba-card">
-                  <div className="ba-label before">BEFORE — System-centric</div>
-                  <div className="ba-visual">
-                    <div className="ba-step">Claims</div>
-                    <div className="ba-step">Appointments</div>
-                    <div className="ba-step">Messaging</div>
-                    <div className="ba-step">Records</div>
-                  </div>
-                </div>
-                <div className="ba-card">
-                  <div className="ba-label after">AFTER — Member-intent</div>
-                  <div className="ba-visual">
-                    <div className="ba-step">My Health</div>
-                    <div className="ba-step">My Coverage</div>
-                    <div className="ba-step">My Care Team</div>
-                    <div className="ba-step">My Plan</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Decision 3 */}
+      {/* Prototype CTA */}
+      <div className="container" style={{ marginBottom: '4rem' }}>
+        <div style={{
+          background: 'rgba(99,102,241,0.06)',
+          border: '1px solid rgba(99,102,241,0.25)',
+          borderRadius: '12px',
+          padding: '2.5rem',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '2rem',
+          flexWrap: 'wrap',
+        }}>
           <div>
-            <span className="cs-section-number" style={{fontSize:'11px',letterSpacing:'0.12em'}}>DECISION 03</span>
-            <h3 className="cs-section-title" style={{fontSize:'clamp(18px, 2vw, 24px)'}}>Turning health data into actionable signals</h3>
-            <div className="cs-two-col">
-              <div className="cs-body">
-                <p>Healthcare apps often present raw metrics without context. Data exists, but it rarely helps users decide what to do next.</p>
-                <p>I designed the dashboard layer to surface key indicators through visual summaries, progress indicators, and contextual prompts. Instead of browsing data, members can quickly understand what matters and take action.</p>
-              </div>
-              <div style={{background:'var(--surface)',border:'1px solid var(--border)',borderRadius:'10px',padding:'24px',boxShadow:'inset 0 1px 0 rgba(255,255,255,0.05)'}}>
-                <div style={{fontFamily:'var(--font-mono)',fontSize:'10px',color:'var(--text-2)',letterSpacing:'0.1em',textTransform:'uppercase',marginBottom:'16px'}}>Dashboard Signal Model</div>
-                <div style={{display:'flex',flexDirection:'column',gap:'10px'}}>
-                  {[
-                    { label: 'Next appointment', signal: 'Action required', color: '#f59e0b' },
-                    { label: 'Medication refill', signal: 'Due in 3 days', color: '#f59e0b' },
-                    { label: 'Annual checkup', signal: 'Overdue', color: '#ef4444' },
-                    { label: 'Benefits usage', signal: 'On track', color: '#22c55e' },
-                    { label: 'Care messages', signal: '2 unread', color: 'var(--accent)' },
-                  ].map(({ label, signal, color }) => (
-                    <div key={label} style={{display:'flex',alignItems:'center',justifyContent:'space-between',padding:'8px 10px',background:'var(--surface-2)',borderRadius:'5px',border:'1px solid var(--border)'}}>
-                      <span style={{fontSize:'13px',color:'var(--text-1)'}}>{label}</span>
-                      <span style={{fontFamily:'var(--font-mono)',fontSize:'10px',color,letterSpacing:'0.03em'}}>{signal}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <div style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.08em', color: 'var(--accent)', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Interactive Prototype</div>
+            <h3 style={{ fontSize: '1.15rem', fontWeight: 600, color: 'var(--text)', marginBottom: '0.4rem' }}>50+ screens. Full agentic flow.</h3>
+            <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>From member onboarding through symptom triage to a confirmed appointment — experience the complete Healio journey.</p>
           </div>
+          <a
+            href={FIGMA_PROTOTYPE}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              background: 'var(--accent)',
+              color: '#fff',
+              padding: '0.75rem 1.5rem',
+              borderRadius: '8px',
+              fontWeight: 600,
+              fontSize: '0.9rem',
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+              flexShrink: 0,
+            }}
+          >
+            View Prototype
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </a>
         </div>
       </div>
 
-      {/* Section 4: Outcome */}
-      <div className="cs-section">
-        <div className="container">
-          <span className="cs-section-number">04</span>
-          <h2 className="cs-section-title">Outcome</h2>
-
-          <div className="callout-box" style={{marginBottom:'40px'}}>
-            <p>This was a strategic design engagement — the deliverable was a complete product vision and design system used by NTT Data to pitch enterprise healthcare clients. Outcome metrics are pre-launch.</p>
-          </div>
-
-          <div className="cs-body" style={{marginBottom:'32px'}}>
-            <p>The project resulted in a fully realized mobile product concept that unified multiple healthcare services into a single experience.</p>
-          </div>
-
-          <div style={{display:'flex',flexDirection:'column',gap:'0'}}>
+      <div className="container">
+        {/* Outcomes */}
+        <div className="cs-section">
+          <h2 className="cs-section-title">Project Outcomes</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
             {[
-              { num: '01', title: 'End-to-End Mobile Product Vision', desc: 'A complete product vision spanning dashboards, messaging, health tracking, and care coordination — designed to feel like a single platform.' },
-              { num: '02', title: 'Navigation Architecture', desc: 'A structured navigation model designed to scale across multiple healthcare services, organized around member intent rather than internal systems.' },
-              { num: '03', title: 'Design System and Component Library', desc: 'A reusable design system and component library that allowed the platform to be extended across additional modules without redesign.' },
-              { num: '04', title: 'High-Fidelity Product Flows', desc: 'Presentation-ready mobile flows demonstrating how fragmented healthcare services could function as a single, coherent platform.' },
-            ].map(({ num, title, desc }) => (
-              <div key={num} className="framework-item">
-                <span className="framework-num">{num}</span>
-                <div className="framework-text">
-                  <h4>{title}</h4>
-                  <p>{desc}</p>
+              { stat: '50+', label: 'Screens across onboarding, triage, provider matching, and booking flows' },
+              { stat: '1 agent', label: 'Replaces 3–5 separate portals with a single conversational interface' },
+              { stat: 'Active', label: 'Used by NTT Data in live enterprise healthcare sales conversations' },
+              { stat: 'Full system', label: 'Reusable design system with custom chat components and inline card patterns' },
+            ].map(({ stat, label }) => (
+              <div key={stat} style={{ background: 'rgba(99,102,241,0.06)', border: '1px solid rgba(99,102,241,0.15)', borderRadius: '10px', padding: '1.25rem 1.5rem' }}>
+                <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--accent)', marginBottom: '0.4rem' }}>{stat}</div>
+                <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: 1.5 }}>{label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Problem */}
+        <div className="cs-section">
+          <h2 className="cs-section-title">The Problem: Healthcare Apps Are Built for Systems, Not People</h2>
+          <p className="cs-body">Most healthcare platforms mirror the structure of internal systems: separate sections for claims, appointments, messaging, records, and benefits. That model makes sense to the organization but fails the member. A patient who feels sick does not think in terms of "scheduling" and "insurance verification" — they think "I need to see a doctor."</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '0.75rem', marginTop: '1.5rem' }}>
+            {[
+              'Members navigate 3–5 different portals to complete a single healthcare task',
+              'Symptom-to-appointment journeys require manual research, phone calls, and insurance verification as separate steps',
+              'Onboarding new members involves multi-page forms that collect information the system already has',
+              'No continuity between interactions — every session starts from zero context',
+            ].map((item) => (
+              <div key={item} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start', background: 'rgba(239,68,68,0.04)', border: '1px solid rgba(239,68,68,0.12)', borderRadius: '8px', padding: '1rem 1.25rem' }}>
+                <span style={{ color: 'rgba(239,68,68,0.6)', fontSize: '0.75rem', marginTop: '0.2rem', flexShrink: 0 }}>✕</span>
+                <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Approach */}
+        <div className="cs-section">
+          <h2 className="cs-section-title">The Approach: One Agent. Every Healthcare Task.</h2>
+          <p className="cs-body">I designed Healio as a single AI agent that replaces the traditional multi-screen healthcare app with a conversational interface capable of handling complex, multi-step healthcare workflows. The core design principle: the agent should feel like talking to a knowledgeable healthcare concierge, not navigating software.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '0.75rem', marginTop: '1.5rem' }}>
+            {[
+              { cap: 'Conversational Onboarding', desc: 'New members set up their profile, insurance, and preferences through a guided conversation — not a 12-field form' },
+              { cap: 'Symptom Triage', desc: 'Healio asks targeted follow-up questions, provides a preliminary assessment, and surfaces relevant care options' },
+              { cap: 'Provider Matching', desc: 'Recommends doctors based on specialty, insurance, location, and availability — all within the chat' },
+              { cap: 'Insurance Verification', desc: 'Members scan their insurance card with the camera. Healio extracts the details and verifies coverage in real-time' },
+              { cap: 'Appointment Booking', desc: 'End-to-end scheduling from provider selection to time slot confirmation without leaving the conversation' },
+              { cap: 'Document Capture', desc: 'Physical ID and insurance card scanning integrated directly into the conversational flow' },
+            ].map(({ cap, desc }) => (
+              <div key={cap} style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '10px', padding: '1.25rem 1.5rem' }}>
+                <h3 style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--accent)', marginBottom: '0.5rem' }}>{cap}</h3>
+                <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Design Decisions */}
+        <div className="cs-section">
+          <h2 className="cs-section-title">Key Design Decisions: Building Trust into an AI Healthcare Agent</h2>
+          <p className="cs-body">Healthcare is high-stakes. Users will not trust an AI agent with their health unless the interaction design earns that trust at every step. Three decisions shaped the entire product:</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.5rem' }}>
+            {[
+              {
+                num: '01',
+                title: 'Structured data inside conversation, not outside it',
+                body: 'When Healio surfaces doctor recommendations, insurance details, or appointment slots, they appear as rich inline cards within the chat — not as a redirect to a separate screen. This keeps the user in a single mental model. The conversation IS the interface. I designed custom card components for provider profiles, coverage breakdowns, and time slot pickers that render natively within the chat thread.',
+              },
+              {
+                num: '02',
+                title: 'Progressive disclosure over upfront interrogation',
+                body: 'Traditional healthcare forms ask for everything at once. Healio asks one question at a time, confirms the answer, and moves forward. This conversational pacing reduces cognitive load and mirrors how a real healthcare professional would gather information. Each response builds on the previous one, creating a sense of momentum rather than burden.',
+              },
+              {
+                num: '03',
+                title: 'The agent explains before it acts',
+                body: 'Before Healio takes any action — booking an appointment, verifying insurance, recommending a specialist — it explains what it is about to do and why. This transparency pattern is critical for healthcare AI. Users see the reasoning, not just the output. It transforms the agent from a black box into a transparent collaborator.',
+              },
+            ].map(({ num, title, body }) => (
+              <div key={num} style={{ display: 'flex', gap: '1.5rem', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '1.5rem' }}>
+                <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'rgba(99,102,241,0.3)', flexShrink: 0, lineHeight: 1 }}>{num}</div>
+                <div>
+                  <h3 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--text)' }}>{title}</h3>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: 1.7, margin: 0 }}>{body}</p>
                 </div>
               </div>
             ))}
           </div>
+        </div>
 
-          <div className="cs-body" style={{marginTop:'40px'}}>
-            <p>I iterated through multiple rounds of concept refinement to align the experience with NTT Data stakeholders and ensure the system could realistically integrate with existing healthcare platforms.</p>
-            <p>The final deliverable was a presentation-ready product vision and prototype that NTT Data could use to demonstrate how enterprise healthcare providers could modernize the digital member experience without rebuilding their entire technology stack.</p>
+        {/* Agent Architecture */}
+        <div className="cs-section">
+          <h2 className="cs-section-title">Agent Architecture: The Agentic Interaction Model</h2>
+          <p className="cs-body">Healio is not a chatbot with scripted responses. It is an agent that orchestrates multiple backend services through a conversational interface. I designed the interaction model to handle the complexity of multi-step healthcare workflows while keeping the experience simple for the user.</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginTop: '1.5rem' }}>
+            {[
+              { step: 'Intent Recognition', desc: 'User describes a need in natural language. Healio identifies the task type: triage, booking, benefits lookup, or onboarding.' },
+              { step: 'Context Gathering', desc: 'Agent asks targeted follow-up questions to collect the minimum information needed to act.' },
+              { step: 'Service Orchestration', desc: 'Healio calls the relevant backend services (provider directory, insurance verification, scheduling) and synthesizes the results.' },
+              { step: 'Structured Response', desc: 'Results are presented as rich inline cards — doctor profiles, coverage details, time slots — within the conversation.' },
+              { step: 'Action Confirmation', desc: 'Agent explains what it will do, user confirms, action is executed. Full transparency at every step.' },
+            ].map(({ step, desc }, i) => (
+              <div key={step} style={{ display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
+                <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: 'rgba(99,102,241,0.15)', border: '1px solid rgba(99,102,241,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 700, color: 'var(--accent)', flexShrink: 0 }}>{i + 1}</div>
+                <div style={{ paddingTop: '0.25rem' }}>
+                  <span style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text)' }}>{step} — </span>
+                  <span style={{ fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>{desc}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
 
-      {/* Footer CTA */}
-      <div style={{padding:'80px 0',borderTop:'1px solid var(--border)',textAlign:'center'}}>
-        <div className="container">
-          <p style={{fontFamily:'var(--font-mono)',fontSize:'11px',color:'var(--text-2)',letterSpacing:'0.1em',textTransform:'uppercase',marginBottom:'16px'}}>Next steps</p>
-          <h3 style={{fontFamily:'var(--font-display)',fontWeight:700,fontSize:'28px',color:'var(--text-1)',marginBottom:'12px',letterSpacing:'-0.02em'}}>Interested in this work?</h3>
-          <p style={{fontSize:'16px',color:'var(--text-2)',marginBottom:'32px'}}>I'm open to Lead and Principal Product Designer roles at AI-first companies.</p>
-          <div style={{display:'flex',gap:'12px',justifyContent:'center',flexWrap:'wrap'}}>
-            <a href="mailto:andre@andrebot.com" className="btn-primary">Send me an email</a>
-            <button onClick={onBack} className="btn-ghost-hero">← Back to Work</button>
+        {/* Tradeoffs / Reflection */}
+        <div className="cs-section">
+          <h2 className="cs-section-title">What I Learned About Designing AI Agents</h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginTop: '1.5rem' }}>
+            {[
+              {
+                decision: 'Conversation is a UI pattern, not a gimmick',
+                detail: 'For complex, multi-step workflows like healthcare, a conversational interface is not a novelty — it is genuinely better than forms and menus. The key is designing the agent to handle branching, context-switching, and error recovery gracefully.',
+                tradeoff: 'Conversational UX is harder to prototype and test than screen-based flows. You are not just designing screens — you are designing dialogue trees, edge cases, and failure states in natural language.',
+              },
+              {
+                decision: 'Trust is earned through transparency, not polish',
+                detail: 'In healthcare, users do not trust AI because it looks good. They trust it because they can see what it is doing and why. Every design decision in Healio prioritized explainability over aesthetics.',
+                tradeoff: 'Adding explanation steps slows down the interaction. The tradeoff was worth it: for a product handling a user\'s health, reduced speed is a better outcome than reduced trust.',
+              },
+              {
+                decision: 'Structured data and conversation are not opposites',
+                detail: 'The biggest design challenge was rendering complex information — provider profiles, insurance breakdowns, appointment calendars — inside a chat thread without breaking the conversational flow.',
+                tradeoff: 'Custom inline components took significantly longer to design than standard list views. But redirecting users to separate screens would have destroyed the single-interface promise of the product.',
+              },
+            ].map(({ decision, detail, tradeoff }) => (
+              <div key={decision} style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '1.75rem' }}>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: 600, color: 'var(--accent)', marginBottom: '0.75rem' }}>{decision}</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text)', lineHeight: 1.7, marginBottom: '0.75rem' }}>{detail}</p>
+                <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: 1.7 }}><strong style={{ color: 'var(--text)' }}>Tradeoff:</strong> {tradeoff}</p>
+              </div>
+            ))}
           </div>
+        </div>
+
+        {/* Outcome */}
+        <div className="cs-section" style={{ marginBottom: '6rem' }}>
+          <h2 className="cs-section-title">The Outcome: A Product Vision That Sells</h2>
+          <p className="cs-body">This was a strategic design engagement. The deliverable was a complete product vision and interactive prototype that NTT Data uses to pitch enterprise healthcare clients on the future of AI-powered patient experience.</p>
+          <p className="cs-body" style={{ marginTop: '1rem' }}>The Healio prototype demonstrated that a single conversational agent could credibly replace the fragmented multi-portal model that dominates enterprise healthcare today — from first contact through confirmed appointment. The result is a product concept now active in NTT Data's enterprise sales pipeline.</p>
+
+          <div style={{ marginTop: '2.5rem', background: 'rgba(99,102,241,0.06)', border: '1px solid rgba(99,102,241,0.2)', borderRadius: '12px', padding: '2rem', textAlign: 'center' }}>
+            <div style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.08em', color: 'var(--accent)', textTransform: 'uppercase', marginBottom: '0.75rem' }}>See It In Action</div>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: 1.6, marginBottom: '1.5rem', maxWidth: '480px', margin: '0 auto 1.5rem' }}>
+              The full 50+ screen prototype covers every flow: conversational onboarding, symptom triage, provider matching, insurance verification, and appointment booking.
+            </p>
+            <a
+              href={FIGMA_PROTOTYPE}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                background: 'var(--accent)',
+                color: '#fff',
+                padding: '0.875rem 2rem',
+                borderRadius: '8px',
+                fontWeight: 600,
+                fontSize: '0.95rem',
+                textDecoration: 'none',
+              }}
+            >
+              View Interactive Prototype
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+          <button className="back-btn" onClick={onBack} style={{ marginTop: '3rem' }}>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M9 2 L4 7 L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            Back to Work
+          </button>
         </div>
       </div>
     </div>
