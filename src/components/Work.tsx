@@ -3,9 +3,10 @@ import { useFadeUp } from '../hooks/useFadeUp'
 interface WorkProps {
   onShowCaseStudy: () => void
   onShowNTTData: () => void
+  onShowPG: () => void
 }
 
-export function Work({ onShowCaseStudy, onShowNTTData }: WorkProps) {
+export function Work({ onShowCaseStudy, onShowNTTData, onShowPG }: WorkProps) {
   const label = useFadeUp()
   const heading = useFadeUp()
   const grid = useFadeUp()
@@ -115,7 +116,7 @@ export function Work({ onShowCaseStudy, onShowNTTData }: WorkProps) {
           </a>
 
           {/* 4. P&G */}
-          <div className="project-card" aria-label="P&G — case study coming soon">
+          <a href="#" className="project-card" onClick={(e) => { e.preventDefault(); onShowPG() }} aria-label="View P&G Olay case study">
             <div className="card-image placeholder-pg">
               <div className="placeholder-grid"></div>
               <svg style={{position:'absolute',inset:0,width:'100%',height:'100%',opacity:0.18}} viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice">
@@ -135,10 +136,7 @@ export function Work({ onShowCaseStudy, onShowNTTData }: WorkProps) {
                 <span className="tag">UX Research</span>
               </div>
             </div>
-            <div className="coming-soon-overlay">
-              <span className="coming-soon-label">CASE STUDY COMING SOON</span>
-            </div>
-          </div>
+          </a>
 
           {/* 5. Credit Connection */}
           <div className="project-card" aria-label="Credit Connection — case study coming soon">
