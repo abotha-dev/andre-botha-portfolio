@@ -614,6 +614,55 @@ footer {
 .stagger.visible > *:nth-child(7) { opacity: 1; transform: translateY(0); transition-delay: 360ms; }
 .stagger.visible > *:nth-child(8) { opacity: 1; transform: translateY(0); transition-delay: 420ms; }
 
+/* IMAGE TREATMENTS — bridge light screenshots against dark bg */
+
+/* Dark tray: wraps light screenshots in an elevated panel */
+.img-panel {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 10px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.04),
+    0 4px 24px rgba(0,0,0,0.3);
+}
+.img-panel img {
+  display: block;
+  width: 100%;
+  border-radius: calc(var(--r-lg) - 4px);
+}
+
+/* Hero image: full-width with gradient fade into dark bg at bottom */
+.img-hero-wrap {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.img-hero-wrap img {
+  display: block;
+  width: 100%;
+}
+.img-hero-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, transparent 55%, rgba(13,13,15,0.7) 100%),
+    linear-gradient(to right, rgba(13,13,15,0.15) 0%, transparent 8%, transparent 92%, rgba(13,13,15,0.15) 100%);
+  pointer-events: none;
+}
+
+/* Inset shadow on card images — auto-frames screenshots when SVG placeholders are replaced */
+.card-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.25), inset 0 -2px 8px rgba(0,0,0,0.2);
+  pointer-events: none;
+  z-index: 2;
+}
+
 /* FOCUS STATES */
 a:focus-visible, button:focus-visible {
   outline: 2px solid var(--accent); outline-offset: 3px; border-radius: var(--r-sm);
