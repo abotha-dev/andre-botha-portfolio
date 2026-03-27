@@ -45,7 +45,7 @@ export function PGCaseStudy({ onBack }: PGCaseStudyProps) {
       {/* Hero Image */}
       <div className="container" style={{ marginBottom: '4rem' }}>
         <div className="img-hero-wrap">
-          <img
+          <div class="dark-panel"><img
             src="/assets/pg/pg_hero.png"
             alt="Redesigned Olay.com on desktop and mobile"
           />
@@ -107,7 +107,7 @@ export function PGCaseStudy({ onBack }: PGCaseStudyProps) {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '1.5rem' }}>
             {['pg_slide_1.avif','pg_slide_2.avif','pg_slide_3.avif','pg_slide_4.avif','pg_slide_5.avif','pg_slide_6.avif'].map((img, i) => (
               <div key={img} className="img-panel">
-                <img src={`/assets/pg/${img}`} alt={`Olay design screen ${i + 1}`} />
+                <div class="dark-panel"><img src={`/assets/pg/${img}`} alt={`Olay design screen ${i + 1}`} />
               </div>
             ))}
           </div>
@@ -145,8 +145,8 @@ export function PGCaseStudy({ onBack }: PGCaseStudyProps) {
           <p className="cs-body" style={{ marginTop: '1rem' }}>The launch generated the highest number of waitlist sign-ups in P&G history. When the product dropped, it sold out in less than two hours. The momentum continued for months, establishing the new serum as the #1 seller in its category in North America — and fundamentally shifting the perception of the Olay brand for a new generation of consumers.</p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', marginTop: '2rem' }}>
-            <div className="img-panel"><img src="/assets/pg/pg_slide_5.avif" alt="Olay final product page mobile" /></div>
-            <div className="img-panel"><img src="/assets/pg/pg_slide_6.avif" alt="Olay launch result" /></div>
+            <div className="img-panel"><div class="dark-panel"><img src="/assets/pg/pg_slide_5.avif" alt="Olay final product page mobile" /></div>
+            <div className="img-panel"><div class="dark-panel"><img src="/assets/pg/pg_slide_6.avif" alt="Olay launch result" /></div>
           </div>
 
           <button className="back-btn" onClick={onBack} style={{ marginTop: '3rem' }}>
