@@ -5,7 +5,7 @@ import { Work } from './components/Work'
 import { Toolkit } from './components/Toolkit'
 import { About } from './components/About'
 import { Contact } from './components/Contact'
-import { CaseStudy } from './components/CaseStudy'
+import { TakeoffCaseStudy } from './components/TakeoffCaseStudy'
 import { NTTDataCaseStudy } from './components/NTTDataCaseStudy'
 import { PGCaseStudy } from './components/PGCaseStudy'
 import { CCCaseStudy } from './components/CCCaseStudy'
@@ -73,7 +73,7 @@ export default function App() {
       <DockNav onNavigate={onCaseStudyPage ? handleGoHome : undefined} />
 
       {activePage === 'takeoff-ai' ? (
-        <CaseStudy onBack={handleGoHome} />
+        <TakeoffCaseStudy onBack={handleGoHome} />
       ) : activePage === 'ntt-data' ? (
         <NTTDataCaseStudy onBack={handleGoHome} />
       ) : activePage === 'pg' ? (
