@@ -4,9 +4,10 @@ interface WorkProps {
   onShowCaseStudy: () => void
   onShowNTTData: () => void
   onShowPG: () => void
+  onShowCC: () => void
 }
 
-export function Work({ onShowCaseStudy, onShowNTTData, onShowPG }: WorkProps) {
+export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: WorkProps) {
   const label = useFadeUp()
   const heading = useFadeUp()
   const grid = useFadeUp()
@@ -139,7 +140,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG }: WorkProps) {
           </a>
 
           {/* 5. Credit Connection */}
-          <div className="project-card" aria-label="Credit Connection — case study coming soon">
+          <a href="#" className="project-card" onClick={(e) => { e.preventDefault(); onShowCC() }} aria-label="View Credit Connection case study">
             <div className="card-image placeholder-credit">
               <div className="placeholder-grid"></div>
               <svg style={{position:'absolute',inset:0,width:'100%',height:'100%',opacity:0.18}} viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice">
@@ -158,10 +159,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG }: WorkProps) {
                 <span className="tag">Mobile</span>
               </div>
             </div>
-            <div className="coming-soon-overlay">
-              <span className="coming-soon-label">CASE STUDY COMING SOON</span>
-            </div>
-          </div>
+          </a>
 
         </div>
       </div>
