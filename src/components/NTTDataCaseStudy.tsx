@@ -12,7 +12,7 @@ export function NTTDataCaseStudy({ onBack }: NTTDataCaseStudyProps) {
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', paddingTop: '80px' }}>
       <div className="container">
-        <button className="back-btn" onClick={onBack} aria-label="Back to portfolio">
+        <button className="back-btn dark-panel" onClick={onBack} aria-label="Back to portfolio">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M9 2 L4 7 L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
