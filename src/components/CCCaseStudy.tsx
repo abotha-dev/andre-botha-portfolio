@@ -5,6 +5,17 @@ interface CCCaseStudyProps {
 }
 
 export function CCCaseStudy({ onBack }: CCCaseStudyProps) {
+
+const ccHeroSize = { width: 2175, height: 1455 }
+const ccImageSizes: Record<string, { width: number; height: number }> = {
+  'cc_slide_1.png': { width: 1868, height: 1358 },
+  'cc_slide_2.png': { width: 2000, height: 1156 },
+  'cc_slide_3.png': { width: 2016, height: 1372 },
+  'cc_slide_4.png': { width: 2112, height: 1424 },
+  'cc_slide_5.avif': { width: 1936, height: 1296 },
+  'cc_slide_6.png': { width: 1928, height: 1352 },
+  'cc_slide_7.png': { width: 1760, height: 1406 },
+}
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
@@ -48,6 +59,9 @@ export function CCCaseStudy({ onBack }: CCCaseStudyProps) {
           <img
             src="/assets/credit-connection/cc_hero.png"
             alt="CreditConnection dashboard on laptop with mobile landing page"
+            loading="lazy"
+            width={ccHeroSize.width}
+            height={ccHeroSize.height}
           />
         </div>
       </div>
@@ -114,11 +128,11 @@ export function CCCaseStudy({ onBack }: CCCaseStudyProps) {
         <div className="cs-section">
           <h2 className="cs-section-title">Design</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', marginTop: '1.5rem' }}>
-            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_1.png" alt="CreditConnection dashboard screen 1" /></div></div>
-            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_2.png" alt="CreditConnection dashboard screen 2" /></div></div>
-            <div className="img-panel" style={{ gridColumn: 'span 2' }}><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_4.png" alt="CreditConnection desktop dashboard" /></div></div>
-            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_3.png" alt="CreditConnection screen 3" /></div></div>
-            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_5.avif" alt="CreditConnection screen 5" /></div></div>
+            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_1.png" loading="lazy" width={ccImageSizes['cc_slide_1.png'].width} height={ccImageSizes['cc_slide_1.png'].height} alt="CreditConnection dashboard screen 1" /></div></div>
+            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_2.png" loading="lazy" width={ccImageSizes['cc_slide_2.png'].width} height={ccImageSizes['cc_slide_2.png'].height} alt="CreditConnection dashboard screen 2" /></div></div>
+            <div className="img-panel" style={{ gridColumn: 'span 2' }}><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_4.png" loading="lazy" width={ccImageSizes['cc_slide_4.png'].width} height={ccImageSizes['cc_slide_4.png'].height} alt="CreditConnection desktop dashboard" /></div></div>
+            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_3.png" loading="lazy" width={ccImageSizes['cc_slide_3.png'].width} height={ccImageSizes['cc_slide_3.png'].height} alt="CreditConnection screen 3" /></div></div>
+            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_5.avif" loading="lazy" width={ccImageSizes['cc_slide_5.avif'].width} height={ccImageSizes['cc_slide_5.avif'].height} alt="CreditConnection screen 5" /></div></div>
           </div>
         </div>
 
@@ -154,9 +168,9 @@ export function CCCaseStudy({ onBack }: CCCaseStudyProps) {
           <p className="cs-body" style={{ marginTop: '1rem' }}>More importantly, by integrating the option to "Report Late Payment" directly into the familiar workflow of managing an overdue invoice, the product gently onboarded users into the practice of credit reporting. It used a short-term utility to drive a long-term, market-building behavior. The result was not just a product, but a foundational piece of infrastructure for a more transparent credit ecosystem in Nigeria.</p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '2rem' }}>
-            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_6.png" alt="CreditConnection final screen 1" /></div></div>
-            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_7.png" alt="CreditConnection final screen 2" /></div></div>
-            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_2.png" alt="CreditConnection final screen 3" /></div></div>
+            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_6.png" loading="lazy" width={ccImageSizes['cc_slide_6.png'].width} height={ccImageSizes['cc_slide_6.png'].height} alt="CreditConnection final screen 1" /></div></div>
+            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_7.png" loading="lazy" width={ccImageSizes['cc_slide_7.png'].width} height={ccImageSizes['cc_slide_7.png'].height} alt="CreditConnection final screen 2" /></div></div>
+            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/credit-connection/cc_slide_2.png" loading="lazy" width={ccImageSizes['cc_slide_2.png'].width} height={ccImageSizes['cc_slide_2.png'].height} alt="CreditConnection final screen 3" /></div></div>
           </div>
 
           <div style={{ marginTop: '3rem', padding: '2rem', borderRadius: '16px', border: '1px solid rgba(99,102,241,0.2)', background: 'rgba(99,102,241,0.08)', display: 'flex', flexWrap: 'wrap', gap: '1.5rem', alignItems: 'center', justifyContent: 'space-between' }}>

@@ -23,7 +23,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
           {/* 1. Takeoff.ai — FEATURED */}
           <a href="#" className="project-card featured" onClick={(e) => { e.preventDefault(); onShowCaseStudy() }} aria-label="View Takeoff.ai case study">
             <div className="card-image">
-              <img src="/assets/takeoff/thumbnail.webp" alt="Takeoff.ai" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
+              <img src="/assets/takeoff/thumbnail.webp" loading="lazy" width="3200" height="1800" alt="Takeoff.ai" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
             </div>
             <div className="card-body">
               <div className="card-header">
@@ -43,7 +43,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
           {/* 2. NTT Data */}
           <a href="#" className="project-card" onClick={(e) => { e.preventDefault(); onShowNTTData() }} aria-label="View NTT Data case study">
             <div className="card-image">
-              <img src="/assets/ntt-data/thumbnail.webp" alt="Healio — NTT Data" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
+              <img src="/assets/ntt-data/thumbnail.webp" loading="lazy" width="3200" height="1800" alt="Healio — NTT Data" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
             </div>
             <div className="card-body">
               <div className="card-header">
@@ -62,7 +62,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
           {/* 3. P&G */}
           <a href="#" className="project-card" onClick={(e) => { e.preventDefault(); onShowPG() }} aria-label="View P&G Olay case study">
             <div className="card-image">
-              <img src="/assets/pg/thumbnail.webp" alt="Procter &amp; Gamble" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
+              <img src="/assets/pg/thumbnail.webp" loading="lazy" width="3200" height="1800" alt="Procter &amp; Gamble" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
             </div>
             <div className="card-body">
               <div className="card-header">
@@ -80,7 +80,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
           {/* 4. Credit Connection */}
           <a href="#" className="project-card" onClick={(e) => { e.preventDefault(); onShowCC() }} aria-label="View Credit Connection case study">
             <div className="card-image">
-              <img src="/assets/credit-connection/thumbnail.webp" alt="Credit Connection" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
+              <img src="/assets/credit-connection/thumbnail.webp" loading="lazy" width="3200" height="1800" alt="Credit Connection" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
             </div>
             <div className="card-body">
               <div className="card-header">
