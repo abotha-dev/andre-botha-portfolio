@@ -22,25 +22,8 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
 
           {/* 1. Takeoff.ai — FEATURED */}
           <a href="#" className="project-card featured" onClick={(e) => { e.preventDefault(); onShowCaseStudy() }} aria-label="View Takeoff.ai case study">
-            <div className="card-image placeholder-takeoff">
-              <div className="placeholder-grid"></div>
-              <svg style={{position:'absolute',inset:0,width:'100%',height:'100%',opacity:0.18}} viewBox="0 0 800 340" preserveAspectRatio="xMidYMid slice">
-                <rect x="60" y="60" width="280" height="220" fill="none" stroke="#6366f1" strokeWidth="1"/>
-                <rect x="80" y="80" width="100" height="80" fill="none" stroke="#6366f1" strokeWidth="0.5"/>
-                <rect x="200" y="80" width="120" height="80" fill="none" stroke="#6366f1" strokeWidth="0.5"/>
-                <rect x="80" y="180" width="240" height="80" fill="none" stroke="#6366f1" strokeWidth="0.5"/>
-                <line x1="60" y1="170" x2="340" y2="170" stroke="#6366f1" strokeWidth="0.5"/>
-                <line x1="195" y1="60" x2="195" y2="280" stroke="#6366f1" strokeWidth="0.5"/>
-                <line x1="60" y1="310" x2="340" y2="310" stroke="#6366f1" strokeWidth="0.5"/>
-                <text x="200" y="325" fill="#6366f1" fontSize="10" textAnchor="middle" fontFamily="monospace">28.0 ft</text>
-                <rect x="430" y="40" width="320" height="260" rx="8" fill="rgba(99,102,241,0.06)" stroke="rgba(99,102,241,0.3)" strokeWidth="1"/>
-                <rect x="450" y="60" width="180" height="8" rx="4" fill="rgba(99,102,241,0.4)"/>
-                <rect x="450" y="80" width="120" height="6" rx="3" fill="rgba(255,255,255,0.12)"/>
-                <rect x="450" y="108" width="280" height="1" fill="rgba(255,255,255,0.06)"/>
-                <rect x="450" y="120" width="100" height="6" rx="3" fill="rgba(255,255,255,0.08)"/>
-                <rect x="450" y="208" width="280" height="40" rx="6" fill="rgba(99,102,241,0.15)" stroke="rgba(99,102,241,0.3)" strokeWidth="1"/>
-                <text x="590" y="233" fill="rgba(99,102,241,0.9)" fontSize="11" textAnchor="middle" fontFamily="monospace" fontWeight="600">Export Estimate →</text>
-              </svg>
+            <div className="card-image">
+              <img src="/assets/takeoff/thumbnail.png" alt="Takeoff.ai" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
             </div>
             <div className="card-body">
               <div className="card-header">
