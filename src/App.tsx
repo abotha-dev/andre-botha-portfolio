@@ -13,7 +13,7 @@ import { Footer } from './components/Footer'
 
 type ActivePage = 'home' | 'takeoff-ai' | 'ntt-data' | 'pg' | 'cc'
 
-const NTT_PASSWORD = 'healio2025'
+const NTT_PASSWORD = import.meta.env.VITE_NTT_PASSWORD ?? ''
 
 export default function App() {
   const [activePage, setActivePage] = useState<ActivePage>('home')
