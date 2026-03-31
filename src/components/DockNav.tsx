@@ -22,14 +22,17 @@ function getScale(hoveredIndex: number | null, index: number) {
   return 1
 }
 
-export function DockNav({ onNavigate }: { onNavigate?: () => void }) {
+export function DockNav({ onNavigate }: { onNavigate?: (scrollTarget: string) => void }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   const handleClick = useCallback((href: string) => {
-    if (onNavigate) onNavigate()
-    const el = document.querySelector(href)
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' })
+    if (onNavigate) {
+      // On a case study page — go home first, then scroll to target after render
+      onNavigate(href)
+    } else {
+      // Already on home — just scroll directly
+      const el = document.querySelector(href)
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
     }
   }, [onNavigate])
 

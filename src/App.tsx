@@ -21,6 +21,7 @@ export default function App() {
   const [showPasswordModal, setShowPasswordModal] = useState(false)
   const [passwordInput, setPasswordInput] = useState('')
   const [passwordError, setPasswordError] = useState(false)
+  const [pendingScroll, setPendingScroll] = useState<string | null>(null)
 
   const handleShowTakeoff = useCallback(() => {
     setActivePage('takeoff-ai')
@@ -58,11 +59,26 @@ export default function App() {
     history.pushState({ page: 'cc' }, '', '/work/credit-connection')
   }, [])
 
-  const handleGoHome = useCallback(() => {
+  const handleGoHome = useCallback((scrollTarget?: string) => {
     setActivePage('home')
-    window.scrollTo(0, 0)
+    if (scrollTarget) {
+      setPendingScroll(scrollTarget)
+    } else {
+      window.scrollTo(0, 0)
+    }
     history.pushState({ page: 'home' }, '', '/')
   }, [])
+
+  // After returning home with a pending scroll target, scroll once the section renders
+  useEffect(() => {
+    if (activePage === 'home' && pendingScroll) {
+      const el = document.querySelector(pendingScroll)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' })
+        setPendingScroll(null)
+      }
+    }
+  }, [activePage, pendingScroll])
 
   // Handle browser back/forward
   useEffect(() => {
