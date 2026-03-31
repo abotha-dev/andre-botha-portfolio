@@ -29,7 +29,7 @@ body {
 
 /* HERO */
 #hero {
-  position: relative; min-height: 100vh;
+  position: relative; min-height: 65vh;
   display: flex; align-items: center; justify-content: flex-start;
   overflow: hidden;
   background-color: #0d0d0f;
@@ -103,7 +103,8 @@ body {
   transform: translateY(-1px);
 }
 
-.scroll-indicator {
+.scroll-indicator { display: none !important; /* hidden per design review */
+.scroll-indicator_unused {
   position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 6px;
   color: var(--text-2); font-size: 12px; font-family: var(--font-mono);
@@ -135,7 +136,7 @@ section { padding: 120px 0; }
 }
 
 /* WORK */
-#work { background: var(--bg); }
+#work { background: var(--bg); padding-top: 48px; }
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

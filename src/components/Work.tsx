@@ -21,6 +21,9 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
         <div ref={grid.ref} className={`projects-grid stagger${grid.visible ? ' visible' : ''}`}>
 
           {/* 1. Takeoff.ai — FEATURED */}
+          <div style={{ gridColumn: '1 / -1', marginBottom: '-8px' }}>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-2)' }}>Featured Project</span>
+          </div>
           <a href="#" className="project-card featured" onClick={(e) => { e.preventDefault(); onShowCaseStudy() }} aria-label="View Takeoff.ai case study">
             <div className="card-image">
               <img src="/assets/takeoff/thumbnail.webp" loading="lazy" width="3200" height="1800" alt="Takeoff.ai" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
