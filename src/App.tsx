@@ -10,8 +10,9 @@ import { NTTDataCaseStudy } from './components/NTTDataCaseStudy'
 import { PGCaseStudy } from './components/PGCaseStudy'
 import { CCCaseStudy } from './components/CCCaseStudy'
 import { Footer } from './components/Footer'
+import { NotFound } from './components/NotFound'
 
-type ActivePage = 'home' | 'takeoff-ai' | 'ntt-data' | 'pg' | 'cc'
+type ActivePage = 'home' | 'takeoff-ai' | 'ntt-data' | 'pg' | 'cc' | 'not-found'
 
 const NTT_PASSWORD = import.meta.env.VITE_NTT_PASSWORD ?? ''
 
@@ -79,6 +80,7 @@ export default function App() {
     else if (path === '/work/ntt-data') setShowPasswordModal(true)
     else if (path === '/work/pg') setActivePage('pg')
     else if (path === '/work/credit-connection') setActivePage('cc')
+    else if (path !== '/') setActivePage('not-found')
 
     return () => window.removeEventListener('popstate', handler)
   }, [])
@@ -154,6 +156,8 @@ export default function App() {
         <PGCaseStudy onBack={handleGoHome} />
       ) : activePage === 'cc' ? (
         <CCCaseStudy onBack={handleGoHome} />
+      ) : activePage === 'not-found' ? (
+        <NotFound onGoHome={handleGoHome} />
       ) : (
         <main id="main-page">
           <Hero />
