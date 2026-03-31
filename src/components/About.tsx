@@ -18,12 +18,11 @@ export function About() {
             {!photoLoaded && (
               <div className="photo-placeholder-content">
                 <div className="photo-placeholder-icon">
-                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                    <circle cx="14" cy="10" r="5" stroke="rgba(255,255,255,0.2)" strokeWidth="1"/>
-                    <path d="M4 24 C4 18 8 15 14 15 C20 15 24 18 24 24" stroke="rgba(255,255,255,0.2)" strokeWidth="1" fill="none"/>
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <circle cx="24" cy="18" r="9" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5"/>
+                    <path d="M6 42 C6 30 13 25 24 25 C35 25 42 30 42 42" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" fill="none"/>
                   </svg>
                 </div>
-                <div className="photo-placeholder-text">Photo<br/>Placeholder<br/>PSX_20260303</div>
               </div>
             )}
             <img
