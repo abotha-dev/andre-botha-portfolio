@@ -471,6 +471,16 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
           </div>
         </div>
 
+          <div style={{ marginTop: '3rem', padding: '2rem', borderRadius: '16px', border: '1px solid rgba(99,102,241,0.2)', background: 'rgba(99,102,241,0.08)', display: 'flex', flexWrap: 'wrap', gap: '1.5rem', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--text)' }}>Let&apos;s work together</h3>
+              <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', margin: 0, maxWidth: '520px' }}>
+                Have a product or team that could use AI-native design and execution? I&apos;d love to help.
+              </p>
+            </div>
+            <a href="/#contact" className="btn-primary" style={{ whiteSpace: 'nowrap' }}>Get in touch</a>
+          </div>
+
       </div>
     </div>
   )

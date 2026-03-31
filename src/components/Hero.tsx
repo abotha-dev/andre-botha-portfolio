@@ -43,8 +43,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          I design and build AI products end-to-end — from concept to shipped SaaS.
-          Currently focused on AI tooling, fintech, and enterprise software.
+          Built and launched AI products solo. Led enterprise UX at NTT Data and P&G.
         </motion.p>
 
         <motion.div

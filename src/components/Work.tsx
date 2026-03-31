@@ -30,7 +30,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
                 <h3 className="card-title">Takeoff.ai</h3>
                 <span className="card-arrow">→</span>
               </div>
-              <p className="card-desc">AI-powered construction estimating SaaS — conceived, designed, and shipped solo in 4 weeks. Live product, pre-revenue validation.</p>
+              <p className="card-desc">AI-powered construction estimator — conceived, designed, and shipped solo in 4 weeks. Live product built end-to-end with Cursor, Claude, Supabase, and Vercel.</p>
               <div className="card-tags">
                 <span className="tag accent">AI</span>
                 <span className="tag accent">Founder</span>
@@ -50,7 +50,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
                 <h3 className="card-title">Healio — NTT Data</h3>
                 <span className="card-arrow">→</span>
               </div>
-              <p className="card-desc">Conversational AI agent replacing 5 fragmented healthcare portals. Onboarding, symptom triage, provider matching, insurance verification, and booking — one conversation.</p>
+              <p className="card-desc">Replaced 5 fragmented healthcare portals with one AI conversation. Led 50+ screens of agentic UX for onboarding, symptom triage, insurance verification, and booking at NTT Data.</p>
               <div className="card-tags">
                 <span className="tag accent">AI Agent</span>
                 <span className="tag accent">Healthcare</span>
@@ -69,7 +69,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
                 <h3 className="card-title">Procter &amp; Gamble</h3>
                 <span className="card-arrow">→</span>
               </div>
-              <p className="card-desc">Enterprise UX strategy and research for Fortune 500 consumer goods operations at global scale.</p>
+              <p className="card-desc">Led UX strategy for digital commerce at P&G — delivered a 7.6% checkout conversion lift and $100K+/month in measurable revenue contribution.</p>
               <div className="card-tags">
                 <span className="tag">Enterprise</span>
                 <span className="tag">UX Research</span>
@@ -87,7 +87,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
                 <h3 className="card-title">Credit Connection</h3>
                 <span className="card-arrow">→</span>
               </div>
-              <p className="card-desc">Fintech mobile app for credit building and financial access for underserved communities.</p>
+              <p className="card-desc">Designed a fintech mobile app for credit building and financial access in underserved communities — from 0 to shipped.</p>
               <div className="card-tags">
                 <span className="tag">Fintech</span>
                 <span className="tag">Mobile</span>
