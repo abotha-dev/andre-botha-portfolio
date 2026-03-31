@@ -41,6 +41,8 @@ export function DockNav({ onNavigate }: { onNavigate?: () => void }) {
         left: '50%',
         transform: 'translateX(-50%)',
         zIndex: 100,
+        maxWidth: 'calc(100vw - 32px)',
+        width: 'max-content',
       }}
       aria-label="Main navigation"
     >
@@ -52,8 +54,7 @@ export function DockNav({ onNavigate }: { onNavigate?: () => void }) {
           display: 'flex',
           alignItems: 'center',
           gap: '4px',
-          padding: '10px 24px',
-          minWidth: '600px',
+          padding: '8px 16px',
           borderRadius: '50px',
           background: 'rgba(15,15,15,0.85)',
           backdropFilter: 'blur(20px)',
