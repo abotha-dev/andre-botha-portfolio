@@ -86,21 +86,8 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
 
           {/* 3. NTT Data */}
           <a href="#" className="project-card" onClick={(e) => { e.preventDefault(); onShowNTTData() }} aria-label="View NTT Data case study">
-            <div className="card-image placeholder-ntt">
-              <div className="placeholder-grid"></div>
-              <svg style={{position:'absolute',inset:0,width:'100%',height:'100%',opacity:0.18}} viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice">
-                <rect x="40" y="40" width="320" height="145" rx="6" fill="none" stroke="rgba(99,102,241,0.4)" strokeWidth="1"/>
-                <rect x="40" y="40" width="320" height="28" rx="6" fill="rgba(99,102,241,0.08)"/>
-                <rect x="52" y="51" width="80" height="6" rx="3" fill="rgba(99,102,241,0.5)"/>
-                <rect x="52" y="84" width="120" height="4" rx="2" fill="rgba(255,255,255,0.08)"/>
-                <rect x="52" y="96" width="90" height="4" rx="2" fill="rgba(255,255,255,0.06)"/>
-                <rect x="52" y="116" width="220" height="40" rx="4" fill="rgba(99,102,241,0.05)" stroke="rgba(99,102,241,0.15)" strokeWidth="0.8"/>
-                <rect x="64" y="128" width="100" height="4" rx="2" fill="rgba(99,102,241,0.3)"/>
-                <rect x="64" y="140" width="140" height="4" rx="2" fill="rgba(255,255,255,0.06)"/>
-                <rect x="290" y="84" width="50" height="70" rx="4" fill="none" stroke="rgba(99,102,241,0.3)" strokeWidth="0.8"/>
-                <rect x="298" y="92" width="34" height="4" rx="2" fill="rgba(99,102,241,0.3)"/>
-                <rect x="298" y="102" width="26" height="3" rx="2" fill="rgba(255,255,255,0.06)"/>
-              </svg>
+            <div className="card-image">
+              <img src="/assets/ntt-data/thumbnail.png" alt="Healio — NTT Data" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
             </div>
             <div className="card-body">
               <div className="card-header">
@@ -118,13 +105,8 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
 
           {/* 4. P&G */}
           <a href="#" className="project-card" onClick={(e) => { e.preventDefault(); onShowPG() }} aria-label="View P&G Olay case study">
-            <div className="card-image placeholder-pg">
-              <div className="placeholder-grid"></div>
-              <svg style={{position:'absolute',inset:0,width:'100%',height:'100%',opacity:0.18}} viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice">
-                <circle cx="200" cy="112" r="70" fill="none" stroke="rgba(239,68,68,0.3)" strokeWidth="0.5"/>
-                <circle cx="200" cy="112" r="50" fill="none" stroke="rgba(239,68,68,0.4)" strokeWidth="1"/>
-                <circle cx="200" cy="112" r="25" fill="rgba(239,68,68,0.06)" stroke="rgba(239,68,68,0.4)" strokeWidth="1"/>
-              </svg>
+            <div className="card-image">
+              <img src="/assets/pg/thumbnail.png" alt="Procter &amp; Gamble" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
             </div>
             <div className="card-body">
               <div className="card-header">
@@ -141,12 +123,8 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
 
           {/* 5. Credit Connection */}
           <a href="#" className="project-card" onClick={(e) => { e.preventDefault(); onShowCC() }} aria-label="View Credit Connection case study">
-            <div className="card-image placeholder-credit">
-              <div className="placeholder-grid"></div>
-              <svg style={{position:'absolute',inset:0,width:'100%',height:'100%',opacity:0.18}} viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice">
-                <rect x="130" y="30" width="140" height="165" rx="12" fill="none" stroke="rgba(99,102,241,0.4)" strokeWidth="1"/>
-                <rect x="148" y="50" width="104" height="6" rx="3" fill="rgba(99,102,241,0.4)"/>
-              </svg>
+            <div className="card-image">
+              <img src="/assets/credit-connection/thumbnail.png" alt="Credit Connection" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
             </div>
             <div className="card-body">
               <div className="card-header">

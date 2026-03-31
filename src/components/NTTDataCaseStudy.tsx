@@ -96,16 +96,21 @@ export function NTTDataCaseStudy({ onBack }: NTTDataCaseStudyProps) {
       {/* Demo Videos */}
       <div className="container" style={{ marginBottom: '4rem' }}>
         <h2 className="cs-section-title">Product Demos</h2>
-        <p className="cs-body" style={{ marginBottom: '2rem' }}>Two core flows from the Healio prototype — conversational onboarding and AI-powered symptom triage.</p>
+        <p className="cs-body" style={{ marginBottom: '2rem' }}>Two core flows from the Healio prototype — smart account setup and AI-powered symptom triage.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
           <div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', overflow: 'hidden' }}>
             <div style={{ padding: '1rem 1.25rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
               <div style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.08em', color: 'var(--accent)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Flow 01</div>
-              <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text)' }}>Conversational Onboarding</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text)' }}>Smart Account Setup</div>
             </div>
-            <video controls playsInline style={{ width: '100%', display: 'block' }}>
-              <source src="/assets/ntt-data/onboarding.webm" type="video/webm" />
-              <source src="/assets/ntt-data/onboarding.mp4" type="video/mp4" />
+            <video
+              controls
+              playsInline
+              preload="none"
+              poster="/assets/ntt-data/smart-account-setup.jpg"
+              style={{ width: '100%', display: 'block' }}
+            >
+              <source src="/assets/ntt-data/smart-account-setup.mp4" type="video/mp4" />
             </video>
           </div>
           <div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', overflow: 'hidden' }}>
@@ -113,8 +118,13 @@ export function NTTDataCaseStudy({ onBack }: NTTDataCaseStudyProps) {
               <div style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.08em', color: 'var(--accent)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Flow 02</div>
               <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text)' }}>Symptom Triage</div>
             </div>
-            <video controls playsInline style={{ width: '100%', display: 'block' }}>
-              <source src="/assets/ntt-data/symptom-triage.webm" type="video/webm" />
+            <video
+              controls
+              playsInline
+              preload="none"
+              poster="/assets/ntt-data/symptom-triage.jpg"
+              style={{ width: '100%', display: 'block' }}
+            >
               <source src="/assets/ntt-data/symptom-triage.mp4" type="video/mp4" />
             </video>
           </div>
@@ -203,7 +213,7 @@ export function NTTDataCaseStudy({ onBack }: NTTDataCaseStudyProps) {
               },
             ].map(({ num, title, body }) => (
               <div key={num} style={{ display: 'flex', gap: '1.5rem', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '1.5rem' }}>
-                <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'rgba(99,102,241,0.3)', flexShrink: 0, lineHeight: 1 }}>{num}</div>
+                <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'rgba(99,102,241,0.75)', textShadow: '0 0 12px rgba(99,102,241,0.25)', flexShrink: 0, lineHeight: 1 }}>{num}</div>
                 <div>
                   <h3 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--text)' }}>{title}</h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: 1.7, margin: 0 }}>{body}</p>
