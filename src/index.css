@@ -103,7 +103,7 @@ body {
   transform: translateY(-1px);
 }
 
-.scroll-indicator { display: none !important; /* hidden per design review */
+.scroll-indicator { display: none !important; /* hidden per design review */ }
 .scroll-indicator_unused {
   position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 6px;

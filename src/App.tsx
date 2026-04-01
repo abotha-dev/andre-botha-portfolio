@@ -9,10 +9,11 @@ import { TakeoffCaseStudy } from './components/TakeoffCaseStudy'
 import { NTTDataCaseStudy } from './components/NTTDataCaseStudy'
 import { PGCaseStudy } from './components/PGCaseStudy'
 import { CCCaseStudy } from './components/CCCaseStudy'
+import { AIPortfolioCaseStudy } from './components/AIPortfolioCaseStudy'
 import { Footer } from './components/Footer'
 import { NotFound } from './components/NotFound'
 
-type ActivePage = 'home' | 'takeoff-ai' | 'ntt-data' | 'pg' | 'cc' | 'not-found'
+type ActivePage = 'home' | 'takeoff-ai' | 'ntt-data' | 'pg' | 'cc' | 'ai-portfolio' | 'not-found'
 
 const NTT_PASSWORD = import.meta.env.VITE_NTT_PASSWORD ?? ''
 
@@ -59,6 +60,12 @@ export default function App() {
     history.pushState({ page: 'cc' }, '', '/work/credit-connection')
   }, [])
 
+  const handleShowAIPortfolio = useCallback(() => {
+    setActivePage('ai-portfolio')
+    window.scrollTo(0, 0)
+    history.pushState({ page: 'ai-portfolio' }, '', '/work/ai-portfolio')
+  }, [])
+
   const handleGoHome = useCallback((scrollTarget?: string) => {
     setActivePage('home')
     if (scrollTarget) {
@@ -84,7 +91,7 @@ export default function App() {
   useEffect(() => {
     const handler = (e: PopStateEvent) => {
       const page = e.state?.page as ActivePage | undefined
-      const validPages = ['takeoff-ai', 'ntt-data', 'pg', 'cc'] as const
+      const validPages = ['takeoff-ai', 'ntt-data', 'pg', 'cc', 'ai-portfolio'] as const
       setActivePage(validPages.includes(page as typeof validPages[number]) ? page as ActivePage : 'home')
       window.scrollTo(0, 0)
     }
@@ -96,6 +103,7 @@ export default function App() {
     else if (path === '/work/ntt-data') setShowPasswordModal(true)
     else if (path === '/work/pg') setActivePage('pg')
     else if (path === '/work/credit-connection') setActivePage('cc')
+    else if (path === '/work/ai-portfolio') setActivePage('ai-portfolio')
     else if (path !== '/') setActivePage('not-found')
 
     return () => window.removeEventListener('popstate', handler)
@@ -172,12 +180,14 @@ export default function App() {
         <PGCaseStudy onBack={handleGoHome} />
       ) : activePage === 'cc' ? (
         <CCCaseStudy onBack={handleGoHome} />
+      ) : activePage === 'ai-portfolio' ? (
+        <AIPortfolioCaseStudy onBack={handleGoHome} />
       ) : activePage === 'not-found' ? (
         <NotFound onGoHome={handleGoHome} />
       ) : (
         <main id="main-page">
           <Hero />
-          <Work onShowCaseStudy={handleShowTakeoff} onShowNTTData={handleShowNTTData} onShowPG={handleShowPG} onShowCC={handleShowCC} />
+          <Work onShowCaseStudy={handleShowTakeoff} onShowNTTData={handleShowNTTData} onShowPG={handleShowPG} onShowCC={handleShowCC} onShowAIPortfolio={handleShowAIPortfolio} />
           <Toolkit />
           <About />
           <Contact />

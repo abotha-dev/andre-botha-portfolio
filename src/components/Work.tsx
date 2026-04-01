@@ -5,9 +5,10 @@ interface WorkProps {
   onShowNTTData: () => void
   onShowPG: () => void
   onShowCC: () => void
+  onShowAIPortfolio: () => void
 }
 
-export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: WorkProps) {
+export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onShowAIPortfolio }: WorkProps) {
   const label = useFadeUp()
   const heading = useFadeUp()
   const grid = useFadeUp()
@@ -94,6 +95,25 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC }: Wor
               <div className="card-tags">
                 <span className="tag">Fintech</span>
                 <span className="tag">Mobile</span>
+              </div>
+            </div>
+          </a>
+
+          {/* 5. AI Portfolio Build — Meta */}
+          <a href="#" className="project-card" onClick={(e) => { e.preventDefault(); onShowAIPortfolio() }} aria-label="View AI Portfolio Build case study">
+            <div className="card-image" style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.2) 0%, rgba(139,92,246,0.15) 50%, rgba(15,15,25,0.95) 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <span style={{ fontSize: '3rem' }}>🦾</span>
+            </div>
+            <div className="card-body">
+              <div className="card-header">
+                <h3 className="card-title">AI Agent Build Process</h3>
+                <span className="card-arrow">→</span>
+              </div>
+              <p className="card-desc">How I built this portfolio using an AI agent team — Rex, Dev Agent, and Content Agent running 24/7. Design intent to production code with zero human handoffs.</p>
+              <div className="card-tags">
+                <span className="tag accent">AI Agents</span>
+                <span className="tag accent">OpenClaw</span>
+                <span className="tag">Meta</span>
               </div>
             </div>
           </a>
