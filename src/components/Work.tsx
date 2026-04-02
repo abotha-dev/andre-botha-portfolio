@@ -1,4 +1,7 @@
 import { useFadeUp } from '../hooks/useFadeUp'
+import { WireframeAgentBuild } from './wireframes/WireframeAgentBuild'
+import { motion } from 'framer-motion'
+import type { MouseEvent } from 'react'
 
 interface WorkProps {
   onShowCaseStudy: () => void
@@ -131,28 +134,44 @@ function WireframeMobileApp() {
   )
 }
 
-function WireframeAgentBuild() {
+// ─── UPGRADED PROJECT CARD ────────────────────────────────────────────────────
+// Corner bracket accent pattern from 21st.dev Dark Grid inspiration
+// Inner dot overlay + gradient border glow on hover
+
+interface ProjectCardProps {
+  children: React.ReactNode
+  onClick: () => void
+  ariaLabel: string
+  featured?: boolean
+  index?: number
+}
+
+function ProjectCard({ children, onClick, ariaLabel, featured = false, index = 0 }: ProjectCardProps) {
   return (
-    <svg viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" className="wf-lines" aria-hidden="true">
-      {/* Node graph / agent topology */}
-      {/* Central node */}
-      <circle cx="200" cy="110" r="20" stroke="currentColor" strokeWidth="1.5"/>
-      {/* Satellite nodes */}
-      <circle cx="80" cy="60" r="12" stroke="currentColor" strokeWidth="1.2"/>
-      <circle cx="320" cy="60" r="12" stroke="currentColor" strokeWidth="1.2"/>
-      <circle cx="60" cy="160" r="12" stroke="currentColor" strokeWidth="1.2"/>
-      <circle cx="340" cy="160" r="12" stroke="currentColor" strokeWidth="1.2"/>
-      <circle cx="200" cy="196" r="10" stroke="currentColor" strokeWidth="1.2"/>
-      {/* Connections */}
-      <line x1="92" y1="66" x2="183" y2="97" stroke="currentColor" strokeWidth="0.9" strokeDasharray="4 3"/>
-      <line x1="308" y1="66" x2="217" y2="97" stroke="currentColor" strokeWidth="0.9" strokeDasharray="4 3"/>
-      <line x1="71" y1="152" x2="183" y2="123" stroke="currentColor" strokeWidth="0.9" strokeDasharray="4 3"/>
-      <line x1="329" y1="152" x2="217" y2="123" stroke="currentColor" strokeWidth="0.9" strokeDasharray="4 3"/>
-      <line x1="200" y1="130" x2="200" y2="186" stroke="currentColor" strokeWidth="0.9" strokeDasharray="4 3"/>
-      {/* Labels under nodes */}
-      <line x1="56" y1="78" x2="104" y2="78" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" opacity="0.5"/>
-      <line x1="296" y1="78" x2="344" y2="78" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" opacity="0.5"/>
-    </svg>
+    <motion.a
+      href="#"
+      className={`project-card-21 ${featured ? 'featured' : ''}`}
+      onClick={(e: MouseEvent<HTMLAnchorElement>) => { e.preventDefault(); onClick() }}
+      aria-label={ariaLabel}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.5, delay: index * 0.07, ease: [0.16, 1, 0.3, 1] }}
+    >
+      {/* Dot grid overlay — appears on hover */}
+      <div className="card-dot-overlay" aria-hidden="true" />
+
+      {/* Corner brackets — Linear/Vercel hallmark hover detail */}
+      <div className="card-corner card-corner-tl" aria-hidden="true" />
+      <div className="card-corner card-corner-tr" aria-hidden="true" />
+      <div className="card-corner card-corner-bl" aria-hidden="true" />
+      <div className="card-corner card-corner-br" aria-hidden="true" />
+
+      {/* Gradient border glow */}
+      <div className="card-glow-border" aria-hidden="true" />
+
+      {children}
+    </motion.a>
   )
 }
 
