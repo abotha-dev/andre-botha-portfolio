@@ -55,15 +55,29 @@ export function Contact() {
               background: 'rgba(34,197,94,0.08)',
               border: '1px solid rgba(34,197,94,0.25)',
               textAlign: 'center',
+              maxWidth: '560px',
+              margin: '2rem auto 0',
             }}>
               <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>✓</div>
               <p style={{ color: 'rgba(34,197,94,0.9)', fontWeight: 600, margin: 0 }}>Message sent! I'll get back to you soon.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '560px', margin: '2rem auto 0' }}>
+            <form
+              onSubmit={handleSubmit}
+              style={{
+                marginTop: '2rem',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1rem',
+                maxWidth: '560px',
+                margin: '2rem auto 0',
+                textAlign: 'left',   // labels left-aligned
+              }}
+            >
+              {/* Name + Email row */}
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-                  <label htmlFor="cf-name" style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 500 }}>Name</label>
+                  <label htmlFor="cf-name" style={labelStyle}>Name</label>
                   <input
                     id="cf-name"
                     type="text"
@@ -75,7 +89,7 @@ export function Contact() {
                   />
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-                  <label htmlFor="cf-email" style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 500 }}>Email</label>
+                  <label htmlFor="cf-email" style={labelStyle}>Email</label>
                   <input
                     id="cf-email"
                     type="email"
@@ -87,8 +101,10 @@ export function Contact() {
                   />
                 </div>
               </div>
+
+              {/* Message */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-                <label htmlFor="cf-message" style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 500 }}>Message</label>
+                <label htmlFor="cf-message" style={labelStyle}>Message</label>
                 <textarea
                   id="cf-message"
                   required
@@ -99,30 +115,49 @@ export function Contact() {
                   style={{ ...inputStyle, resize: 'vertical', fontFamily: 'inherit' }}
                 />
               </div>
+
               {status === 'error' && (
                 <p style={{ fontSize: '0.85rem', color: 'rgba(239,68,68,0.8)', margin: 0 }}>
-                  Something went wrong. Try emailing directly below.
+                  Something went wrong. Please try again or reach out on LinkedIn.
                 </p>
               )}
-              <button
-                type="submit"
-                disabled={status === 'sending'}
-                className="btn-primary"
-                style={{ alignSelf: 'flex-start', opacity: status === 'sending' ? 0.6 : 1, cursor: status === 'sending' ? 'wait' : 'pointer' }}
-              >
-                {status === 'sending' ? 'Sending...' : 'Send message'}
-              </button>
+
+              {/* CTA row: Send + LinkedIn only */}
+              <div style={{ display: 'flex', gap: '12px', alignItems: 'center', marginTop: '4px' }}>
+                <button
+                  type="submit"
+                  disabled={status === 'sending'}
+                  className="btn-primary"
+                  style={{
+                    opacity: status === 'sending' ? 0.6 : 1,
+                    cursor: status === 'sending' ? 'wait' : 'pointer',
+                  }}
+                >
+                  {status === 'sending' ? 'Sending...' : 'Send message'}
+                </button>
+
+                <a
+                  href="https://www.linkedin.com/in/bothaandre/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={linkedInStyle}
+                >
+                  View LinkedIn
+                </a>
+              </div>
             </form>
           )}
-
-          <div className="contact-ctas" style={{ marginTop: '1.5rem' }}>
-            <a href="mailto:andre@andrebot.com" className="btn-ghost-hero">or email directly</a>
-            <a href="https://www.linkedin.com/in/bothaandre/" target="_blank" rel="noopener noreferrer" className="btn-ghost-hero">View LinkedIn</a>
-          </div>
         </div>
       </div>
     </section>
   )
+}
+
+const labelStyle: React.CSSProperties = {
+  fontSize: '0.8rem',
+  color: 'var(--text-2)',
+  fontWeight: 500,
+  fontFamily: "'Geist Sans', sans-serif",
 }
 
 const inputStyle: React.CSSProperties = {
@@ -130,9 +165,24 @@ const inputStyle: React.CSSProperties = {
   borderRadius: '8px',
   background: 'rgba(255,255,255,0.05)',
   border: '1px solid rgba(255,255,255,0.12)',
-  color: 'var(--text)',
+  color: 'var(--text-1)',
   fontSize: '0.9rem',
   outline: 'none',
   width: '100%',
   boxSizing: 'border-box',
+  fontFamily: "'Geist Sans', sans-serif",
+}
+
+const linkedInStyle: React.CSSProperties = {
+  display: 'inline-block',
+  padding: '10px 20px',
+  borderRadius: '6px',
+  border: '1px solid rgba(255,255,255,0.15)',
+  color: 'rgba(255,255,255,0.7)',
+  fontSize: '14px',
+  fontWeight: 400,
+  fontFamily: "'Geist Sans', sans-serif",
+  textDecoration: 'none',
+  letterSpacing: '-0.01em',
+  transition: 'border-color 0.15s, color 0.15s',
 }
