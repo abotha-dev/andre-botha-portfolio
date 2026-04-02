@@ -123,7 +123,7 @@ export function Contact() {
               )}
 
               {/* CTA row: Send + LinkedIn only */}
-              <div style={{ display: 'flex', gap: '12px', alignItems: 'center', marginTop: '4px' }}>
+              <div style={{ display: 'flex', gap: '12px', alignItems: 'stretch', marginTop: '4px' }}>
                 <button
                   type="submit"
                   disabled={status === 'sending'}
@@ -175,7 +175,7 @@ const inputStyle: React.CSSProperties = {
 
 const linkedInStyle: React.CSSProperties = {
   display: 'inline-block',
-  padding: '10px 20px',
+  padding: '12px 24px',   // matches .btn-primary (12px 24px)
   borderRadius: '6px',
   border: '1px solid rgba(255,255,255,0.15)',
   color: 'rgba(255,255,255,0.7)',
@@ -184,5 +184,7 @@ const linkedInStyle: React.CSSProperties = {
   fontFamily: "'Geist Sans', sans-serif",
   textDecoration: 'none',
   letterSpacing: '-0.01em',
+  lineHeight: '1.4',      // same implicit line-height as btn-primary
   transition: 'border-color 0.15s, color 0.15s',
+  boxSizing: 'border-box',
 }
