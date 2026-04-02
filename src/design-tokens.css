@@ -1,26 +1,27 @@
-/* Design tokens — aligned with UUPM-style minimal dark + subtle glass */
+/* Design tokens — visual-redesign: Linear-inspired dark system */
 :root {
   /* Backgrounds */
-  --bg: #0d0d0f;
-  --surface: #141416;
-  --surface-2: #1b1b1d;
-  --surface-hover: #202022;
+  --bg: #09090B;
+  --surface: #111113;
+  --surface-2: #1a1a1c;
+  --surface-hover: #161618;
 
-  /* Borders — rgba approach like Linear/Vercel for better adaptability */
-  --border: rgba(255,255,255,0.12);
-  --border-strong: rgba(255,255,255,0.2);
-  --border-accent: rgba(99,102,241,0.35);
+  /* Borders */
+  --border: rgba(255,255,255,0.06);
+  --border-strong: rgba(255,255,255,0.12);
+  --border-hover: rgba(255,255,255,0.12);
+  --border-accent: rgba(99,91,255,0.3);
 
   /* Text */
   --text-1: #f0f0f0;
-  --text-2: #a5a5a5;
-  --text-3: rgba(240,240,240,0.55);
+  --text-2: rgba(255,255,255,0.5);
+  --text-3: rgba(255,255,255,0.3);
 
-  /* Accent */
-  --accent: #6366f1;
-  --accent-hover: #5153cc;
-  --accent-glow: rgba(99,102,241,0.12);
-  --accent-dim: rgba(99,102,241,0.6);
+  /* Accent — purple, used in exactly ONE place on homepage (primary CTA) */
+  --accent: #635BFF;
+  --accent-hover: #524AE3;
+  --accent-glow: rgba(99,91,255,0.12);
+  --accent-dim: rgba(99,91,255,0.6);
 
   /* Utility */
   --green: #22c55e;
@@ -29,15 +30,30 @@
   /* Radii */
   --r-sm: 6px;
   --r-md: 10px;
-  --r-lg: 14px;
+  --r-lg: 12px;
   --r-xl: 20px;
 
   /* Easing */
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Typography */
-  --font-display: 'Satoshi', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  /* Typography — Geist Sans */
+  --font-display: 'Geist Sans', sans-serif;
+  --font-body: 'Geist Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Case study pages use warm off-white bg */
+.cs-page-shell {
+  --bg: #F5F4F1;
+  --surface: #ECEAE7;
+  --surface-2: #E4E2DF;
+  --surface-hover: #E8E6E3;
+  --border: rgba(0,0,0,0.07);
+  --border-strong: rgba(0,0,0,0.12);
+  --border-hover: rgba(0,0,0,0.14);
+  --text-1: #111111;
+  --text-2: rgba(17,17,17,0.55);
+  --text-3: rgba(17,17,17,0.38);
+  --accent-glow: rgba(99,91,255,0.08);
 }

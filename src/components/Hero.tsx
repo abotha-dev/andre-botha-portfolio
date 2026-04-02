@@ -1,20 +1,13 @@
 import { useTextScramble } from '../hooks/useTextScramble'
 import { motion } from 'framer-motion'
-import { SplineBackground } from './SplineBackground'
 
 export function Hero() {
   const line1 = useTextScramble('AI-Native Product Designer')
   const line2 = useTextScramble('& Builder')
 
   return (
-    <section
-      id="hero"
-      aria-label="Hero"
-    >
-      {/* 3D Spline background — deferred mount to avoid main-thread competition */}
-      <SplineBackground />
-
-      <div className="hero-content" style={{ position: 'relative', zIndex: 10, pointerEvents: 'none' }}>
+    <section id="hero" aria-label="Hero">
+      <div className="hero-content">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -31,9 +24,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          style={{ fontFamily: "'Satoshi', sans-serif" }}
         >
           {line1}<br />
+          {/* No purple — weight and size carry this */}
           <span className="line2">{line2}</span>
         </motion.h1>
 
@@ -52,12 +45,29 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
         >
-          <a href="#work" className="btn-primary" style={{ pointerEvents: 'auto' }} onClick={(e) => { e.preventDefault(); document.querySelector('#work')?.scrollIntoView({ behavior: 'smooth' }) }}>View My Work</a>
-          <a href="#contact" className="btn-ghost-hero" style={{ pointerEvents: 'auto' }} onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }) }}>Get in Touch</a>
+          {/* Primary CTA — only purple element on homepage */}
+          <a
+            href="#work"
+            className="btn-primary"
+            onClick={(e) => {
+              e.preventDefault()
+              document.querySelector('#work')?.scrollIntoView({ behavior: 'smooth' })
+            }}
+          >
+            View My Work
+          </a>
+          {/* Secondary — plain text link */}
+          <a
+            href="#contact"
+            className="btn-ghost-hero"
+            onClick={(e) => {
+              e.preventDefault()
+              document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
+            }}
+          >
+            Get in Touch
+          </a>
         </motion.div>
-      </div>
-      <div className="scroll-indicator" aria-hidden="true">
-        <div className="chevron"></div>
       </div>
     </section>
   )

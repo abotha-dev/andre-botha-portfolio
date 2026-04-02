@@ -16,7 +16,7 @@ export function NotFound({ onGoHome }: { onGoHome: () => void }) {
         color: 'var(--accent)',
         lineHeight: 1,
         marginBottom: '1rem',
-        fontFamily: "'Space Grotesk', sans-serif",
+        fontFamily: "'Geist Sans', sans-serif",
         opacity: 0.4,
       }}>404</div>
       <h1 style={{
