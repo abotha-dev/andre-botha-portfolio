@@ -4,7 +4,7 @@ interface CaseStudyProps {
 
 export function CaseStudy({ onBack }: CaseStudyProps) {
   return (
-    <div style={{ minHeight: '100vh', background: 'var(--bg)', paddingTop: '80px' }}>
+    <div className="cs-page-shell">
       <div className="container">
         <button className="back-btn" onClick={onBack} aria-label="Back to portfolio">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
