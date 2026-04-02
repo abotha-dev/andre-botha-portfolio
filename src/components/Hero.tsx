@@ -84,12 +84,29 @@ export function Hero() {
           <BlurWords text={LINE2} startIndex={LINE1_WORD_COUNT} className="line2" />
         </h1>
 
-        {/* Subtext — appears after headline crystallises */}
+        {/* Worldview tagline — lands right after headline */}
+        <motion.p
+          style={{
+            fontFamily: 'var(--font-mono)',
+            fontSize: '12px',
+            color: 'rgba(99,91,255,0.7)',
+            letterSpacing: '0.08em',
+            marginBottom: '16px',
+            textTransform: 'uppercase',
+          }}
+          initial={{ opacity: 0, y: 10, filter: 'blur(4px)' }}
+          animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          transition={{ duration: 0.5, delay: POST_HEADLINE_DELAY + 0.0, ease: 'easeOut' }}
+        >
+          Design ends at deployment.
+        </motion.p>
+
+        {/* Subtext — appears after tagline */}
         <motion.p
           className="hero-sub"
           initial={{ opacity: 0, y: 10, filter: 'blur(4px)' }}
           animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-          transition={{ duration: 0.55, delay: POST_HEADLINE_DELAY + 0.05, ease: 'easeOut' }}
+          transition={{ duration: 0.55, delay: POST_HEADLINE_DELAY + 0.15, ease: 'easeOut' }}
         >
           Built and launched AI products solo. Led enterprise UX at NTT Data and P&G.
         </motion.p>
