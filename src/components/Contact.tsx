@@ -161,16 +161,19 @@ const labelStyle: React.CSSProperties = {
 }
 
 const inputStyle: React.CSSProperties = {
-  padding: '0.75rem 1rem',
+  padding: '10px 14px',
   borderRadius: '8px',
-  background: 'rgba(255,255,255,0.05)',
-  border: '1px solid rgba(255,255,255,0.12)',
+  background: 'rgba(255,255,255,0.04)',
+  border: '1px solid rgba(255,255,255,0.1)',
   color: 'var(--text-1)',
-  fontSize: '0.9rem',
+  fontSize: '15px',
+  lineHeight: '1.5',
   outline: 'none',
   width: '100%',
   boxSizing: 'border-box',
   fontFamily: "'Geist Sans', sans-serif",
+  transition: 'border-color 0.2s ease-out, box-shadow 0.2s ease-out',
+  // Focus ring applied via CSS class below (onFocus/onBlur)
 }
 
 const linkedInStyle: React.CSSProperties = {

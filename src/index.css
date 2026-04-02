@@ -287,6 +287,158 @@ section { padding: 96px 0; }
 }
 .project-card:hover .card-arrow { opacity: 1; transform: translate(0,0); }
 
+/* ─── PROJECT CARD 21 — 21st.dev-inspired upgrade ────────────────────────── */
+/* Inherits all .project-card styles + adds corner brackets, dot overlay, glow */
+
+.project-card-21 {
+  /* Base styles (mirror .project-card) */
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.04),
+    0 1px 3px rgba(0,0,0,0.3);
+
+  /* Smooth all layer transitions */
+  transition:
+    transform 0.25s cubic-bezier(0.16,1,0.3,1),
+    border-color 0.25s ease-out,
+    box-shadow 0.25s ease-out;
+}
+.project-card-21:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.07),
+    0 1px 2px rgba(0,0,0,0.04),
+    0 8px 32px rgba(0,0,0,0.45);
+}
+
+/* Dot pattern overlay — radial dot grid, appears on hover */
+.card-dot-overlay {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255,255,255,0.025) 1px,
+    transparent 1px
+  );
+  background-size: 16px 16px;
+  z-index: 1;
+  border-radius: inherit;
+}
+.project-card-21:hover .card-dot-overlay { opacity: 1; }
+
+/* Gradient border glow — appears on hover */
+.card-glow-border {
+  pointer-events: none;
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.08) 0%,
+    rgba(255,255,255,0.03) 50%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  z-index: 1;
+}
+.project-card-21:hover .card-glow-border { opacity: 1; }
+
+/* Corner bracket accents — 8×8px white squares at each corner */
+/* Inspired by Linear / 21st.dev Dark Grid component */
+.card-corner {
+  pointer-events: none;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+  z-index: 10;
+}
+.project-card-21:hover .card-corner { opacity: 1; }
+.card-corner-tl { top: -2px; left: -2px; }
+.card-corner-tr { top: -2px; right: -2px; }
+.card-corner-bl { bottom: -2px; left: -2px; }
+.card-corner-br { bottom: -2px; right: -2px; }
+
+/* Wireframe area — z-index above overlays */
+.project-card-21 .card-wireframe {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--surface);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-card-21 .card-wireframe svg { width: 90%; height: 90%; }
+.project-card-21 .card-wireframe .wf-lines {
+  color: rgba(255,255,255,0.12);
+  transition: color 0.25s ease-out;
+}
+.project-card-21:hover .card-wireframe .wf-lines { color: rgba(255,255,255,0.28); }
+
+/* Body — z-index above overlays */
+.project-card-21 .card-body { position: relative; z-index: 2; padding: 24px; }
+.project-card-21 .card-arrow { opacity: 0; color: var(--text-2); font-size: 14px; transform: translate(-4px, 4px); transition: opacity 0.2s ease-out, transform 0.2s ease-out; flex-shrink: 0; margin-left: 8px; }
+.project-card-21:hover .card-arrow { opacity: 1; transform: translate(0,0); }
+
+/* Featured variant — horizontal layout */
+.project-card-21.featured { display: flex; flex-direction: row; }
+.project-card-21.featured .card-wireframe {
+  width: 55%;
+  flex-shrink: 0;
+  aspect-ratio: unset;
+  min-height: 320px;
+}
+.project-card-21.featured .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 44px;
+}
+/* Featured card title larger */
+.project-card-21.featured .card-title { font-size: 18px; letter-spacing: -0.02em; }
+.project-card-21.featured .card-desc { font-size: 14px; line-height: 1.65; }
+
+/* Inner glow on featured featured hover — single subtle accent radial */
+.project-card-21.featured:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    0 1px 2px rgba(0,0,0,0.04),
+    0 12px 40px rgba(0,0,0,0.5),
+    0 0 0 1px rgba(99,91,255,0.08);
+}
+
+@media (max-width: 1024px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .project-card-21.featured { grid-column: 1 / -1; }
+}
+@media (max-width: 768px) {
+  .project-card-21.featured { flex-direction: column; }
+  .project-card-21.featured .card-wireframe { width: 100%; min-height: 200px; aspect-ratio: 16/9; }
+  .project-card-21.featured .card-body { padding: 24px; }
+}
+@media (max-width: 640px) {
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-card-21.featured { grid-column: 1; }
+}
+
 /* ─── CASE STUDY SHELL (warm bg) ─────────────────────────────────────────── */
 .cs-page-shell {
   min-height: 100vh;
@@ -450,22 +602,68 @@ section { padding: 96px 0; }
 @media (max-width: 480px) { .toolkit-grid { grid-template-columns: repeat(2, 1fr); } }
 
 .tool-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--r-md); padding: 24px 20px; text-align: center;
-  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out, transform 0.2s ease-out;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 24px 20px;
+  text-align: center;
+  transition:
+    border-color 0.25s cubic-bezier(0.16,1,0.3,1),
+    box-shadow 0.25s cubic-bezier(0.16,1,0.3,1),
+    transform 0.25s cubic-bezier(0.16,1,0.3,1),
+    background 0.25s ease-out;
   cursor: default;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.03),
+    0 1px 2px rgba(0,0,0,0.04),
+    0 4px 12px rgba(0,0,0,0.08);
 }
+/* Subtle radial inner glow on hover — BentoGrid pattern */
+.tool-card::before {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% -20%,
+    rgba(255,255,255,0.04) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  z-index: 0;
+}
+.tool-card:hover::before { opacity: 1; }
 .tool-card:hover {
-  border-color: var(--border-strong);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 4px 16px rgba(0,0,0,0.2);
+  border-color: rgba(255,255,255,0.12);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.07),
+    0 1px 2px rgba(0,0,0,0.04),
+    0 4px 16px rgba(0,0,0,0.24);
   transform: translateY(-2px);
 }
+.tool-card > * { position: relative; z-index: 1; }
 .tool-icon {
-  width: 40px; height: 40px; margin: 0 auto 12px;
-  display: flex; align-items: center; justify-content: center;
+  /* Icon container with zinc-800 border — BentoGrid pattern */
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.04);
+  transition: background 0.2s ease-out, border-color 0.2s ease-out;
+  overflow: hidden;
 }
-.tool-icon svg, .tool-icon img { width: 100%; height: 100%; }
+.tool-card:hover .tool-icon {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.15);
+}
+.tool-icon svg, .tool-icon img { width: 28px; height: 28px; }
 .tool-name {
   font-family: var(--font-body); font-weight: 500;
   font-size: 14px; color: var(--text-1); margin-bottom: 4px; letter-spacing: -0.01em;
@@ -501,15 +699,68 @@ section { padding: 96px 0; }
 .about-bio-text p:last-child { margin-bottom: 0; }
 
 .credentials-row {
-  display: flex; gap: 40px; padding-top: 40px;
+  display: flex;
+  gap: 12px;
+  padding-top: 40px;
   border-top: 1px solid var(--border);
 }
-@media (max-width: 480px) { .credentials-row { flex-direction: column; gap: 24px; } }
-.cred-metric {
-  font-family: var(--font-display); font-weight: 700;
-  font-size: 24px; color: var(--text-1); letter-spacing: -0.03em;
+@media (max-width: 480px) { .credentials-row { flex-direction: column; gap: 8px; } }
+
+/* Elevated stat tile — BentoGrid-inspired */
+.cred-item {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.04),
+    0 1px 2px rgba(0,0,0,0.04),
+    0 4px 12px rgba(0,0,0,0.08);
+  transition:
+    border-color 0.25s ease-out,
+    box-shadow 0.25s ease-out,
+    transform 0.25s cubic-bezier(0.16,1,0.3,1);
 }
-.cred-label { font-size: 13px; color: var(--text-2); margin-top: 2px; }
+.cred-item:hover {
+  border-color: rgba(255,255,255,0.12);
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.07),
+    0 4px 16px rgba(0,0,0,0.22);
+}
+/* Radial corner glow on hover */
+.cred-item::before {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 0% 0%, rgba(99,91,255,0.06) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.cred-item:hover::before { opacity: 1; }
+
+.cred-metric {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--text-1);
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  position: relative; z-index: 1;
+}
+.cred-label {
+  font-size: 11px;
+  color: var(--text-2);
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  position: relative; z-index: 1;
+}
 
 /* ─── CONTACT ─────────────────────────────────────────────────────────────── */
 #contact {
@@ -533,6 +784,18 @@ section { padding: 96px 0; }
   margin: 0 auto 40px; line-height: 1.6;
 }
 .contact-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+/* Contact form input focus states */
+#contact input:focus,
+#contact textarea:focus {
+  border-color: rgba(99,91,255,0.5) !important;
+  box-shadow: 0 0 0 3px rgba(99,91,255,0.12) !important;
+  background: rgba(99,91,255,0.03) !important;
+}
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: rgba(255,255,255,0.2);
+}
 
 /* ─── FOOTER ──────────────────────────────────────────────────────────────── */
 footer {
