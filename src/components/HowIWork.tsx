@@ -96,11 +96,7 @@ export function HowIWork() {
                   alignItems: 'center',
                   color: 'rgba(99,102,241,0.5)',
                   fontSize: '1.1rem',
-                  padding: '0 0.1rem',
-                  background: 'rgba(255,255,255,0.03)',
-                  border: '1px solid rgba(255,255,255,0.07)',
-                  borderLeft: 'none',
-                  borderRight: 'none',
+                  padding: '0 0.35rem',
                 }}>→</div>
               )}
             </div>

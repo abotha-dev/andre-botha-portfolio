@@ -400,7 +400,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
         </div>
 
         {/* CTAs */}
-        <div className="cs-section" style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '3rem', display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center', justifyContent: 'space-between' }}>
+        <div className="cs-section" style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '3rem', marginTop: '2rem', display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center', justifyContent: 'space-between' }}>
           <div>
             <div style={{ fontSize: '1.125rem', fontWeight: 600, color: 'var(--text)', marginBottom: '0.35rem' }}>See it in action</div>
             <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)' }}>Upload a blueprint and get a live estimate in 30 seconds.</div>

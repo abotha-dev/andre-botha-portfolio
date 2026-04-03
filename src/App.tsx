@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from 'react'
 import { DockNav } from './components/DockNav'
 import { Hero } from './components/Hero'
+import { CompanyMarquee } from './components/CompanyMarquee'
 import { Work } from './components/Work'
 import { Toolkit } from './components/Toolkit'
 import { About } from './components/About'
@@ -200,6 +201,7 @@ export default function App() {
       ) : (
         <main id="main-page">
           <Hero />
+          <CompanyMarquee />
           <Work onShowCaseStudy={handleShowTakeoff} onShowNTTData={handleShowNTTData} onShowPG={handleShowPG} onShowCC={handleShowCC} onShowAIPortfolio={handleShowAIPortfolio} />
           <Testimonials />
           <HowIWork />
