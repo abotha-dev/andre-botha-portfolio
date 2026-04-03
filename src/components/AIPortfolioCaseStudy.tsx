@@ -72,8 +72,8 @@ export function AIPortfolioCaseStudy({ onBack }: AIPortfolioCaseStudyProps) {
               margin: '0 auto 0.75rem',
               fontSize: '1.75rem'
             }}>🦾</div>
-            <div style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--text)' }}>Rex</div>
-            <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>Orchestrator</div>
+            <div style={{ fontSize: '0.875rem', fontWeight: 600, color: 'rgba(255,255,255,0.9)' }}>Rex</div>
+            <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.6)', marginTop: '0.2rem' }}>Orchestrator</div>
           </div>
 
           {/* Arrow */}
@@ -91,8 +91,8 @@ export function AIPortfolioCaseStudy({ onBack }: AIPortfolioCaseStudyProps) {
               margin: '0 auto 0.75rem',
               fontSize: '1.75rem'
             }}>💻</div>
-            <div style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--text)' }}>Dev Agent</div>
-            <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>Writes code</div>
+            <div style={{ fontSize: '0.875rem', fontWeight: 600, color: 'rgba(255,255,255,0.9)' }}>Dev Agent</div>
+            <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.6)', marginTop: '0.2rem' }}>Writes code</div>
           </div>
 
           {/* Arrow */}
@@ -113,8 +113,8 @@ export function AIPortfolioCaseStudy({ onBack }: AIPortfolioCaseStudyProps) {
                 <path d="M37.5274 0L75.0548 65H0L37.5274 0Z"/>
               </svg>
             </div>
-            <div style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--text)' }}>Vercel</div>
-            <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>Auto-deploys</div>
+            <div style={{ fontSize: '0.875rem', fontWeight: 600, color: 'rgba(255,255,255,0.9)' }}>Vercel</div>
+            <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.6)', marginTop: '0.2rem' }}>Auto-deploys</div>
           </div>
         </div>
       </div>
