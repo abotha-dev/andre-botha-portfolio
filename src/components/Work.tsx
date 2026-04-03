@@ -223,7 +223,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
             aria-label="View AI Portfolio Build case study"
           >
             <div className="card-wireframe">
-              <WireframeAgentBuild />
+              <WireframeAgentBuild className="wf-lines" />
             </div>
             <div className="card-body">
               <div className="card-header">
