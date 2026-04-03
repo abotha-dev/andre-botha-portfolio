@@ -11,6 +11,7 @@ import { PGCaseStudy } from './components/PGCaseStudy'
 import { CCCaseStudy } from './components/CCCaseStudy'
 import { AIPortfolioCaseStudy } from './components/AIPortfolioCaseStudy'
 import { Testimonials } from './components/Testimonials'
+import { HowIWork } from './components/HowIWork'
 import { Footer } from './components/Footer'
 import { NotFound } from './components/NotFound'
 
@@ -193,6 +194,7 @@ export default function App() {
           <Hero />
           <Work onShowCaseStudy={handleShowTakeoff} onShowNTTData={handleShowNTTData} onShowPG={handleShowPG} onShowCC={handleShowCC} onShowAIPortfolio={handleShowAIPortfolio} />
           <Testimonials />
+          <HowIWork />
           <Toolkit />
           <About />
           <Contact />
