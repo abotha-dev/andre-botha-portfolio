@@ -1,12 +1,12 @@
 const COMPANY_LOGOS = [
   { name: 'P&G', src: '/assets/logos/pg.svg' },
   { name: 'NTT Data', src: '/assets/logos/ntt-data.svg' },
-  { name: 'Pier59 Studios' },
+  { name: 'Pier59 Studios', src: '/assets/logos/pier59studios.png' },
   { name: 'Olay', src: '/assets/logos/olay.svg' },
-  { name: 'BlueCross Blue Shield', src: '/assets/logos/bcbs.svg' },
-  { name: 'Credit Connection' },
-  { name: 'Qeepsake' },
-  { name: 'SmartPlan AI' },
+  { name: 'BlueCross Blue Shield', src: '/assets/logos/bluecrossblueshield.png' },
+  { name: 'Credit Connection', src: '/assets/logos/creditconnection.png' },
+  { name: 'Qeepsake', src: '/assets/logos/qeepsake.png' },
+  { name: 'SmartPlan AI', src: '/assets/logos/SmartPlan-ai.svg' },
 ]
 
 export function CompanyMarquee() {
