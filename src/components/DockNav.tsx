@@ -7,7 +7,15 @@ const navItems = [
   { label: 'Contact', href: '#contact' },
 ]
 
-export function DockNav({ onNavigate }: { onNavigate?: (scrollTarget: string) => void }) {
+export function DockNav({
+  onNavigate,
+  variant = 'dark',
+}: {
+  onNavigate?: (scrollTarget: string) => void
+  variant?: 'dark' | 'light'
+}) {
+  const isLight = variant === 'light'
+
   const handleClick = useCallback((href: string) => {
     if (onNavigate) {
       onNavigate(href)
@@ -40,11 +48,11 @@ export function DockNav({ onNavigate }: { onNavigate?: (scrollTarget: string) =>
           gap: '2px',
           padding: '7px 14px',
           borderRadius: '50px',
-          background: 'rgba(255,255,255,0.03)',
+          background: isLight ? '#212023' : 'rgba(255,255,255,0.03)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
-          border: '1px solid rgba(255,255,255,0.08)',
-          boxShadow: '0 4px 24px rgba(0,0,0,0.3)',
+          border: isLight ? '1px solid rgba(255,255,255,0.18)' : '1px solid rgba(255,255,255,0.08)',
+          boxShadow: isLight ? '0 6px 24px rgba(0,0,0,0.35)' : '0 4px 24px rgba(0,0,0,0.3)',
         }}
       >
         {/* Logo */}
@@ -53,7 +61,7 @@ export function DockNav({ onNavigate }: { onNavigate?: (scrollTarget: string) =>
           style={{
             background: 'none',
             border: 'none',
-            color: 'rgba(255,255,255,0.85)',
+            color: isLight ? '#f5f5f5' : 'rgba(255,255,255,0.85)',
             fontFamily: "'Geist Sans', sans-serif",
             fontWeight: 500,
             fontSize: '13px',
@@ -71,7 +79,7 @@ export function DockNav({ onNavigate }: { onNavigate?: (scrollTarget: string) =>
         <div style={{
           width: '1px',
           height: '16px',
-          background: 'rgba(255,255,255,0.08)',
+          background: isLight ? 'rgba(255,255,255,0.12)' : 'rgba(255,255,255,0.08)',
           margin: '0 4px',
           flexShrink: 0,
         }} />
@@ -84,7 +92,7 @@ export function DockNav({ onNavigate }: { onNavigate?: (scrollTarget: string) =>
             style={{
               background: 'none',
               border: 'none',
-              color: 'rgba(255,255,255,0.45)',
+              color: isLight ? 'rgba(255,255,255,0.75)' : 'rgba(255,255,255,0.45)',
               cursor: 'pointer',
               padding: '5px 10px',
               borderRadius: '20px',
@@ -95,8 +103,8 @@ export function DockNav({ onNavigate }: { onNavigate?: (scrollTarget: string) =>
               whiteSpace: 'nowrap',
               letterSpacing: '-0.01em',
             }}
-            onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.85)')}
-            onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.45)')}
+            onMouseEnter={e => (e.currentTarget.style.color = isLight ? '#ffffff' : 'rgba(255,255,255,0.85)')}
+            onMouseLeave={e => (e.currentTarget.style.color = isLight ? 'rgba(255,255,255,0.75)' : 'rgba(255,255,255,0.45)')}
           >
             {item.label}
           </button>

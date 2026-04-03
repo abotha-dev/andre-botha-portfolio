@@ -114,7 +114,10 @@ export default function App() {
 
   return (
     <>
-      <DockNav onNavigate={onCaseStudyPage ? handleGoHome : undefined} />
+      <DockNav
+        onNavigate={onCaseStudyPage ? handleGoHome : undefined}
+        variant={onCaseStudyPage ? 'light' : 'dark'}
+      />
 
       {/* Password Modal */}
       {showPasswordModal && (
