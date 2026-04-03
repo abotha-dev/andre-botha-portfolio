@@ -48,7 +48,7 @@ export function DockNav({
           gap: '2px',
           padding: '7px 14px',
           borderRadius: '50px',
-          background: isLight ? 'rgba(33,32,35,0.85)' : 'rgba(255,255,255,0.03)',
+          background: isLight ? 'rgba(33,32,35,0.95)' : 'rgba(255,255,255,0.03)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
           border: isLight ? '1px solid rgba(255,255,255,0.16)' : '1px solid rgba(255,255,255,0.08)',
