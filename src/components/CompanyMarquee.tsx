@@ -15,15 +15,21 @@ export function CompanyMarquee() {
   return (
     <section aria-label="Company logos" className="logo-marquee">
       <div className="logo-marquee__track">
-        {items.map((item, i) => (
-          <div key={`${item.name}-${i}`} className="logo-marquee__item">
-            {item.src ? (
-              <img src={item.src} alt={item.name} className="logo-marquee__img" />
-            ) : (
-              <span className="logo-marquee__text">{item.name}</span>
-            )}
-          </div>
-        ))}
+        {items.map((item, i) => {
+          const imgClass = item.name === 'BlueCross Blue Shield'
+            ? 'logo-marquee__img logo-marquee__img--bcbs'
+            : 'logo-marquee__img'
+
+          return (
+            <div key={`${item.name}-${i}`} className="logo-marquee__item">
+              {item.src ? (
+                <img src={item.src} alt={item.name} className={imgClass} />
+              ) : (
+                <span className="logo-marquee__text">{item.name}</span>
+              )}
+            </div>
+          )
+        })}
       </div>
     </section>
   )

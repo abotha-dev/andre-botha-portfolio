@@ -218,6 +218,9 @@ section { padding: 96px 0; }
   filter: brightness(0) invert(1);
   opacity: 0.8;
 }
+.logo-marquee__img--bcbs {
+  height: 34px;
+}
 .logo-marquee__text {
   color: rgba(255,255,255,0.75);
   font-size: 14px;
