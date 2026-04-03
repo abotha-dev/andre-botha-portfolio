@@ -69,6 +69,7 @@ export default function App() {
   }, [])
 
   const handleGoHome = useCallback((scrollTarget?: string) => {
+    setShowPasswordModal(false)
     setActivePage('home')
     if (scrollTarget) {
       setPendingScroll(scrollTarget)
@@ -76,6 +77,13 @@ export default function App() {
       window.scrollTo(0, 0)
     }
     history.pushState({ page: 'home' }, '', '/')
+
+    // Fallback: if home doesn't render (rare), force reload to avoid blank screen
+    requestAnimationFrame(() => {
+      if (!document.querySelector('#main-page')) {
+        window.location.href = '/'
+      }
+    })
   }, [])
 
   // After returning home with a pending scroll target, scroll once the section renders
