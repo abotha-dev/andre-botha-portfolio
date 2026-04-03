@@ -215,7 +215,30 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
             </div>
           </a>
 
-          {/* 2. NTT Data */}
+          {/* 2. AI Portfolio Build — Meta */}
+          <a
+            href="#"
+            className="project-card"
+            onClick={(e) => { e.preventDefault(); onShowAIPortfolio() }}
+            aria-label="View AI Portfolio Build case study"
+          >
+            <div className="card-wireframe">
+              <WireframeAgentBuild />
+            </div>
+            <div className="card-body">
+              <div className="card-header">
+                <h3 className="card-title">AI Agent Build Process</h3>
+                <span className="card-arrow">→</span>
+              </div>
+              <p className="card-desc">How I built this portfolio using an AI agent team — design intent to production with zero human handoffs.</p>
+              <div className="card-tags">
+                <span className="tag">AI Agents</span>
+                <span className="tag">Meta</span>
+              </div>
+            </div>
+          </a>
+
+          {/* 3. NTT Data */}
           <a
             href="#"
             className="project-card"
@@ -239,7 +262,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
             </div>
           </a>
 
-          {/* 3. P&G */}
+          {/* 4. P&G */}
           <a
             href="#"
             className="project-card"
@@ -262,7 +285,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
             </div>
           </a>
 
-          {/* 4. Credit Connection */}
+          {/* 5. Credit Connection */}
           <a
             href="#"
             className="project-card"
@@ -281,29 +304,6 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
               <div className="card-tags">
                 <span className="tag">Fintech</span>
                 <span className="tag">Mobile</span>
-              </div>
-            </div>
-          </a>
-
-          {/* 5. AI Portfolio Build — Meta */}
-          <a
-            href="#"
-            className="project-card"
-            onClick={(e) => { e.preventDefault(); onShowAIPortfolio() }}
-            aria-label="View AI Portfolio Build case study"
-          >
-            <div className="card-wireframe">
-              <WireframeAgentBuild />
-            </div>
-            <div className="card-body">
-              <div className="card-header">
-                <h3 className="card-title">AI Agent Build Process</h3>
-                <span className="card-arrow">→</span>
-              </div>
-              <p className="card-desc">How I built this portfolio using an AI agent team — design intent to production with zero human handoffs.</p>
-              <div className="card-tags">
-                <span className="tag">AI Agents</span>
-                <span className="tag">Meta</span>
               </div>
             </div>
           </a>
