@@ -3,7 +3,7 @@ import { Suspense, lazy, useState, useEffect } from 'react'
 const Spline = lazy(() => import('@splinetool/react-spline'))
 
 /**
- * Deferred Spline 3D background — loads only after the main page paint
+ * Deferred Spline 3D background  -  loads only after the main page paint
  * to avoid competing with hero entrance animations on the main thread.
  */
 export function SplineBackground() {
@@ -51,7 +51,7 @@ export function SplineBackground() {
           />
         </Suspense>
       )}
-      {/* Dark gradient overlay — left side for text readability */}
+      {/* Dark gradient overlay  -  left side for text readability */}
       <div
         style={{
           position: 'absolute',

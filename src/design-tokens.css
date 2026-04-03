@@ -1,4 +1,4 @@
-/* Design tokens — visual-redesign: Linear-inspired dark system */
+/* Design tokens  -  visual-redesign: Linear-inspired dark system */
 :root {
   /* Backgrounds */
   --bg: #09090B;
@@ -17,7 +17,7 @@
   --text-2: rgba(255,255,255,0.5);
   --text-3: rgba(255,255,255,0.3);
 
-  /* Accent — purple, used in exactly ONE place on homepage (primary CTA) */
+  /* Accent  -  purple, used in exactly ONE place on homepage (primary CTA) */
   --accent: #635BFF;
   --accent-hover: #524AE3;
   --accent-glow: rgba(99,91,255,0.12);
@@ -37,7 +37,7 @@
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Typography — Geist Sans */
+  /* Typography  -  Geist Sans */
   --font-display: 'Geist Sans', sans-serif;
   --font-body: 'Geist Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;

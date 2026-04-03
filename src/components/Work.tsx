@@ -59,7 +59,7 @@ function WireframeHealthcareAgent() {
       <line x1="0" y1="36" x2="400" y2="36" stroke="currentColor" strokeWidth="0.8"/>
       <circle cx="20" cy="18" r="8" stroke="currentColor" strokeWidth="1.2"/>
       <line x1="40" y1="18" x2="100" y2="18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-      {/* Chat bubbles — user */}
+      {/* Chat bubbles  -  user */}
       <rect x="180" y="52" width="180" height="32" rx="8" stroke="currentColor" strokeWidth="1.2"/>
       <line x1="196" y1="64" x2="280" y2="64" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
       <line x1="196" y1="74" x2="248" y2="74" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" opacity="0.6"/>
@@ -158,10 +158,10 @@ function ProjectCard({ children, onClick, ariaLabel, featured = false, index = 0
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.5, delay: index * 0.07, ease: [0.16, 1, 0.3, 1] }}
     >
-      {/* Dot grid overlay — appears on hover */}
+      {/* Dot grid overlay  -  appears on hover */}
       <div className="card-dot-overlay" aria-hidden="true" />
 
-      {/* Corner brackets — Linear/Vercel hallmark hover detail */}
+      {/* Corner brackets  -  Linear/Vercel hallmark hover detail */}
       <div className="card-corner card-corner-tl" aria-hidden="true" />
       <div className="card-corner card-corner-tr" aria-hidden="true" />
       <div className="card-corner card-corner-bl" aria-hidden="true" />
@@ -190,7 +190,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
 
         <div ref={grid.ref} className={`projects-grid stagger${grid.visible ? ' visible' : ''}`}>
 
-          {/* 1. Takeoff.ai — FEATURED */}
+          {/* 1. Takeoff.ai  -  FEATURED */}
           <a
             href="#"
             className="project-card featured"
@@ -205,7 +205,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
                 <h3 className="card-title">Takeoff.ai</h3>
                 <span className="card-arrow">→</span>
               </div>
-              <p className="card-desc">AI-powered construction estimator — conceived, designed, and shipped solo in 4 weeks.</p>
+              <p className="card-desc">AI-powered construction estimator  -  conceived, designed, and shipped solo in 4 weeks.</p>
               <div className="card-tags">
                 <span className="tag">AI</span>
                 <span className="tag">Founder</span>
@@ -215,7 +215,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
             </div>
           </a>
 
-          {/* 2. AI Portfolio Build — Meta */}
+          {/* 2. AI Portfolio Build  -  Meta */}
           <a
             href="#"
             className="project-card"
@@ -230,7 +230,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
                 <h3 className="card-title">AI Agent Build Process</h3>
                 <span className="card-arrow">→</span>
               </div>
-              <p className="card-desc">How I built this portfolio using an AI agent team — design intent to production with zero human handoffs.</p>
+              <p className="card-desc">How I built this portfolio using an AI agent team  -  design intent to production with zero human handoffs.</p>
               <div className="card-tags">
                 <span className="tag">AI Agents</span>
                 <span className="tag">Meta</span>
@@ -250,7 +250,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
             </div>
             <div className="card-body">
               <div className="card-header">
-                <h3 className="card-title">Healio — NTT Data</h3>
+                <h3 className="card-title">Healio  -  NTT Data</h3>
                 <span className="card-arrow">→</span>
               </div>
               <p className="card-desc">Replaced 5 fragmented healthcare portals with one AI conversation. 50+ screens of agentic UX.</p>
@@ -300,7 +300,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
                 <h3 className="card-title">Credit Connection</h3>
                 <span className="card-arrow">→</span>
               </div>
-              <p className="card-desc">Fintech mobile app for credit building and financial access in underserved communities — 0 to shipped.</p>
+              <p className="card-desc">Fintech mobile app for credit building and financial access in underserved communities  -  0 to shipped.</p>
               <div className="card-tags">
                 <span className="tag">Fintech</span>
                 <span className="tag">Mobile</span>

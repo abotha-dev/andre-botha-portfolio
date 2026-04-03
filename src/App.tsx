@@ -133,7 +133,7 @@ export default function App() {
             borderRadius: '16px', padding: '2.5rem', maxWidth: '420px', width: '100%',
           }}>
             <div style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.08em', color: 'rgba(99,102,241,0.8)', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Protected Case Study</div>
-            <h2 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#fff', marginBottom: '0.5rem' }}>Healio — NTT Data</h2>
+            <h2 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#fff', marginBottom: '0.5rem' }}>Healio  -  NTT Data</h2>
             <p style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, marginBottom: '1.75rem' }}>
               This case study contains client work shared under NDA. Enter the password provided to you to view.
             </p>

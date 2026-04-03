@@ -33,16 +33,16 @@ export function HowIWork() {
           marginBottom: '3.5rem',
         }}>
           <p style={{ margin: 0 }}>
-            I don't design in isolation. I work in tight loops — research, prototype, test, ship — and I use AI as a force multiplier at every stage.
+            I don't design in isolation. I work in tight loops  -  research, prototype, test, ship  -  and I use AI as a force multiplier at every stage.
           </p>
           <p style={{ margin: 0 }}>
-            I start with the problem, not the pixels. That means stakeholder interviews, competitive teardowns, and data before I open Figma. When I do open Figma, I move fast — components, variants, real content, no Lorem Ipsum.
+            I start with the problem, not the pixels. That means stakeholder interviews, competitive teardowns, and data before I open Figma. When I do open Figma, I move fast  -  components, variants, real content, no Lorem Ipsum.
           </p>
           <p style={{ margin: 0 }}>
-            For builds, I vibe-code alongside Claude and Cursor. I can take a design from frames to a working React app in a day. That changes what's possible in a sprint — and it changes what I can promise a team.
+            For builds, I vibe-code alongside Claude and Cursor. I can take a design from frames to a working React app in a day. That changes what's possible in a sprint  -  and it changes what I can promise a team.
           </p>
           <p style={{ margin: 0 }}>
-            I care about shipping. Not pixel-perfect handoffs that die in Jira — working products that real users can touch.
+            I care about shipping. Not pixel-perfect handoffs that die in Jira  -  working products that real users can touch.
           </p>
         </div>
 

@@ -84,7 +84,7 @@ export function DockNav({
           flexShrink: 0,
         }} />
 
-        {/* Nav items — plain text, no icons */}
+        {/* Nav items  -  plain text, no icons */}
         {navItems.map((item) => (
           <button
             key={item.label}

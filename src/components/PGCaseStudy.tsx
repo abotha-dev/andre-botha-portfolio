@@ -133,7 +133,7 @@ const pgImageSizes: Record<string, { width: number; height: number }> = {
             {[
               {
                 decision: 'Education over Urgency',
-                detail: 'We prioritized content that proved the product\'s efficacy — ingredient deep-dives, clinical study data, and video demonstrations from Olay\'s internal scientists — over promotional banners and countdown timers.',
+                detail: 'We prioritized content that proved the product\'s efficacy  -  ingredient deep-dives, clinical study data, and video demonstrations from Olay\'s internal scientists  -  over promotional banners and countdown timers.',
                 tradeoff: 'This approach asked more of the user upfront. But for a premium launch, building a foundation of trust was more valuable than securing a low-quality conversion.',
               },
               {
@@ -155,7 +155,7 @@ const pgImageSizes: Record<string, { width: number; height: number }> = {
         <div className="cs-section" style={{ marginBottom: '6rem' }}>
           <h2 className="cs-section-title">The Outcome: A Record-Breaking Launch</h2>
           <p className="cs-body">The strategic shift to a credibility-first model was an unequivocal success. By building trust and educating the user before asking for the sale, we created unprecedented demand.</p>
-          <p className="cs-body" style={{ marginTop: '1rem' }}>The launch generated the highest number of waitlist sign-ups in P&G history. When the product dropped, it sold out in less than two hours. The momentum continued for months, establishing the new serum as the #1 seller in its category in North America — and fundamentally shifting the perception of the Olay brand for a new generation of consumers.</p>
+          <p className="cs-body" style={{ marginTop: '1rem' }}>The launch generated the highest number of waitlist sign-ups in P&G history. When the product dropped, it sold out in less than two hours. The momentum continued for months, establishing the new serum as the #1 seller in its category in North America  -  and fundamentally shifting the perception of the Olay brand for a new generation of consumers.</p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', marginTop: '2rem' }}>
             <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/pg/pg_slide_5.avif" alt="Olay final product page mobile" loading="lazy" width={pgImageSizes['pg_slide_5.avif'].width} height={pgImageSizes['pg_slide_5.avif'].height} /></div></div>

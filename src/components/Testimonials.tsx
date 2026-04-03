@@ -11,7 +11,7 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    quote: "Andre brought a level of strategic clarity to our Olay.com relaunch that changed how we thought about the entire project. He pushed us to lead with science and ingredient education instead of discounts — the launch generated the highest waitlist signups in P&G history and sold out in under two hours.",
+    quote: "Andre brought a level of strategic clarity to our Olay.com relaunch that changed how we thought about the entire project. He pushed us to lead with science and ingredient education instead of discounts  -  the launch generated the highest waitlist signups in P&G history and sold out in under two hours.",
     name: "Brittany Canfield",
     title: "Senior Director of Digital Commerce",
     company: "Procter & Gamble",
@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     initials: "SP",
   },
   {
-    quote: "Andre designed something genuinely difficult: a healthcare AI agent that users actually trust. The single conversational interface instead of bouncing between screens was not obvious at the time — it's now the thing every stakeholder highlights. Healio consistently lands in our enterprise sales conversations.",
+    quote: "Andre designed something genuinely difficult: a healthcare AI agent that users actually trust. The single conversational interface instead of bouncing between screens was not obvious at the time  -  it's now the thing every stakeholder highlights. Healio consistently lands in our enterprise sales conversations.",
     name: "Tarana Rawat",
     title: "Principal Design Lead",
     company: "NTT Data",

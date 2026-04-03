@@ -128,7 +128,7 @@ body {
   margin-bottom: 24px;
   color: var(--text-1);
 }
-/* Remove purple from "& Builder" line — weight + size carries it */
+/* Remove purple from "& Builder" line  -  weight + size carries it */
 .hero-headline .line2 {
   display: block;
   color: var(--text-1);
@@ -144,7 +144,7 @@ body {
 
 .hero-ctas { display: flex; gap: 16px; justify-content: flex-start; flex-wrap: wrap; align-items: center; }
 
-/* Primary CTA — the ONLY purple element on homepage */
+/* Primary CTA  -  the ONLY purple element on homepage */
 .btn-primary {
   background: var(--accent);
   color: #fff;
@@ -167,7 +167,7 @@ body {
   transform: translateY(-1px);
 }
 
-/* Ghost CTA — plain text link style */
+/* Ghost CTA  -  plain text link style */
 .btn-ghost-hero {
   color: var(--text-2);
   font-size: 14px;

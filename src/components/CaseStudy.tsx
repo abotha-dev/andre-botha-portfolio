@@ -19,7 +19,7 @@ export function CaseStudy({ onBack }: CaseStudyProps) {
         <div className="container">
           <span className="cs-label">Case Study · AI SaaS · Solo Founder</span>
           <h1 className="cs-title">Takeoff.ai: AI-Powered<br/>Construction Estimating</h1>
-          <p className="cs-subtitle">From failed outreach to a validated AI product strategy — conceived, designed, and shipped solo in 4 weeks.</p>
+          <p className="cs-subtitle">From failed outreach to a validated AI product strategy  -  conceived, designed, and shipped solo in 4 weeks.</p>
 
           <div className="metadata-table">
             <div className="meta-cell">
@@ -47,7 +47,7 @@ export function CaseStudy({ onBack }: CaseStudyProps) {
             <div className="placeholder-takeoff" style={{position:'absolute',inset:0}}>
               <div className="placeholder-grid"></div>
               <svg style={{position:'absolute',inset:0,width:'100%',height:'100%',opacity:0.25}} viewBox="0 0 900 394" preserveAspectRatio="xMidYMid meet">
-                <text x="450" y="190" fill="rgba(255,255,255,0.15)" fontSize="13" textAnchor="middle" fontFamily="monospace">PLACEHOLDER — Replace with Takeoff.ai interface screenshot</text>
+                <text x="450" y="190" fill="rgba(255,255,255,0.15)" fontSize="13" textAnchor="middle" fontFamily="monospace">PLACEHOLDER  -  Replace with Takeoff.ai interface screenshot</text>
               </svg>
             </div>
           </div>
@@ -80,7 +80,7 @@ export function CaseStudy({ onBack }: CaseStudyProps) {
                     <div style={{fontSize:'13px',color:'var(--text-2)',marginTop:'4px'}}>Response rate from initial outreach</div>
                   </div>
                   <div style={{height:'1px',background:'var(--border)'}}></div>
-                  <div style={{fontSize:'14px',color:'var(--text-2)',lineHeight:1.6}}>Sent to 3 local contractors. Zero opens, zero replies. The channel was wrong — not the product.</div>
+                  <div style={{fontSize:'14px',color:'var(--text-2)',lineHeight:1.6}}>Sent to 3 local contractors. Zero opens, zero replies. The channel was wrong  -  not the product.</div>
                 </div>
               </div>
             </div>
@@ -161,7 +161,7 @@ export function CaseStudy({ onBack }: CaseStudyProps) {
           <div className="cs-two-col">
             <div className="cs-body">
               <p>The failed email campaign forced a pivot: from broadcasting to bullseye targeting. Instead of pushing the product, I started pulling insights from users.</p>
-              <p><strong>Reddit community research.</strong> I analyzed r/Construction, r/Contractors, and r/Estimating — listening, not promoting.</p>
+              <p><strong>Reddit community research.</strong> I analyzed r/Construction, r/Contractors, and r/Estimating  -  listening, not promoting.</p>
               <p><strong>Targeted DM outreach.</strong> Armed with those insights, I switched from cold emails to hyper-targeted Reddit DMs.</p>
               <p><strong>In-person validation.</strong> Using Yelp and local directories, I identified 5 contractors within 15 minutes of West Hollywood with physical offices.</p>
             </div>
@@ -201,7 +201,7 @@ export function CaseStudy({ onBack }: CaseStudyProps) {
           </div>
           <div className="before-after">
             <div className="ba-card">
-              <div className="ba-label before">BEFORE — 5-step wizard</div>
+              <div className="ba-label before">BEFORE  -  5-step wizard</div>
               <div className="ba-visual">
                 <div className="ba-step">Step 1: Project Name</div>
                 <div className="ba-step">Step 2: File Format (PDF/Image)</div>
@@ -211,7 +211,7 @@ export function CaseStudy({ onBack }: CaseStudyProps) {
               </div>
             </div>
             <div className="ba-card">
-              <div className="ba-label after">AFTER — single action</div>
+              <div className="ba-label after">AFTER  -  single action</div>
               <div className="ba-visual" style={{alignItems:'center',justifyContent:'center'}}>
                 <div style={{border:'2px dashed rgba(99,102,241,0.4)',borderRadius:'10px',padding:'32px 40px',textAlign:'center',background:'rgba(99,102,241,0.06)'}}>
                   <div style={{fontSize:'28px',marginBottom:'10px'}}>⬆</div>

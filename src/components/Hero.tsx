@@ -55,7 +55,7 @@ export function Hero() {
     <section id="hero" aria-label="Hero">
       <div className="hero-content">
 
-        {/* Name byline — arrives first */}
+        {/* Name byline  -  arrives first */}
         <motion.div
           initial={{ opacity: 0, y: 8, filter: 'blur(4px)' }}
           animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
@@ -65,7 +65,7 @@ export function Hero() {
           Andre Botha
         </motion.div>
 
-        {/* Status badge — arrives next */}
+        {/* Status badge  -  arrives next */}
         <motion.div
           initial={{ opacity: 0, y: 14, filter: 'blur(6px)' }}
           animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
@@ -77,14 +77,14 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* Headline — word-by-word blur reveal */}
+        {/* Headline  -  word-by-word blur reveal */}
         <h1 className="hero-headline">
           <BlurWords text={LINE1} startIndex={0} />
           <br />
           <BlurWords text={LINE2} startIndex={LINE1_WORD_COUNT} className="line2" />
         </h1>
 
-        {/* Worldview tagline — lands right after headline */}
+        {/* Worldview tagline  -  lands right after headline */}
         <motion.p
           style={{
             fontFamily: 'var(--font-mono)',
@@ -101,7 +101,7 @@ export function Hero() {
           Design ends at deployment.
         </motion.p>
 
-        {/* Subtext — appears after tagline */}
+        {/* Subtext  -  appears after tagline */}
         <motion.p
           className="hero-sub"
           initial={{ opacity: 0, y: 10, filter: 'blur(4px)' }}
@@ -111,14 +111,14 @@ export function Hero() {
           Built and launched AI products solo. Led enterprise UX at NTT Data and P&G.
         </motion.p>
 
-        {/* CTAs — settle in last */}
+        {/* CTAs  -  settle in last */}
         <motion.div
           className="hero-ctas"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: POST_HEADLINE_DELAY + 0.3, ease: 'easeOut' }}
         >
-          {/* Primary CTA — only purple element on homepage */}
+          {/* Primary CTA  -  only purple element on homepage */}
           <a
             href="#work"
             className="btn-primary"
@@ -129,7 +129,7 @@ export function Hero() {
           >
             View My Work
           </a>
-          {/* Secondary — plain text link */}
+          {/* Secondary  -  plain text link */}
           <a
             href="#contact"
             className="btn-ghost-hero"

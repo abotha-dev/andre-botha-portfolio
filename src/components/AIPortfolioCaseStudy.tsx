@@ -23,7 +23,7 @@ export function AIPortfolioCaseStudy({ onBack }: AIPortfolioCaseStudyProps) {
         <div className="container">
           <span className="cs-label">Case Study · AI Orchestration · Vibe Coding · Solo Build</span>
           <h1 className="cs-title">Building This Portfolio<br/>With an AI Agent Team</h1>
-          <p className="cs-subtitle">How I replaced a traditional design-to-dev handoff with a 24/7 autonomous agent workforce — and shipped a production portfolio in days, not weeks.</p>
+          <p className="cs-subtitle">How I replaced a traditional design-to-dev handoff with a 24/7 autonomous agent workforce  -  and shipped a production portfolio in days, not weeks.</p>
 
           <div className="metadata-table">
             <div className="meta-cell">
@@ -49,7 +49,7 @@ export function AIPortfolioCaseStudy({ onBack }: AIPortfolioCaseStudyProps) {
         </div>
       </div>
 
-      {/* Hero Visual — Agent Architecture Diagram */}
+      {/* Hero Visual  -  Agent Architecture Diagram */}
       <div className="container" style={{ marginBottom: '4rem' }}>
         <div style={{
           background: 'linear-gradient(135deg, rgba(15,15,25,0.95) 0%, rgba(20,20,35,0.98) 100%)',
@@ -125,7 +125,7 @@ export function AIPortfolioCaseStudy({ onBack }: AIPortfolioCaseStudyProps) {
           <h2 className="cs-section-title">What This Proves</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
             {[
-              { stat: '3 agents', label: 'Rex orchestrates Dev Agent + Content Agent — no human handoffs' },
+              { stat: '3 agents', label: 'Rex orchestrates Dev Agent + Content Agent  -  no human handoffs' },
               { stat: '24/7', label: 'Agents run autonomously while I sleep, work, or ideate' },
               { stat: '0 handoffs', label: 'Design intent → production code without a dev team' },
               { stat: '4× faster', label: 'Ship velocity vs. traditional solo designer workflow' },
@@ -143,9 +143,9 @@ export function AIPortfolioCaseStudy({ onBack }: AIPortfolioCaseStudyProps) {
       <div className="container">
         <div className="cs-section">
           <h2 className="cs-section-title">The Problem With "Designer Portfolios"</h2>
-          <p className="cs-body">Most design portfolios are a graveyard of PDFs and static screenshots. They show what you made — not how you think, or how fast you can ship.</p>
-          <p className="cs-body">The bigger issue: as a designer who builds, I kept hitting the same ceiling. I could design anything. I could spec it perfectly. But execution velocity was bottlenecked by the traditional design → dev → review loop — even when I was doing both sides myself.</p>
-          <p className="cs-body">I wanted to break that ceiling. Not just for the portfolio — for everything I build.</p>
+          <p className="cs-body">Most design portfolios are a graveyard of PDFs and static screenshots. They show what you made  -  not how you think, or how fast you can ship.</p>
+          <p className="cs-body">The bigger issue: as a designer who builds, I kept hitting the same ceiling. I could design anything. I could spec it perfectly. But execution velocity was bottlenecked by the traditional design → dev → review loop  -  even when I was doing both sides myself.</p>
+          <p className="cs-body">I wanted to break that ceiling. Not just for the portfolio  -  for everything I build.</p>
         </div>
       </div>
 
@@ -153,20 +153,20 @@ export function AIPortfolioCaseStudy({ onBack }: AIPortfolioCaseStudyProps) {
       <div className="container">
         <div className="cs-section">
           <h2 className="cs-section-title">The Approach: Agents as Employees</h2>
-          <p className="cs-body">I treat AI agents the way a startup treats its first hires. Each one has a defined role, a workspace, a communication channel, and standing operating procedures. They don't just respond to prompts — they run autonomously on schedules, react to triggers, and hand work off to each other.</p>
+          <p className="cs-body">I treat AI agents the way a startup treats its first hires. Each one has a defined role, a workspace, a communication channel, and standing operating procedures. They don't just respond to prompts  -  they run autonomously on schedules, react to triggers, and hand work off to each other.</p>
 
           <div style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {[
               {
-                role: '🦾 Rex — Orchestrator',
+                role: '🦾 Rex  -  Orchestrator',
                 desc: 'The central brain. Reads context, routes tasks, monitors output quality, writes to memory, manages the Todoist board, and posts status to Discord. Runs 24/7 via heartbeat polling.',
               },
               {
-                role: '💻 Dev Agent — Builder',
+                role: '💻 Dev Agent  -  Builder',
                 desc: 'Scoped to a single repo. Gets a brief from Rex (design reference + component spec), writes the TypeScript, and pushes to GitHub. Vercel auto-deploys on every push.',
               },
               {
-                role: '✍️ Content Agent — Writer',
+                role: '✍️ Content Agent  -  Writer',
                 desc: "Handles LinkedIn posts, cover letters, case study copy, and outreach drafts. Gets topic + angle from Rex, produces the content, posts draft to Discord for Andre's review.",
               },
             ].map(({ role, desc }) => (
@@ -191,14 +191,14 @@ export function AIPortfolioCaseStudy({ onBack }: AIPortfolioCaseStudyProps) {
       <div className="container">
         <div className="cs-section">
           <h2 className="cs-section-title">How It Actually Works</h2>
-          <p className="cs-body">Here's the real workflow behind this portfolio — no fluff, no hypotheticals. This is the exact process that produced every component you're looking at.</p>
+          <p className="cs-body">Here's the real workflow behind this portfolio  -  no fluff, no hypotheticals. This is the exact process that produced every component you're looking at.</p>
 
           <div style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '0' }}>
             {[
-              { step: '01', title: 'Design intent in plain language', body: "I describe what I want in a Telegram message or Discord chat. \"Dark hero, animated product preview, no stock photos — differentiate from Togal.AI's stock photo hero.\" That's the brief. Rex captures it and writes it to a design reference file in the repo." },
-              { step: '02', title: 'Rex compiles the spec', body: 'Rex reads the brief, cross-references the existing codebase, identifies which components need to change, and writes a structured task for Dev Agent. Not just "update the hero" — a complete spec with props, colour tokens, and acceptance criteria.' },
+              { step: '01', title: 'Design intent in plain language', body: "I describe what I want in a Telegram message or Discord chat. \"Dark hero, animated product preview, no stock photos  -  differentiate from Togal.AI's stock photo hero.\" That's the brief. Rex captures it and writes it to a design reference file in the repo." },
+              { step: '02', title: 'Rex compiles the spec', body: 'Rex reads the brief, cross-references the existing codebase, identifies which components need to change, and writes a structured task for Dev Agent. Not just "update the hero"  -  a complete spec with props, colour tokens, and acceptance criteria.' },
               { step: '03', title: 'Dev Agent writes the code', body: 'Dev Agent gets the spec, opens the repo in Cursor (with Claude Sonnet as the model), implements the changes, and pushes to GitHub. It adds a progress comment to the Todoist ticket and pings #portfolio when done.' },
-              { step: '04', title: 'Vercel deploys automatically', body: 'GitHub push triggers a Vercel preview deployment. Rex checks the deploy status via the Vercel MCP. If it passes — done. If there\'s a build error — Rex reads the log, diagnoses the issue, and hands the fix back to Dev Agent.' },
+              { step: '04', title: 'Vercel deploys automatically', body: 'GitHub push triggers a Vercel preview deployment. Rex checks the deploy status via the Vercel MCP. If it passes  -  done. If there\'s a build error  -  Rex reads the log, diagnoses the issue, and hands the fix back to Dev Agent.' },
               { step: '05', title: 'Rex closes the loop', body: 'Rex marks the ticket done in Todoist, posts a summary to Discord, and updates MEMORY.md. The next heartbeat picks up the next task automatically.' },
             ].map(({ step, title, body }, i, arr) => (
               <div key={step} style={{ display: 'flex', gap: '1.5rem', position: 'relative' }}>
@@ -235,11 +235,11 @@ export function AIPortfolioCaseStudy({ onBack }: AIPortfolioCaseStudyProps) {
             {[
               {
                 decision: 'OpenClaw as orchestration layer',
-                why: 'Persistent memory across sessions, heartbeat scheduling, multi-agent routing, and Discord + Telegram integration — in one config file. Nothing else comes close for solo operators.',
+                why: 'Persistent memory across sessions, heartbeat scheduling, multi-agent routing, and Discord + Telegram integration  -  in one config file. Nothing else comes close for solo operators.',
               },
               {
                 decision: 'React + TypeScript, no CMS',
-                why: 'Case studies are code. Agents can read, edit, and push changes directly — no login, no GUI, no bottleneck. Vercel redeploys automatically on every push.',
+                why: 'Case studies are code. Agents can read, edit, and push changes directly  -  no login, no GUI, no bottleneck. Vercel redeploys automatically on every push.',
               },
               {
                 decision: 'Claude Sonnet for all code tasks',
@@ -247,7 +247,7 @@ export function AIPortfolioCaseStudy({ onBack }: AIPortfolioCaseStudyProps) {
               },
               {
                 decision: 'Todoist as shared task state',
-                why: "Both Rex and Dev Agent write to the same board. Andre checks from his phone. One source of truth — no Slack threads, no emails, no \"where are we on this?\"",
+                why: "Both Rex and Dev Agent write to the same board. Andre checks from his phone. One source of truth  -  no Slack threads, no emails, no \"where are we on this?\"",
               },
             ].map(({ decision, why }) => (
               <div key={decision} style={{
@@ -269,7 +269,7 @@ export function AIPortfolioCaseStudy({ onBack }: AIPortfolioCaseStudyProps) {
       <div className="container">
         <div className="cs-section">
           <h2 className="cs-section-title">What I Actually Learned</h2>
-          <p className="cs-body">The hardest part wasn't the code. It was designing the agent system — their roles, their handoffs, their memory architecture. Poorly scoped agents are worse than no agents: they hallucinate tasks, repeat work, and create noise.</p>
+          <p className="cs-body">The hardest part wasn't the code. It was designing the agent system  -  their roles, their handoffs, their memory architecture. Poorly scoped agents are worse than no agents: they hallucinate tasks, repeat work, and create noise.</p>
           <p className="cs-body">The unlock was treating agents like junior employees, not magic tools. Give them a clear role, a workspace, a way to communicate status, and a definition of "done." When you do that, they compound. Every task one agent completes creates context that makes the next agent faster.</p>
           <p className="cs-body" style={{ marginBottom: 0 }}>This portfolio is the proof of concept. The same architecture runs Takeoff.ai outreach, competitive intel, job applications, and content distribution. The build is the case study.</p>
         </div>
@@ -291,7 +291,7 @@ export function AIPortfolioCaseStudy({ onBack }: AIPortfolioCaseStudyProps) {
           <div>
             <div style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.08em', color: 'var(--accent)', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Open Source</div>
             <h3 style={{ fontSize: '1.15rem', fontWeight: 600, color: 'var(--text)', marginBottom: '0.4rem' }}>This portfolio is public on GitHub</h3>
-            <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>Every component, every commit, every agent instruction — available to inspect. The build process is part of the portfolio.</p>
+            <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>Every component, every commit, every agent instruction  -  available to inspect. The build process is part of the portfolio.</p>
           </div>
           <a
             href="https://github.com/scruffyjerk/andre-botha-portfolio"

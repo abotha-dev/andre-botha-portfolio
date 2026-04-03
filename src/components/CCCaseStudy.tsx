@@ -110,7 +110,7 @@ const ccImageSizes: Record<string, { width: number; height: number }> = {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.5rem' }}>
             {[
               { num: '01', title: 'Strategic Design', body: 'Anchored the entire user experience around the invoice lifecycle. The dashboard was structured not around "credit," but around the job the user was trying to do: track who has paid, who is late, and who needs a reminder. This made the product immediately useful.' },
-              { num: '02', title: 'Systems Thinking', body: 'Designed and built a comprehensive design system in parallel with the product UI — reusable components, variables, and patterns that allowed the dev team to build faster and ensured future features would feel consistent.' },
+              { num: '02', title: 'Systems Thinking', body: 'Designed and built a comprehensive design system in parallel with the product UI  -  reusable components, variables, and patterns that allowed the dev team to build faster and ensured future features would feel consistent.' },
               { num: '03', title: 'User-Centered Execution', body: 'Conducted user feedback sessions with local business owners to pressure-test the design. This direct input was critical for simplifying the UI, clarifying confusing financial jargon, and ensuring the product felt built for the Nigerian market.' },
             ].map(({ num, title, body }) => (
               <div key={num} style={{ display: 'flex', gap: '1.5rem', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '1.5rem' }}>
@@ -143,7 +143,7 @@ const ccImageSizes: Record<string, { width: number; height: number }> = {
             {[
               {
                 decision: 'Clarity over Novelty',
-                detail: 'Used familiar, established UI patterns for financial data — tables for invoices, line graphs for cash flow. The goal was to make the tool feel instantly intuitive and trustworthy.',
+                detail: 'Used familiar, established UI patterns for financial data  -  tables for invoices, line graphs for cash flow. The goal was to make the tool feel instantly intuitive and trustworthy.',
                 tradeoff: 'We sacrificed the opportunity for flashy, experimental data visualizations. For a product dealing with a business\'s money, building trust and reducing the learning curve was more important than visual novelty.',
               },
               {
@@ -164,7 +164,7 @@ const ccImageSizes: Record<string, { width: number; height: number }> = {
         {/* Outcome */}
         <div className="cs-section" style={{ marginBottom: '6rem' }}>
           <h2 className="cs-section-title">The Outcome: A Foundation for a New Market</h2>
-          <p className="cs-body">The final product successfully delivered on both of its core jobs. It provided Nigerian small businesses with a clean, modern, and intuitive tool to manage their daily cash flow — solving an immediate, tangible problem for the user.</p>
+          <p className="cs-body">The final product successfully delivered on both of its core jobs. It provided Nigerian small businesses with a clean, modern, and intuitive tool to manage their daily cash flow  -  solving an immediate, tangible problem for the user.</p>
           <p className="cs-body" style={{ marginTop: '1rem' }}>More importantly, by integrating the option to "Report Late Payment" directly into the familiar workflow of managing an overdue invoice, the product gently onboarded users into the practice of credit reporting. It used a short-term utility to drive a long-term, market-building behavior. The result was not just a product, but a foundational piece of infrastructure for a more transparent credit ecosystem in Nigeria.</p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '2rem' }}>

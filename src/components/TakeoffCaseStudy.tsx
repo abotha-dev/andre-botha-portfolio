@@ -23,7 +23,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
         <div className="container">
           <span className="cs-label">Case Study · Solo Founder · AI Product Design</span>
           <h1 className="cs-title">Takeoff.ai: Building a Generative<br/>AI SaaS Product End-to-End</h1>
-          <p className="cs-subtitle">From a failed cold email campaign to a validated go-to-market strategy in four weeks — as a solo designer, founder, and builder.</p>
+          <p className="cs-subtitle">From a failed cold email campaign to a validated go-to-market strategy in four weeks  -  as a solo designer, founder, and builder.</p>
 
           <div className="metadata-table">
             <div className="meta-cell">
@@ -72,7 +72,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
               Takeoff.ai
             </div>
             <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
-              AI-powered construction estimation — blueprint to bid in 30 seconds
+              AI-powered construction estimation  -  blueprint to bid in 30 seconds
             </div>
             <a
               href="https://blueprint-estimate.vercel.app"
@@ -124,8 +124,8 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
         {/* Challenge */}
         <div className="cs-section">
           <h2 className="cs-section-title">The Challenge: How Do You Sell AI to a Tech-Skeptical Audience?</h2>
-          <p className="cs-body">I had built a technically impressive tool — GPT-4o Vision reading a blueprint and returning a room-by-room cost estimate in 30 seconds. My initial assumption was that a superior product would sell itself.</p>
-          <p className="cs-body" style={{ marginTop: '1rem' }}>I was wrong. My first attempt at validation was a cold email campaign to local contractors. <strong>The result: zero responses.</strong> This failure was the most important data point of the project. It proved that the target audience was deeply resistant to traditional SaaS sales tactics and that my go-to-market strategy was fundamentally broken. I had a solution — I just hadn't correctly identified how my users discovered and trusted new tools.</p>
+          <p className="cs-body">I had built a technically impressive tool  -  GPT-4o Vision reading a blueprint and returning a room-by-room cost estimate in 30 seconds. My initial assumption was that a superior product would sell itself.</p>
+          <p className="cs-body" style={{ marginTop: '1rem' }}>I was wrong. My first attempt at validation was a cold email campaign to local contractors. <strong>The result: zero responses.</strong> This failure was the most important data point of the project. It proved that the target audience was deeply resistant to traditional SaaS sales tactics and that my go-to-market strategy was fundamentally broken. I had a solution  -  I just hadn't correctly identified how my users discovered and trusted new tools.</p>
         </div>
 
         {/* Challenge visual */}
@@ -161,14 +161,14 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
         {/* Solution */}
         <div className="cs-section">
           <h2 className="cs-section-title">The Solution: An AI Estimator for the Underdogs</h2>
-          <p className="cs-body">Takeoff.ai is not designed to compete with PlanSwift or QuickBid — enterprise tools that cost hundreds per month and require weeks of training. Instead, it targets the 90% of contractors who are priced out or overwhelmed by those platforms.</p>
-          <p className="cs-body" style={{ marginTop: '1rem' }}>For <strong>$49/month</strong>, a contractor uploads a blueprint and receives a detailed, room-by-room material and cost estimate in 30 seconds. The accuracy sits at 70-80% — not for final bids, but for <strong>project screening</strong>: quickly deciding which jobs are worth the time and cost of a full manual takeoff. It turns a 60-minute process into 30 seconds.</p>
+          <p className="cs-body">Takeoff.ai is not designed to compete with PlanSwift or QuickBid  -  enterprise tools that cost hundreds per month and require weeks of training. Instead, it targets the 90% of contractors who are priced out or overwhelmed by those platforms.</p>
+          <p className="cs-body" style={{ marginTop: '1rem' }}>For <strong>$49/month</strong>, a contractor uploads a blueprint and receives a detailed, room-by-room material and cost estimate in 30 seconds. The accuracy sits at 70-80%  -  not for final bids, but for <strong>project screening</strong>: quickly deciding which jobs are worth the time and cost of a full manual takeoff. It turns a 60-minute process into 30 seconds.</p>
         </div>
 
         {/* AI Design section */}
         <div className="cs-section">
           <h2 className="cs-section-title">AI Design: Designing for Imperfect AI</h2>
-          <p className="cs-body" style={{ marginBottom: '1.5rem' }}>The hardest design challenge wasn't the UI — it was trust. How do you build confidence with a skeptical audience when your AI is only 80% accurate? The answer was to stop hiding the imperfection and start designing around it.</p>
+          <p className="cs-body" style={{ marginBottom: '1.5rem' }}>The hardest design challenge wasn't the UI  -  it was trust. How do you build confidence with a skeptical audience when your AI is only 80% accurate? The answer was to stop hiding the imperfection and start designing around it.</p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
             {[
@@ -180,12 +180,12 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
               {
                 num: '02',
                 title: 'Per-Item Confidence Scores',
-                body: 'Instead of one opaque total, each line item carries a confidence score — 95% for a simple room, 65% for a non-standard material. Users instantly see where to apply their own expertise.',
+                body: 'Instead of one opaque total, each line item carries a confidence score  -  95% for a simple room, 65% for a non-standard material. Users instantly see where to apply their own expertise.',
               },
               {
                 num: '03',
                 title: 'User in Control',
-                body: 'Every AI-generated value is editable. One click to override any quantity or price. This transforms the AI from a black box into an intelligent starting point — the contractor is still the expert.',
+                body: 'Every AI-generated value is editable. One click to override any quantity or price. This transforms the AI from a black box into an intelligent starting point  -  the contractor is still the expert.',
               },
             ].map(({ num, title, body }) => (
               <div key={num} style={{
@@ -205,13 +205,13 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
         {/* The Approach */}
         <div className="cs-section">
           <h2 className="cs-section-title">The Pivot: From Broadcasting to Bullseye Targeting</h2>
-          <p className="cs-body" style={{ marginBottom: '1.5rem' }}>Cold emails failed because I was pushing my product at an audience that doesn't trust cold outreach. The pivot was to stop broadcasting and start listening — find where contractors already complain about estimating, and show up there.</p>
+          <p className="cs-body" style={{ marginBottom: '1.5rem' }}>Cold emails failed because I was pushing my product at an audience that doesn't trust cold outreach. The pivot was to stop broadcasting and start listening  -  find where contractors already complain about estimating, and show up there.</p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {[
               {
                 channel: 'Reddit Communities',
-                detail: 'r/Construction and r/Estimating. Lurked before posting. Found contractors openly discussing pain points like shrink/swell calculations — a specific, high-value problem that even expensive software doesn\'t solve well. This became the anchor for all subsequent outreach.',
+                detail: 'r/Construction and r/Estimating. Lurked before posting. Found contractors openly discussing pain points like shrink/swell calculations  -  a specific, high-value problem that even expensive software doesn\'t solve well. This became the anchor for all subsequent outreach.',
               },
               {
                 channel: 'Targeted DMs',
@@ -260,7 +260,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
         <div className="cs-section">
           <h2 className="cs-section-title">Design Win: From 5 Steps to 1</h2>
           <p className="cs-body">Competitive analysis of PlanSwift and QuickBid revealed we had to win on simplicity. But my initial upload flow was a 5-step wizard asking for project name, file format, unit of measurement, and other details upfront.</p>
-          <p className="cs-body" style={{ marginTop: '1rem' }}>Early testing (using Lovable for AI-driven user interviews) showed consistent drop-off mid-wizard. Users wanted to see the AI work — the setup questions felt like friction before the payoff. I collapsed the entire wizard into a <strong>single drag-and-drop target on the homepage</strong>. The AI infers everything it can from the file itself; anything missing gets asked for later.</p>
+          <p className="cs-body" style={{ marginTop: '1rem' }}>Early testing (using Lovable for AI-driven user interviews) showed consistent drop-off mid-wizard. Users wanted to see the AI work  -  the setup questions felt like friction before the payoff. I collapsed the entire wizard into a <strong>single drag-and-drop target on the homepage</strong>. The AI infers everything it can from the file itself; anything missing gets asked for later.</p>
 
           <div style={{
             display: 'grid',
@@ -288,7 +288,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
                   <span style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>{step}</span>
                 </div>
               ))}
-              <div style={{ fontSize: '0.75rem', color: 'rgba(239,68,68,0.6)', marginTop: '0.75rem' }}>5-step wizard — users dropped off</div>
+              <div style={{ fontSize: '0.75rem', color: 'rgba(239,68,68,0.6)', marginTop: '0.75rem' }}>5-step wizard  -  users dropped off</div>
             </div>
             <div style={{
               background: 'rgba(99,102,241,0.06)',
@@ -322,7 +322,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
                 <div style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--text)', marginBottom: '0.25rem' }}>Drop your blueprint here</div>
                 <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>PNG, JPG, WEBP, PDF</div>
               </div>
-              <div style={{ fontSize: '0.75rem', color: 'rgba(99,102,241,0.7)', fontWeight: 500 }}>After — single action, zero friction</div>
+              <div style={{ fontSize: '0.75rem', color: 'rgba(99,102,241,0.7)', fontWeight: 500 }}>After  -  single action, zero friction</div>
             </div>
           </div>
         </div>
@@ -367,17 +367,17 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
               {
                 num: '01',
                 title: 'Problem First, Technology Second',
-                body: 'Initial failure came from being enamored with the AI. The breakthrough came when I focused on the contractor\'s hatred of manual data entry — not the impressiveness of GPT-4o Vision.',
+                body: 'Initial failure came from being enamored with the AI. The breakthrough came when I focused on the contractor\'s hatred of manual data entry  -  not the impressiveness of GPT-4o Vision.',
               },
               {
                 num: '02',
                 title: 'Find the Watering Hole',
-                body: 'Identify where your audience already complains — Reddit threads, local supply stores, trade associations. Show up as a helpful expert before you show up as a product.',
+                body: 'Identify where your audience already complains  -  Reddit threads, local supply stores, trade associations. Show up as a helpful expert before you show up as a product.',
               },
               {
                 num: '03',
                 title: 'Position as a Complement',
-                body: 'In markets with entrenched incumbents, frame your tool as a simple, cheap addition to their existing workflow — not a scary replacement for something they\'ve used for years.',
+                body: 'In markets with entrenched incumbents, frame your tool as a simple, cheap addition to their existing workflow  -  not a scary replacement for something they\'ve used for years.',
               },
               {
                 num: '04',
