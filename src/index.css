@@ -206,12 +206,24 @@ section { padding: 96px 0; }
   padding-left: 48px;
 }
 .logo-marquee__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  white-space: nowrap;
+}
+.logo-marquee__img {
+  height: 28px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+.logo-marquee__text {
   color: rgba(255,255,255,0.75);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  white-space: nowrap;
 }
 @keyframes marquee {
   0% { transform: translateX(0); }
