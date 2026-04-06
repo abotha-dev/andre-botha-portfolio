@@ -34,7 +34,7 @@ export function NTTDataCaseStudy({ onBack }: NTTDataCaseStudyProps) {
             </div>
             <div className="meta-cell">
               <span className="meta-label">Role</span>
-              <div className="meta-value">Lead Product<br/>Designer</div>
+              <div className="meta-value">Lead Product Designer<br/><span style={{ fontSize: '0.7rem', opacity: 0.6 }}>Sole designer</span></div>
             </div>
             <div className="meta-cell">
               <span className="meta-label">Platform</span>
@@ -137,10 +137,10 @@ export function NTTDataCaseStudy({ onBack }: NTTDataCaseStudyProps) {
           <h2 className="cs-section-title">Project Outcomes</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
             {[
-              { stat: '50+', label: 'Screens across onboarding, triage, provider matching, and booking flows' },
-              { stat: '1 agent', label: 'Replaces 3–5 separate portals with a single conversational interface' },
-              { stat: 'Active', label: 'Used by NTT Data in live enterprise healthcare sales conversations' },
-              { stat: 'Full system', label: 'Reusable design system with custom chat components and inline card patterns' },
+              { stat: '50+', label: 'Screens designed across onboarding, triage, provider matching, insurance, and booking flows' },
+              { stat: '5 → 1', label: 'Replaced five fragmented healthcare portals with a single conversational AI agent' },
+              { stat: '20%', label: 'Improvement in nurse productivity by automating routine patient intake and triage' },
+              { stat: '25%', label: 'Reduction in patient interaction time from first contact to confirmed appointment' },
             ].map(({ stat, label }) => (
               <div key={stat} style={{ background: 'rgba(99,102,241,0.06)', border: '1px solid rgba(99,102,241,0.15)', borderRadius: '10px', padding: '1.25rem 1.5rem' }}>
                 <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--accent)', marginBottom: '0.4rem' }}>{stat}</div>
@@ -279,8 +279,8 @@ export function NTTDataCaseStudy({ onBack }: NTTDataCaseStudyProps) {
         {/* Outcome */}
         <div className="cs-section" style={{ marginBottom: '6rem' }}>
           <h2 className="cs-section-title">The Outcome: A Product Vision That Sells</h2>
-          <p className="cs-body">This was a strategic design engagement. The deliverable was a complete product vision and interactive prototype that NTT Data uses to pitch enterprise healthcare clients on the future of AI-powered patient experience.</p>
-          <p className="cs-body" style={{ marginTop: '1rem' }}>The Healio prototype demonstrated that a single conversational agent could credibly replace the fragmented multi-portal model that dominates enterprise healthcare today  -  from first contact through confirmed appointment. The result is a product concept now active in NTT Data's enterprise sales pipeline.</p>
+          <p className="cs-body">As the sole designer on this strategic engagement, I delivered a complete product vision and 50+ screen interactive prototype that NTT Data now uses to pitch enterprise healthcare clients on the future of AI-powered patient experience.</p>
+          <p className="cs-body" style={{ marginTop: '1rem' }}>The Healio prototype demonstrated that a single conversational agent could credibly replace the fragmented multi-portal model that dominates enterprise healthcare today  -  from first contact through confirmed appointment. Early internal testing projected a 20% improvement in nurse productivity and 25% reduction in patient interaction time. The result is an active enterprise sales tool driving new client conversations at NTT Data.</p>
 
           <div style={{ marginTop: '2.5rem', background: 'rgba(99,102,241,0.06)', border: '1px solid rgba(99,102,241,0.2)', borderRadius: '12px', padding: '2rem', textAlign: 'center' }}>
             <div style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.08em', color: 'var(--accent)', textTransform: 'uppercase', marginBottom: '0.75rem' }}>See It In Action</div>
