@@ -232,16 +232,6 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
           <p className="cs-body" style={{ marginTop: '1rem' }}>In a different project I would have addressed these inline. For this redesign I held scope deliberately  -  the goal was to repackage the product around honest positioning, not to ship a comprehensive refactor. Each piece of debt got logged with the decision rationale and a recommended next step. A senior reviewer reading <code style={codeStyle}>_context/decisions.md</code> can reconstruct every trade-off I made and why.</p>
         </div>
 
-        {/* Outcomes — narrative */}
-        <div className="cs-section">
-          <h2 className="cs-section-title">Outcomes</h2>
-          <p className="cs-body">Eight route pages migrated to the new visual language: Home, Analyze, Results, Login, Signup, Dashboard, Pricing, Success.</p>
-          <p className="cs-body" style={{ marginTop: '1rem' }}>Two shared layout components  -  <code style={codeStyle}>SiteHeader</code> and <code style={codeStyle}>SiteFooter</code>  -  extracted from inlined JSX after the third page.</p>
-          <p className="cs-body" style={{ marginTop: '1rem' }}>Net 1,431 lines removed from the codebase across the redesign. The CSS bundle dropped 7 KB from tree-shaking newly-orphaned classes. The JS bundle dropped 43 KB from removing the old <code style={codeStyle}>Layout</code> dependency tree.</p>
-          <p className="cs-body" style={{ marginTop: '1rem' }}>A real Stripe integration that survived the redesign without a single line of backend change. The frontend now resolves backend URLs through a single env-var-driven constant; the customer portal flow works from both Dashboard and Pricing; the Success page handles the post-checkout <code style={codeStyle}>session_id</code> parameter correctly  -  and surfaced a missing Stripe placeholder bug in the existing checkout config that I fixed in the same diff.</p>
-          <p className="cs-body" style={{ marginTop: '1rem' }}>The full project history lives across <code style={codeStyle}>_context/positioning.md</code>, <code style={codeStyle}>_context/accuracy-truth.md</code>, <code style={codeStyle}>_context/decisions.md</code>, and a tightly-scoped copy deck. Bridge files like these are an underrated portfolio artifact  -  they let a reviewer reconstruct the reasoning behind every decision the work made, not just the decisions themselves.</p>
-        </div>
-
         {/* What I'd do differently */}
         <div className="cs-section">
           <h2 className="cs-section-title">What I&apos;d do differently</h2>
