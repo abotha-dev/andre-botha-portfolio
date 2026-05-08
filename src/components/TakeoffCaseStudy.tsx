@@ -148,7 +148,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
               { stat: 'Backend untouched', label: 'Frontend-only scope held; debt logged in _context/decisions.md' },
             ].map(({ stat, label }) => (
               <div key={stat} style={{ background: 'rgba(99,102,241,0.06)', border: '1px solid rgba(99,102,241,0.15)', borderRadius: '10px', padding: '1.25rem 1.5rem' }}>
-                <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--accent)', marginBottom: '0.4rem' }}>{stat}</div>
+                <div style={{ fontSize: '1.5rem', fontWeight: 700, lineHeight: 1.15, color: 'var(--accent)', marginBottom: '0.4rem' }}>{stat}</div>
                 <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: 1.5 }}>{label}</div>
               </div>
             ))}
