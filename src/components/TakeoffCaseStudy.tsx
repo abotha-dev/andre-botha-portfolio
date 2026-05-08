@@ -142,10 +142,10 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
           <h2 className="cs-section-title">Project Outcomes</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
             {[
-              { stat: '8 routes', label: 'Pages migrated to the new design system  -  Home, Analyze, Results, Login, Signup, Dashboard, Pricing, Success' },
-              { stat: '−1,431 lines', label: 'Net removal across the redesign as duplicated chrome and the old layout dependency tree came out' },
-              { stat: '−50 KB', label: 'Bundle reduction across the redesign  -  43 KB JS from layout removal, 7 KB CSS from tree-shaken classes' },
-              { stat: 'Real Stripe', label: 'Live checkout, customer portal, and post-checkout success flow shipped without a single backend code change' },
+              { stat: 'Promise corrected', label: 'From accuracy-first claims to honest ballpark framing' },
+              { stat: 'Real Stripe live', label: 'Live checkout, customer portal, post-checkout flow shipped without a backend code change' },
+              { stat: '−1,431 lines / −50KB', label: 'Net code reduction across the redesign' },
+              { stat: 'Backend untouched', label: 'Frontend-only scope held; debt logged in _context/decisions.md' },
             ].map(({ stat, label }) => (
               <div key={stat} style={{ background: 'rgba(99,102,241,0.06)', border: '1px solid rgba(99,102,241,0.15)', borderRadius: '10px', padding: '1.25rem 1.5rem' }}>
                 <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--accent)', marginBottom: '0.4rem' }}>{stat}</div>
