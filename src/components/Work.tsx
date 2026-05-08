@@ -190,27 +190,27 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
 
         <div ref={grid.ref} className={`projects-grid stagger${grid.visible ? ' visible' : ''}`}>
 
-          {/* 1. Takeoff.ai  -  FEATURED */}
+          {/* 1. mytakeoff.ai  -  FEATURED */}
           <a
             href="#"
             className="project-card featured"
             onClick={(e) => { e.preventDefault(); onShowCaseStudy() }}
-            aria-label="View Takeoff.ai case study"
+            aria-label="View mytakeoff.ai case study"
           >
             <div className="card-wireframe">
               <WireframeDashboard />
             </div>
             <div className="card-body">
               <div className="card-header">
-                <h3 className="card-title">Takeoff.ai</h3>
+                <h3 className="card-title">mytakeoff.ai</h3>
                 <span className="card-arrow">→</span>
               </div>
-              <p className="card-desc">AI-powered construction estimator  -  conceived, designed, and shipped solo in 4 weeks.</p>
+              <p className="card-desc">Repackaged an AI cost estimator from accuracy-first claims to honest ballpark estimates  -  8 routes redesigned, real Stripe shipped, ~50 KB removed.</p>
               <div className="card-tags">
                 <span className="tag">AI</span>
                 <span className="tag">Founder</span>
-                <span className="tag">Full-Stack</span>
                 <span className="tag">SaaS</span>
+                <span className="tag">Redesign</span>
               </div>
             </div>
           </a>
