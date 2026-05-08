@@ -157,10 +157,10 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
 
         {/* Lead-in (no heading in markdown) */}
         <div className="cs-section">
-          <p className="cs-body">mytakeoff.ai is an AI-powered cost estimator for residential contractors. Upload a floor plan, get a parsed room layout, material quantities, and a cost range. The product worked. The packaging didn&apos;t.</p>
-          <p className="cs-body" style={{ marginTop: '1rem' }}>The site pitched it as &ldquo;accurate construction estimates powered by AI.&rdquo; The actual accuracy data told a more complicated story: 96.7% on clean floor plans rendered from design software, 78.8% on messier inputs, room detection at 100% across both. The cost estimate copy claimed &ldquo;within 4% of contractor benchmarks,&rdquo; which wasn&apos;t defensible  -  contractor benchmarks themselves span 2x ranges, so &ldquo;within range&rdquo; doesn&apos;t mean &ldquo;4% accurate.&rdquo;</p>
-          <p className="cs-body" style={{ marginTop: '1rem' }}>A contractor reading the homepage would expect production-grade precision. They&apos;d upload a phone photo of a marked-up plan, get a result that was off by 20%, and never come back. The promise was wrong, not the product.</p>
-          <p className="cs-body" style={{ marginTop: '1rem' }}>I redesigned the site to repackage what it actually is: a fast filter that runs before a real takeoff. Not a replacement for one.</p>
+          <p className="cs-body">I shipped mytakeoff.ai solo in four weeks — design, frontend, AI pipeline, the whole stack. The product worked. The positioning didn&apos;t. This case study is about going back six weeks later to fix what the marketing was claiming, not what the engine was doing.</p>
+          <p className="cs-body" style={{ marginTop: '1rem' }}>The site pitched it as &ldquo;accurate construction estimates powered by AI.&rdquo; The actual accuracy data told a more complicated story: 96.7% on clean floor plans rendered from design software, 79.6% on messier inputs, room detection at 100% across both. The cost estimate copy claimed &ldquo;within 4% of contractor benchmarks,&rdquo; which wasn&apos;t defensible — contractor benchmarks themselves span 2x ranges, so &ldquo;within range&rdquo; doesn&apos;t mean &ldquo;4% accurate.&rdquo;</p>
+          <p className="cs-body" style={{ marginTop: '1rem' }}>A contractor reading the homepage would expect production-grade precision. They&apos;d upload a phone photo of a marked-up plan, get a result that was off by 20%, and never come back.</p>
+          <p className="cs-body" style={{ marginTop: '1rem' }}>The promise was wrong, not the product. I redesigned the site to repackage what it actually is: a fast filter that runs before a real takeoff. Not a replacement for one.</p>
         </div>
 
         {/* The positioning shift */}
