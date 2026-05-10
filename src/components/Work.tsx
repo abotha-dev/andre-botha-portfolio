@@ -1,5 +1,10 @@
+import { useRef } from 'react'
 import { useFadeUp } from '../hooks/useFadeUp'
-import { WireframeAgentBuild } from './wireframes/WireframeAgentBuild'
+import { TakeoffIllustration } from './wireframes/TakeoffIllustration'
+import { AgentBuildIllustration } from './wireframes/AgentBuildIllustration'
+import { HealioIllustration } from './wireframes/HealioIllustration'
+import { PGIllustration } from './wireframes/PGIllustration'
+import { CreditConnectionIllustration } from './wireframes/CreditConnectionIllustration'
 import { motion } from 'framer-motion'
 import type { MouseEvent } from 'react'
 
@@ -181,6 +186,11 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
   const label = useFadeUp()
   const heading = useFadeUp()
   const grid = useFadeUp()
+  const takeoffCardRef = useRef<HTMLAnchorElement>(null)
+  const agentBuildCardRef = useRef<HTMLAnchorElement>(null)
+  const healioCardRef = useRef<HTMLAnchorElement>(null)
+  const pgCardRef = useRef<HTMLAnchorElement>(null)
+  const ccCardRef = useRef<HTMLAnchorElement>(null)
 
   return (
     <section id="work" aria-label="Selected work">
@@ -192,13 +202,14 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
 
           {/* 1. mytakeoff.ai  -  FEATURED */}
           <a
+            ref={takeoffCardRef}
             href="#"
             className="project-card featured"
             onClick={(e) => { e.preventDefault(); onShowCaseStudy() }}
             aria-label="View mytakeoff.ai case study"
           >
             <div className="card-wireframe">
-              <WireframeDashboard />
+              <TakeoffIllustration cardRef={takeoffCardRef} />
             </div>
             <div className="card-body">
               <div className="card-header">
@@ -217,13 +228,14 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
 
           {/* 2. AI Portfolio Build  -  Meta */}
           <a
+            ref={agentBuildCardRef}
             href="#"
             className="project-card"
             onClick={(e) => { e.preventDefault(); onShowAIPortfolio() }}
             aria-label="View AI Portfolio Build case study"
           >
             <div className="card-wireframe">
-              <WireframeAgentBuild className="wf-lines" />
+              <AgentBuildIllustration cardRef={agentBuildCardRef} />
             </div>
             <div className="card-body">
               <div className="card-header">
@@ -240,13 +252,14 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
 
           {/* 3. NTT Data */}
           <a
+            ref={healioCardRef}
             href="#"
             className="project-card"
             onClick={(e) => { e.preventDefault(); onShowNTTData() }}
             aria-label="View NTT Data case study"
           >
             <div className="card-wireframe">
-              <WireframeHealthcareAgent />
+              <HealioIllustration cardRef={healioCardRef} />
             </div>
             <div className="card-body">
               <div className="card-header">
@@ -264,13 +277,14 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
 
           {/* 4. P&G */}
           <a
+            ref={pgCardRef}
             href="#"
             className="project-card"
             onClick={(e) => { e.preventDefault(); onShowPG() }}
             aria-label="View P&G Olay case study"
           >
             <div className="card-wireframe">
-              <WireframeEcommerce />
+              <PGIllustration cardRef={pgCardRef} />
             </div>
             <div className="card-body">
               <div className="card-header">
@@ -287,13 +301,14 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
 
           {/* 5. Credit Connection */}
           <a
+            ref={ccCardRef}
             href="#"
             className="project-card"
             onClick={(e) => { e.preventDefault(); onShowCC() }}
             aria-label="View Credit Connection case study"
           >
             <div className="card-wireframe">
-              <WireframeMobileApp />
+              <CreditConnectionIllustration cardRef={ccCardRef} />
             </div>
             <div className="card-body">
               <div className="card-header">

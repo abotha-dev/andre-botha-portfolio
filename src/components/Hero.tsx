@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { WireframeAgentBuild } from './wireframes/WireframeAgentBuild'
 
 // ─── Word-by-word blur + fade reveal (Linear-style) ──────────────────────────
 // Each word materialises from a blurred/offset state with a staggered delay.
@@ -140,20 +139,6 @@ export function Hero() {
           >
             Get in Touch
           </a>
-        </motion.div>
-
-        {/* Right-side wireframe accent */}
-        <motion.div
-          className="hero-wireframe"
-          initial={{ opacity: 0, filter: 'blur(12px)' }}
-          animate={{ opacity: 1, filter: 'blur(0px)' }}
-          transition={{ duration: 1.0, delay: 0.8, ease: 'easeOut' }}
-          aria-hidden="true"
-        >
-          <div className="hero-wireframe-bg" />
-          <div className="hero-wireframe-svg">
-            <WireframeAgentBuild />
-          </div>
         </motion.div>
 
       </div>
