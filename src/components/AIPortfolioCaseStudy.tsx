@@ -226,6 +226,16 @@ export function AIPortfolioCaseStudy({ onBack }: AIPortfolioCaseStudyProps) {
         </div>
       </div>
 
+      {/* Inline screenshot — Discord agent status */}
+      <div className="container" style={{ marginBottom: '4rem' }}>
+        <div className="cs-inline-image">
+          <img
+            src="/agent-build-process-workflow.png"
+            alt="Discord channel showing agents posting status updates and task handoffs."
+          />
+        </div>
+      </div>
+
       {/* Technical Decisions */}
       <div className="container">
         <div className="cs-section">

@@ -38,7 +38,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
-    <div className="cs-page-shell takeoff-cs" style={{ paddingTop: '80px' }}>
+    <div className="cs-page-shell" style={{ paddingTop: '80px' }}>
       <div className="container">
         <button className="back-btn" onClick={onBack} aria-label="Back to portfolio">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -105,15 +105,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
           </div>
         </a>
         <style>{`
-          .takeoff-cs {
-            --col-wide: 100%;
-            --col-narrow: 720px;
-          }
-          .takeoff-cs .cs-title,
-          .takeoff-cs .cs-subtitle,
-          .takeoff-cs .cs-section-title,
-          .takeoff-cs .cs-body,
-          .takeoff-cs .takeoff-subsection {
+          .takeoff-subsection {
             max-width: var(--col-narrow);
           }
           .takeoff-hero-card {
