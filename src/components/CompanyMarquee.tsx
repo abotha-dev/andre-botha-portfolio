@@ -1,12 +1,11 @@
 const COMPANY_LOGOS = [
-  { name: 'P&G', src: '/assets/logos/pg.svg' },
-  { name: 'NTT Data', src: '/assets/logos/ntt-data.svg' },
-  { name: 'Pier59 Studios', src: '/assets/logos/pier59studios.png' },
-  { name: 'Olay', src: '/assets/logos/olay.svg' },
-  { name: 'BlueCross Blue Shield', src: '/assets/logos/bluecrossblueshield.png' },
-  { name: 'Credit Connection', src: '/assets/logos/creditconnection.png' },
-  { name: 'Qeepsake', src: '/assets/logos/qeepsake.png' },
-  { name: 'SmartPlan AI', src: '/assets/logos/SmartPlan-ai.svg' },
+  { name: 'P&G',                   src: '/assets/logos/pg.svg',                  sizeKey: 'pg' },
+  { name: 'NTT Data',              src: '/assets/logos/ntt-data.svg',            sizeKey: 'ntt' },
+  { name: 'Olay',                  src: '/assets/logos/olay.svg',                sizeKey: 'olay' },
+  { name: 'BlueCross Blue Shield', src: '/assets/logos/bluecrossblueshield.png', sizeKey: 'bcbs' },
+  { name: 'Credit Connection',     src: '/assets/logos/creditconnection.png',    sizeKey: 'cc' },
+  { name: 'Qeepsake',              src: '/assets/logos/qeepsake.png',            sizeKey: 'qeepsake' },
+  { name: 'SmartPlan AI',          src: '/assets/logos/smartplan-ai.png',        sizeKey: 'smartplan' },
 ]
 
 export function CompanyMarquee() {
@@ -15,21 +14,19 @@ export function CompanyMarquee() {
   return (
     <section aria-label="Company logos" className="logo-marquee">
       <div className="logo-marquee__track">
-        {items.map((item, i) => {
-          const imgClass = item.name === 'BlueCross Blue Shield'
-            ? 'logo-marquee__img logo-marquee__img--bcbs'
-            : 'logo-marquee__img'
-
-          return (
-            <div key={`${item.name}-${i}`} className="logo-marquee__item">
-              {item.src ? (
-                <img src={item.src} alt={item.name} className={imgClass} />
-              ) : (
-                <span className="logo-marquee__text">{item.name}</span>
-              )}
-            </div>
-          )
-        })}
+        {items.map((item, i) => (
+          <div key={`${item.name}-${i}`} className="logo-marquee__item">
+            {item.src ? (
+              <img
+                src={item.src}
+                alt={item.name}
+                className={`logo-marquee__img logo-marquee__img--${item.sizeKey}`}
+              />
+            ) : (
+              <span className="logo-marquee__text">{item.name}</span>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   )

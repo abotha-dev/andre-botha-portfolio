@@ -223,9 +223,13 @@ section { padding: 96px 0; }
   filter: brightness(0) invert(1);
   opacity: 0.8;
 }
-.logo-marquee__img--bcbs {
-  height: 34px;
-}
+.logo-marquee__img--pg        { height: 28px; }
+.logo-marquee__img--ntt       { height: 24px; }
+.logo-marquee__img--olay      { height: 34px; }
+.logo-marquee__img--bcbs      { height: 42px; }
+.logo-marquee__img--cc        { height: 36px; }
+.logo-marquee__img--qeepsake  { height: 24px; }
+.logo-marquee__img--smartplan { height: 22px; }
 .logo-marquee__text {
   color: rgba(255,255,255,0.75);
   font-size: 14px;
