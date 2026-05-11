@@ -1,4 +1,5 @@
-import { useEffect } from 'react'
+import { Fragment, useEffect } from 'react'
+import { HealioChatAnimation } from './HealioChatAnimation'
 
 interface NTTDataCaseStudyProps {
   onBack: () => void
@@ -24,7 +25,7 @@ export function NTTDataCaseStudy({ onBack }: NTTDataCaseStudyProps) {
       <div className="cs-hero">
         <div className="container">
           <span className="cs-label">Case Study · AI Agent · Healthcare · Enterprise</span>
-          <h1 className="cs-title">Healio: Designing an AI Agent<br/>for the Entire Patient Journey</h1>
+          <h1 className="cs-title">Healio: Designing an AI Agent for the Entire Patient Journey</h1>
           <p className="cs-subtitle">Replacing fragmented healthcare portals with a single conversational AI agent that handles onboarding, symptom triage, provider matching, insurance verification, and appointment booking  -  end to end.</p>
 
           <div className="metadata-table">
@@ -93,42 +94,11 @@ export function NTTDataCaseStudy({ onBack }: NTTDataCaseStudyProps) {
         </div>
       </div>
 
-      {/* Demo Videos */}
+      {/* Product Demos */}
       <div className="container" style={{ marginBottom: '4rem' }}>
         <h2 className="cs-section-title">Product Demos</h2>
-        <p className="cs-body" style={{ marginBottom: '2rem' }}>Two core flows from the Healio prototype  -  smart account setup and AI-powered symptom triage.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
-          <div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', overflow: 'hidden' }}>
-            <div style={{ padding: '1rem 1.25rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-              <div style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.08em', color: 'var(--accent)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Flow 01</div>
-              <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text)' }}>Smart Account Setup</div>
-            </div>
-            <video
-              controls
-              playsInline
-              preload="none"
-              poster="/assets/ntt-data/smart-account-setup.jpg"
-              style={{ width: '100%', display: 'block' }}
-            >
-              <source src="/assets/ntt-data/smart-account-setup.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', overflow: 'hidden' }}>
-            <div style={{ padding: '1rem 1.25rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-              <div style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.08em', color: 'var(--accent)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Flow 02</div>
-              <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text)' }}>Symptom Triage</div>
-            </div>
-            <video
-              controls
-              playsInline
-              preload="none"
-              poster="/assets/ntt-data/symptom-triage.jpg"
-              style={{ width: '100%', display: 'block' }}
-            >
-              <source src="/assets/ntt-data/symptom-triage.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
+        <p className="cs-body" style={{ marginBottom: '2rem' }}>A complete onboarding flow, from greeting to identity verification, handled in a single conversation.</p>
+        <HealioChatAnimation />
       </div>
 
       <div className="container">
@@ -227,6 +197,69 @@ export function NTTDataCaseStudy({ onBack }: NTTDataCaseStudyProps) {
         <div className="cs-section">
           <h2 className="cs-section-title">Agent Architecture: The Agentic Interaction Model</h2>
           <p className="cs-body">Healio is not a chatbot with scripted responses. It is an agent that orchestrates multiple backend services through a conversational interface. I designed the interaction model to handle the complexity of multi-step healthcare workflows while keeping the experience simple for the user.</p>
+
+          {/* Agent Architecture Diagram */}
+          <div style={{
+            marginTop: '1.5rem',
+            background: '#F5F5F4',
+            border: '1px solid rgba(0,0,0,0.06)',
+            borderRadius: '24px',
+            padding: 'clamp(1.5rem, 4vw, 2.5rem)',
+          }}>
+            <div style={{
+              textAlign: 'center',
+              fontSize: '0.6875rem',
+              fontWeight: 600,
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: '#5C7A99',
+              marginBottom: '1.25rem',
+            }}>Healio agent</div>
+
+            <div style={{
+              display: 'flex',
+              alignItems: 'stretch',
+              gap: '0.5rem',
+              overflowX: 'auto',
+              scrollbarWidth: 'thin',
+            }}>
+              {[
+                { title: 'Recognize', sub: 'Parse intent' },
+                { title: 'Clarify',   sub: 'Ask user' },
+                { title: 'Execute',   sub: 'Call APIs' },
+                { title: 'Surface',   sub: 'Show cards' },
+                { title: 'Confirm',   sub: 'Run action' },
+              ].map(({ title, sub }, i, arr) => (
+                <Fragment key={title}>
+                  <div style={{
+                    flex: '1 1 0',
+                    minWidth: '120px',
+                    background: '#E5F2FA',
+                    border: '1px solid rgba(0,103,177,0.18)',
+                    borderRadius: '14px',
+                    padding: '1rem 0.75rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.25rem',
+                    textAlign: 'center',
+                  }}>
+                    <div style={{ fontSize: '0.875rem', fontWeight: 600, color: '#0A2540', lineHeight: 1.25 }}>{title}</div>
+                    <div style={{ fontSize: '0.75rem', color: '#0067B1', lineHeight: 1.3 }}>{sub}</div>
+                  </div>
+                  {i < arr.length - 1 && (
+                    <div style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }} aria-hidden="true">
+                      <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+                        <path d="M2 7h14M12 2l4 5-4 5" stroke="#5C7A99" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  )}
+                </Fragment>
+              ))}
+            </div>
+          </div>
+
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginTop: '1.5rem' }}>
             {[
               { step: 'Intent Recognition', desc: 'User describes a need in natural language. Healio identifies the task type: triage, booking, benefits lookup, or onboarding.' },
