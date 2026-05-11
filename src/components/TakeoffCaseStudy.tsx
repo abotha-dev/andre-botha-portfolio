@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import type { CSSProperties } from 'react'
+import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider'
 
 interface TakeoffCaseStudyProps {
   onBack: () => void
@@ -80,60 +81,118 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
         </div>
       </div>
 
-      {/* Hero Visual — live product CTA card (no source image in markdown) */}
+      {/* Hero Visual — live product screenshot */}
       <div className="container" style={{ marginBottom: '4rem' }}>
-        <div className="img-hero-wrap" style={{
-          background: 'linear-gradient(135deg, rgba(99,102,241,0.12) 0%, rgba(139,92,246,0.08) 50%, rgba(99,102,241,0.04) 100%)',
-          border: '1px solid rgba(99,102,241,0.2)',
-          borderRadius: '16px',
-          padding: '3rem',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          minHeight: '320px',
-          gap: '1.5rem',
-        }}>
-          {/* mytakeoff.ai mark — three bars hint at Budget / Standard / Premium tiers */}
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
-            <rect width="56" height="56" rx="14" fill="rgba(99,102,241,0.15)"/>
-            <rect x="16" y="30" width="6" height="14" rx="1.5" fill="rgba(99,102,241,0.55)"/>
-            <rect x="25" y="22" width="6" height="22" rx="1.5" fill="rgba(99,102,241,0.75)"/>
-            <rect x="34" y="14" width="6" height="30" rx="1.5" fill="rgba(99,102,241,0.95)"/>
-          </svg>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--text)', marginBottom: '0.5rem' }}>
-              mytakeoff.ai
-            </div>
-            <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
-              Instant ballpark estimates for residential remodels and ADUs
-            </div>
-            <a
-              href={LIVE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                background: 'rgba(99,102,241,0.15)',
-                border: '1px solid rgba(99,102,241,0.35)',
-                color: 'var(--accent)',
-                borderRadius: '8px',
-                padding: '0.6rem 1.25rem',
-                fontSize: '0.875rem',
-                fontWeight: 500,
-                textDecoration: 'none',
-                transition: 'all 0.2s',
-              }}
-            >
-              Try the Live Product
+        <a
+          href={LIVE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="takeoff-hero-card"
+          aria-label="Try mytakeoff.ai live product"
+        >
+          <img
+            src="/takeoff-hero.png"
+            alt="mytakeoff.ai homepage screenshot"
+            className="takeoff-hero-img"
+          />
+          <div className="takeoff-hero-overlay">
+            <span className="takeoff-hero-cta">
+              Try Live Product
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </a>
+            </span>
           </div>
-        </div>
+        </a>
+        <style>{`
+          .takeoff-hero-card {
+            position: relative;
+            display: block;
+            border: 1px solid rgba(99,102,241,0.2);
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+            line-height: 0;
+            box-shadow: 0 20px 40px -20px rgba(0,0,0,0.15);
+          }
+          .takeoff-hero-img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+          .takeoff-hero-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.5);
+            opacity: 0;
+            transition: opacity 200ms ease;
+          }
+          .takeoff-hero-card:hover .takeoff-hero-overlay,
+          .takeoff-hero-card:focus-visible .takeoff-hero-overlay {
+            opacity: 1;
+          }
+          .takeoff-hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 8px;
+            padding: 0.65rem 1.25rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 1;
+          }
+          @media (hover: none) {
+            .takeoff-hero-overlay { opacity: 1; }
+          }
+          .takeoff-compare-wrap {
+            position: relative;
+            max-width: 720px;
+            margin: 0 0 2rem;
+            border: 1px solid rgba(99,102,241,0.2);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px -20px rgba(0,0,0,0.15);
+            line-height: 0;
+          }
+          .takeoff-compare-label {
+            position: absolute;
+            top: 0.75rem;
+            z-index: 2;
+            font-family: var(--font-mono);
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #fff;
+            background: rgba(0,0,0,0.55);
+            padding: 0.3rem 0.55rem;
+            border-radius: 4px;
+            pointer-events: none;
+            line-height: 1;
+          }
+          .takeoff-compare-label--before { left: 0.75rem; }
+          .takeoff-compare-label--after { right: 0.75rem; }
+          .takeoff-excerpt {
+            max-width: 720px;
+            margin: 0 0 1.5rem;
+            border: 1px solid rgba(99,102,241,0.2);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px -20px rgba(0,0,0,0.15);
+            line-height: 0;
+          }
+          .takeoff-excerpt img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transform: scale(1.1);
+            transform-origin: center;
+          }
+        `}</style>
       </div>
 
       <div className="container">
@@ -183,6 +242,14 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
         {/* Visual language */}
         <div className="cs-section">
           <h2 className="cs-section-title">Visual language</h2>
+          <div className="takeoff-compare-wrap">
+            <span className="takeoff-compare-label takeoff-compare-label--before">Before</span>
+            <span className="takeoff-compare-label takeoff-compare-label--after">After</span>
+            <ReactCompareSlider
+              itemOne={<ReactCompareSliderImage src="/takeoff-before.png" alt="Original mytakeoff.ai site" />}
+              itemTwo={<ReactCompareSliderImage src="/takeoff-hero.png" alt="Redesigned mytakeoff.ai site" />}
+            />
+          </div>
           <p className="cs-body">The old site was dark blue with electric accent colors. Generic SaaS dressing. It looked like it was for software developers, not contractors.</p>
           <p className="cs-body" style={{ marginTop: '1rem' }}>The new site uses a slate-950 chrome (header and footer) with a stone-50 body and amber accents for action. The amber is deliberate. It reads warm and slightly industrial  -  closer to a contractor&apos;s job site than a SaaS dashboard. It&apos;s also the only color used for primary actions and pricing emphasis, so visual hierarchy is unambiguous: amber means &ldquo;this is what to do next.&rdquo;</p>
           <p className="cs-body" style={{ marginTop: '1rem' }}>Typography is tight Inter throughout. Subsection labels (small uppercase amber text above each block) appear consistently across pages. They let a contractor scanning the page understand what they&apos;re looking at without reading the full headline, and they create a rhythm that ties the site together visually without forcing identical layouts.</p>
@@ -194,20 +261,44 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
           <p className="cs-body">Eight pages migrated to the new design. Four made decisions that mattered.</p>
 
           <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--text)', marginTop: '2rem', marginBottom: '0.75rem' }}>Home.</h3>
+          <div className="takeoff-excerpt">
+            <img
+              src="/takeoff-honesty-block.png"
+              alt="The Honesty Block section of the mytakeoff.ai homepage — three plain-language statements describing what the product is and isn't: 'Ballpark, not a bid,' 'Works best on clean floor plans and single-story residential, especially ADUs,' and 'The quick filter before your real takeoff, not a replacement for one.'"
+            />
+          </div>
           <p className="cs-body">The Honesty Block was the section I was most uncertain about and ended up most committed to. It sits near the bottom of the page and says, in plain language, what the product is and isn&apos;t. <em>&ldquo;Ballpark, not a bid.&rdquo;</em> <em>&ldquo;Works best on clean floor plans and single-story residential, especially ADUs.&rdquo;</em> <em>&ldquo;It&apos;s the quick filter before your real takeoff, not a replacement for one.&rdquo;</em></p>
           <p className="cs-body" style={{ marginTop: '1rem' }}>This kind of section usually gets cut from marketing pages because it sounds like an apology. I kept it because the alternative  -  a homepage that overpromises  -  produces churn and refunds at scale. Telling contractors the truth up front is a longer-term trust play. A contractor who lands on the page, reads the Honesty Block, and uses the tool for what it&apos;s good at becomes a paying customer. A contractor who lands on a polished marketing pitch and gets a result that disappoints leaves and never returns. The Honesty Block is a filter for the right customer, not a confession.</p>
 
           <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--text)', marginTop: '2rem', marginBottom: '0.75rem' }}>Analyze.</h3>
+          <div className="takeoff-excerpt">
+            <img
+              src="/takeoff-analyze.png"
+              alt="The Analyze page on mytakeoff.ai — a single drag-and-drop upload area for a floor plan, with no settings panel or configuration in front of it. The processing state cycles through four named steps: parsing rooms and labels, extracting dimensions, calculating material quantities, and building the cost estimate."
+            />
+          </div>
           <p className="cs-body">The original Analyze page had a settings panel  -  project name, region, contingency percentage, quality tier  -  that the user had to fill in before uploading. I deleted it.</p>
           <p className="cs-body" style={{ marginTop: '1rem' }}>This is the second piece of natural entanglement worth calling out. The settings panel only existed because the original framing assumed users wanted to configure a precise estimate. The new framing  -  60-second filter  -  works only if the upload is a single drag-and-drop with no configuration in front of it. The simplification is both a design decision and an engineering decision: the design decision is &ldquo;no settings before upload&rdquo;; the engineering decision is &ldquo;trust the AI&apos;s defaults and surface ranges instead of single numbers.&rdquo; Neither works without the other.</p>
           <p className="cs-body" style={{ marginTop: '1rem' }}>The processing state cycles through four named steps  -  <em>&ldquo;Parsing rooms and labels,&rdquo;</em> <em>&ldquo;Extracting dimensions,&rdquo;</em> <em>&ldquo;Calculating material quantities,&rdquo;</em> <em>&ldquo;Building your cost estimate&rdquo;</em>  -  over the actual parse time. The parser doesn&apos;t report per-step progress, so the steps cycle on a timed estimate that snaps to completion when the real result arrives. A single spinner would have been more honest about what the system actually knows. The four-step sequence does something a spinner can&apos;t: it teaches the user what the system is doing, in their language, while they wait. By the time the result lands they understand what they&apos;re looking at.</p>
 
           <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--text)', marginTop: '2rem', marginBottom: '0.75rem' }}>Results.</h3>
+          <div className="takeoff-excerpt">
+            <img
+              src="/takeoff-results.png"
+              alt="The Results page on mytakeoff.ai — three columns of pricing labeled Budget, Standard, and Premium showing rounded cost ranges instead of a single precise grand total. A persistent context banner sits below the page header explaining that this is a ballpark estimate with low, mid, and high ranges, not a bid or fixed-price quote."
+            />
+          </div>
           <p className="cs-body">Three columns of pricing instead of one number is the headline change. Two smaller decisions deserve attention.</p>
           <p className="cs-body" style={{ marginTop: '1rem' }}>The first is a context banner that sits below the page header, never dismissible: <em>&ldquo;This is a ballpark estimate with low, mid, and high ranges, not a bid or fixed-price quote. Best used for lead qualification and early client conversations. Your real takeoff is still your real takeoff.&rdquo;</em> It costs vertical space on a page that already has a lot of content. It earns that space because it reframes the entire page in two sentences. A contractor screenshotting the result to send to a client will probably crop the banner out  -  and that&apos;s fine. The contractor saw it, internalized the framing, and is now using the tool the right way.</p>
           <p className="cs-body" style={{ marginTop: '1rem' }}>The second is confidence handling. The engine returns a confidence score per parse. When confidence is low, a small inline note appears above the room list: <em>&ldquo;Some measurements on this plan were harder to read than usual. The room list and ranges below are still a useful starting point, but treat the dimensions as approximate.&rdquo;</em> No warning icon, no modal, no alert component. Just a muted line with an amber left accent. Adding a warning icon would imply the result is wrong, which it isn&apos;t  -  it&apos;s just less precise than usual. The note tells the user what they need to know without panicking them.</p>
 
           <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--text)', marginTop: '2rem', marginBottom: '0.75rem' }}>Pricing.</h3>
+          <div className="takeoff-excerpt">
+            <img
+              src="/takeoff-pricing.png"
+              alt="The Pricing page on mytakeoff.ai — two cards labeled Free and Pro using an 'Everything in Free, plus...' pattern, with a segmented Monthly/Annual toggle that swaps the Pro price between $79 and $59. The Pro card has a heavier amber border treatment and a soft shadow to mark it as the conversion target."
+            />
+          </div>
           <p className="cs-body">This page made the riskiest decision in the project: ship real Stripe checkout, not a waitlist mock. The argument for waitlist was operational simplicity. The argument for real Stripe was that &ldquo;shipped a real SaaS with working billing&rdquo; reads stronger than &ldquo;designed mock pricing tiers.&rdquo; I went with real Stripe.</p>
           <p className="cs-body" style={{ marginTop: '1rem' }}>The page itself is two cards (Free, Pro) using the &ldquo;Everything in Free, plus...&rdquo; pattern, with a segmented Monthly/Annual toggle that swaps the Pro price between $79 and $59. The Pro card has a slightly heavier visual treatment  -  <code style={codeStyle}>border-2 border-amber-500</code> plus a soft shadow  -  because it&apos;s the conversion target. The FAQ section uses shadcn Accordion to keep the page short while giving five common contractor questions room to be answered.</p>
           <p className="cs-body" style={{ marginTop: '1rem' }}>This decision also surfaced the project&apos;s biggest pre-existing debt discovery. While testing the live checkout, I found that the production Stripe account had stale pricing ($49/month vs the redesigned page&apos;s $79/month), stale brand metadata (&ldquo;Takeoff.ai&rdquo; merchant name), and was running in live mode rather than test mode (so test cards were being rejected by design). None of this was caused by the redesign. All of it was made visible by it.</p>
