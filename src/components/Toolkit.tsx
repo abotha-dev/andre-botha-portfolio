@@ -9,6 +9,10 @@ const tools = [
   { name: 'Figma', category: 'Design', icon: 'figma' },
   { name: 'Framer', category: 'Prototyping', icon: 'framer' },
   { name: 'Manus AI', category: 'AI Agent', icon: 'manus' },
+  { name: 'Codex', category: 'AI Code Agent', icon: 'codex' },
+  { name: 'Linear', category: 'Project Management', icon: 'linear' },
+  { name: 'OpenClaw', category: 'AI Automation', icon: 'openclaw' },
+  { name: 'Hermes Agent', category: 'AI Agent', icon: 'hermes' },
 ]
 
 function ToolIcon({ icon }: { icon: string }) {
@@ -76,6 +80,14 @@ function ToolIcon({ icon }: { icon: string }) {
       return (
         <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663026803051/pTuOOICiZSILqdxQ.png" alt="Manus AI" width="40" height="40" style={{display:'block',objectFit:'contain'}}/>
       )
+    case 'codex':
+      return <img src="/logos/codex.png" alt="Codex" width="40" height="40" style={{display:'block',objectFit:'contain'}}/>
+    case 'linear':
+      return <img src="/logos/linear.png" alt="Linear" width="40" height="40" style={{display:'block',objectFit:'contain'}}/>
+    case 'openclaw':
+      return <img src="/logos/openclaw.png" alt="OpenClaw" width="40" height="40" style={{display:'block',objectFit:'contain'}}/>
+    case 'hermes':
+      return <img src="/logos/hermes.png" alt="Hermes Agent" width="40" height="40" style={{display:'block',objectFit:'contain',background:'#FFFFFF',borderRadius:'10px',padding:'6px',boxSizing:'border-box'}}/>
     default:
       return null
   }

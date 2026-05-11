@@ -717,6 +717,11 @@ footer {
 .stagger.visible > *:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 300ms; }
 .stagger.visible > *:nth-child(7) { opacity: 1; transform: translateY(0); transition-delay: 360ms; }
 .stagger.visible > *:nth-child(8) { opacity: 1; transform: translateY(0); transition-delay: 420ms; }
+.stagger.visible > *:nth-child(9) { opacity: 1; transform: translateY(0); transition-delay: 480ms; }
+.stagger.visible > *:nth-child(10) { opacity: 1; transform: translateY(0); transition-delay: 540ms; }
+.stagger.visible > *:nth-child(11) { opacity: 1; transform: translateY(0); transition-delay: 600ms; }
+.stagger.visible > *:nth-child(12) { opacity: 1; transform: translateY(0); transition-delay: 660ms; }
+.stagger.visible > *:nth-child(n+13) { opacity: 1; transform: translateY(0); transition-delay: 720ms; }
 
 /* ─── FOCUS ───────────────────────────────────────────────────────────────── */
 a:focus-visible, button:focus-visible {
