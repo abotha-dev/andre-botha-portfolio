@@ -685,6 +685,13 @@ footer {
   width: 100%;
   border-radius: calc(var(--r-lg) - 4px);
 }
+.img-panel--flush {
+  padding-bottom: 0;
+  overflow: hidden;
+}
+.img-panel--flush img {
+  border-radius: calc(var(--r-lg) - 4px) calc(var(--r-lg) - 4px) 0 0;
+}
 
 .img-hero-wrap {
   position: relative;
@@ -693,12 +700,6 @@ footer {
   border: 1px solid rgba(0,0,0,0.09);
 }
 .img-hero-wrap img { display: block; width: 100%; }
-.img-hero-wrap::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(to bottom, transparent 55%, rgba(245,244,241,0.7) 100%);
-  pointer-events: none;
-}
 
 /* ─── FADE-UP ANIMATION ──────────────────────────────────────────────────── */
 .fade-up {

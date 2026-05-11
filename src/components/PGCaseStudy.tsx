@@ -61,6 +61,7 @@ const pgImageSizes: Record<string, { width: number; height: number }> = {
             loading="lazy"
             width={pgHeroSize.width}
             height={pgHeroSize.height}
+            style={{ transform: 'translateX(3%)' }}
           />
         </div>
       </div>
@@ -119,8 +120,8 @@ const pgImageSizes: Record<string, { width: number; height: number }> = {
           <h2 className="cs-section-title">Design</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '1.5rem' }}>
             {['pg_slide_1.avif','pg_slide_2.avif','pg_slide_3.avif','pg_slide_4.avif','pg_slide_5.avif','pg_slide_6.avif'].map((img, i) => (
-              <div key={img} className="img-panel">
-                <div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src={`/assets/pg/${img}`} alt={`Olay design screen ${i + 1}`} loading="lazy" width={pgImageSizes[img].width} height={pgImageSizes[img].height} /></div>
+              <div key={img} className="img-panel img-panel--flush">
+                <img src={`/assets/pg/${img}`} alt={`Olay design screen ${i + 1}`} loading="lazy" width={pgImageSizes[img].width} height={pgImageSizes[img].height} />
               </div>
             ))}
           </div>
@@ -158,8 +159,8 @@ const pgImageSizes: Record<string, { width: number; height: number }> = {
           <p className="cs-body" style={{ marginTop: '1rem' }}>The launch generated the highest number of waitlist sign-ups in P&G history. When the product dropped, it sold out in less than two hours. The momentum continued for months, establishing the new serum as the #1 seller in its category in North America  -  and fundamentally shifting the perception of the Olay brand for a new generation of consumers.</p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', marginTop: '2rem' }}>
-            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/pg/pg_slide_5.avif" alt="Olay final product page mobile" loading="lazy" width={pgImageSizes['pg_slide_5.avif'].width} height={pgImageSizes['pg_slide_5.avif'].height} /></div></div>
-            <div className="img-panel"><div style={{ background: '#0d0d1a', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem' }}><img src="/assets/pg/pg_slide_6.avif" alt="Olay launch result" loading="lazy" width={pgImageSizes['pg_slide_6.avif'].width} height={pgImageSizes['pg_slide_6.avif'].height} /></div></div>
+            <div className="img-panel img-panel--flush"><img src="/assets/pg/pg_slide_5.avif" alt="Olay final product page mobile" loading="lazy" width={pgImageSizes['pg_slide_5.avif'].width} height={pgImageSizes['pg_slide_5.avif'].height} /></div>
+            <div className="img-panel img-panel--flush"><img src="/assets/pg/pg_slide_6.avif" alt="Olay launch result" loading="lazy" width={pgImageSizes['pg_slide_6.avif'].width} height={pgImageSizes['pg_slide_6.avif'].height} /></div>
           </div>
 
           <div style={{ marginTop: '3rem', padding: '2rem', borderRadius: '16px', border: '1px solid rgba(99,102,241,0.2)', background: 'rgba(99,102,241,0.08)', display: 'flex', flexWrap: 'wrap', gap: '1.5rem', alignItems: 'center', justifyContent: 'space-between' }}>
