@@ -26,7 +26,7 @@ export function About() {
               </div>
             )}
             <img
-              src="/assets/andre-about.jpg"
+              src="/assets/andre-about.png"
               alt="Andre Botha  -  AI-Native Product Designer"
               onLoad={() => setPhotoLoaded(true)}
               style={{
