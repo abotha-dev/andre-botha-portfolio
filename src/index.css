@@ -676,6 +676,11 @@ footer {
   font-family: var(--font-mono); transition: color 0.15s;
 }
 .footer-links a:hover { color: var(--text-1); }
+.footer-links a.footer-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 24px; width: 24px;
+}
+.footer-links a.footer-icon svg { display: block; }
 
 /* ─── IMAGE TREATMENTS ───────────────────────────────────────────────────── */
 .img-panel {
