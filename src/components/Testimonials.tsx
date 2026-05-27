@@ -18,13 +18,6 @@ const testimonials: Testimonial[] = [
     initials: "BC",
   },
   {
-    quote: "Andre designed for a problem most designers would have oversimplified. He understood that our users needed a practical cash flow tool before they'd ever trust a credit product, and built exactly that. The design system he delivered has saved our dev team countless hours.",
-    name: "Stefan Pfeifer",
-    title: "Head of Product",
-    company: "CreditConnection",
-    initials: "SP",
-  },
-  {
     quote: "Andre designed something genuinely difficult: a healthcare AI agent that users actually trust. The single conversational interface instead of bouncing between screens was not obvious at the time  -  it's now the thing every stakeholder highlights. Healio consistently lands in our enterprise sales conversations.",
     name: "Tarana Rawat",
     title: "Principal Design Lead",
