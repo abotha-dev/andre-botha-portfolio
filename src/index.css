@@ -205,10 +205,8 @@ section { padding: 96px 0; }
 .logo-marquee__track {
   display: flex;
   align-items: center;
-  gap: 48px;
   width: max-content;
   animation: marquee 32s linear infinite;
-  padding-left: 48px;
 }
 .logo-marquee__item {
   display: flex;
@@ -216,6 +214,11 @@ section { padding: 96px 0; }
   justify-content: center;
   min-height: 32px;
   white-space: nowrap;
+  /* Trailing margin (instead of flex gap) so every item — including the
+     last of each set — takes the same repeating unit. This is what makes
+     translateX(-50%) line up set 2's first logo with set 1's original
+     position for a seamless infinite loop. */
+  margin-right: 48px;
 }
 .logo-marquee__img {
   height: 28px;
