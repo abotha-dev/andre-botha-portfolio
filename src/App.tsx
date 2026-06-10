@@ -1,4 +1,9 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, StrictMode } from 'react'
+import type { ComponentType } from 'react'
+import { Outlet, useNavigate, useLocation, useOutletContext } from 'react-router-dom'
+import type { RouteRecord } from 'vite-react-ssg'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import { DockNav } from './components/DockNav'
 import { Hero } from './components/Hero'
 import { CompanyMarquee } from './components/CompanyMarquee'
@@ -16,24 +21,33 @@ import { HowIWork } from './components/HowIWork'
 import { Footer } from './components/Footer'
 import { NotFound } from './components/NotFound'
 
-type ActivePage = 'home' | 'takeoff-ai' | 'ntt-data' | 'pg' | 'cc' | 'ai-portfolio' | 'not-found'
-
 const NTT_PASSWORD = import.meta.env.VITE_NTT_PASSWORD ?? ''
 
-export default function App() {
-  const [activePage, setActivePage] = useState<ActivePage>('home')
+// Context the Layout shares with its route elements: NTT auth state + the
+// password-modal opener (the NTT case study is gated behind an NDA password).
+type LayoutContext = {
+  nttAuthed: boolean
+  openNttModal: () => void
+}
+function useLayout() {
+  return useOutletContext<LayoutContext>()
+}
+
+// ---------------------------------------------------------------------------
+// Layout — persistent chrome (DockNav + Footer) wrapping every route's Outlet.
+// Replaces the hand-rolled page switcher that used to live in App; also owns
+// the NDA password modal, exactly as the old App did.
+// ---------------------------------------------------------------------------
+function Layout() {
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const [nttAuthed, setNttAuthed] = useState(false)
   const [showPasswordModal, setShowPasswordModal] = useState(false)
   const [passwordInput, setPasswordInput] = useState('')
   const [passwordError, setPasswordError] = useState(false)
-  const [pendingScroll, setPendingScroll] = useState<string | null>(null)
 
-  const handleShowTakeoff = useCallback(() => {
-    setActivePage('takeoff-ai')
-    window.scrollTo(0, 0)
-    history.pushState({ page: 'takeoff-ai' }, '', '/work/takeoff-ai')
-  }, [])
-
-  const handleShowNTTData = useCallback(() => {
+  const openNttModal = useCallback(() => {
     setShowPasswordModal(true)
     setPasswordInput('')
     setPasswordError(false)
@@ -43,90 +57,40 @@ export default function App() {
     if (passwordInput === NTT_PASSWORD) {
       setShowPasswordModal(false)
       setPasswordError(false)
-      setActivePage('ntt-data')
-      window.scrollTo(0, 0)
-      history.pushState({ page: 'ntt-data' }, '', '/work/ntt-data')
+      setNttAuthed(true)
+      navigate('/work/ntt-data')
     } else {
       setPasswordError(true)
     }
-  }, [passwordInput])
+  }, [passwordInput, navigate])
 
-  const handleShowPG = useCallback(() => {
-    setActivePage('pg')
-    window.scrollTo(0, 0)
-    history.pushState({ page: 'pg' }, '', '/work/pg')
-  }, [])
+  // The /work/ntt-data route renders the home page while unauthenticated, so the
+  // dock should behave as it does on home (dark, in-page scroll) in that case.
+  const onHomeContent =
+    location.pathname === '/' ||
+    (location.pathname === '/work/ntt-data' && !nttAuthed)
 
-  const handleShowCC = useCallback(() => {
-    setActivePage('cc')
-    window.scrollTo(0, 0)
-    history.pushState({ page: 'cc' }, '', '/work/credit-connection')
-  }, [])
-
-  const handleShowAIPortfolio = useCallback(() => {
-    setActivePage('ai-portfolio')
-    window.scrollTo(0, 0)
-    history.pushState({ page: 'ai-portfolio' }, '', '/work/ai-portfolio')
-  }, [])
-
-  const handleGoHome = useCallback((scrollTarget?: string) => {
-    setShowPasswordModal(false)
-    setActivePage('home')
-    if (scrollTarget) {
-      setPendingScroll(scrollTarget)
-    } else {
-      window.scrollTo(0, 0)
-    }
-    history.pushState({ page: 'home' }, '', '/')
-
-    // Fallback: if home doesn't render (rare), force reload to avoid blank screen
-    requestAnimationFrame(() => {
-      if (!document.querySelector('#main-page')) {
-        window.location.href = '/'
-      }
-    })
-  }, [])
-
-  // After returning home with a pending scroll target, scroll once the section renders
+  // Reset scroll on every route change — mirrors the window.scrollTo(0, 0) the
+  // old push-state / popstate navigation did. Skipped when the navigation
+  // carried a scroll target for the home page (handled in HomePage instead).
   useEffect(() => {
-    if (activePage === 'home' && pendingScroll) {
-      const el = document.querySelector(pendingScroll)
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' })
-        setPendingScroll(null)
-      }
-    }
-  }, [activePage, pendingScroll])
+    if (typeof window === 'undefined') return
+    const target = (location.state as { scrollTarget?: string } | null)?.scrollTarget
+    if (!(location.pathname === '/' && target)) window.scrollTo(0, 0)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname])
 
-  // Handle browser back/forward
-  useEffect(() => {
-    const handler = (e: PopStateEvent) => {
-      const page = e.state?.page as ActivePage | undefined
-      const validPages = ['takeoff-ai', 'ntt-data', 'pg', 'cc', 'ai-portfolio'] as const
-      setActivePage(validPages.includes(page as typeof validPages[number]) ? page as ActivePage : 'home')
-      window.scrollTo(0, 0)
-    }
-    window.addEventListener('popstate', handler)
-
-    // Handle direct URL navigation
-    const path = window.location.pathname
-    if (path === '/work/takeoff-ai') setActivePage('takeoff-ai')
-    else if (path === '/work/ntt-data') setShowPasswordModal(true)
-    else if (path === '/work/pg') setActivePage('pg')
-    else if (path === '/work/credit-connection') setActivePage('cc')
-    else if (path === '/work/ai-portfolio') setActivePage('ai-portfolio')
-    else if (path !== '/') setActivePage('not-found')
-
-    return () => window.removeEventListener('popstate', handler)
-  }, [])
-
-  const onCaseStudyPage = activePage !== 'home'
+  // Used by the dock on case-study pages: go home, then scroll to a section.
+  const handleGoHomeWithScroll = useCallback(
+    (scrollTarget: string) => navigate('/', { state: { scrollTarget } }),
+    [navigate],
+  )
 
   return (
-    <>
+    <StrictMode>
       <DockNav
-        onNavigate={onCaseStudyPage ? handleGoHome : undefined}
-        variant={onCaseStudyPage ? 'light' : 'dark'}
+        onNavigate={onHomeContent ? undefined : handleGoHomeWithScroll}
+        variant={onHomeContent ? 'dark' : 'light'}
       />
 
       {/* Password Modal */}
@@ -186,32 +150,96 @@ export default function App() {
         </div>
       )}
 
-      {activePage === 'takeoff-ai' ? (
-        <TakeoffCaseStudy onBack={handleGoHome} />
-      ) : activePage === 'ntt-data' ? (
-        <NTTDataCaseStudy onBack={handleGoHome} />
-      ) : activePage === 'pg' ? (
-        <PGCaseStudy onBack={handleGoHome} />
-      ) : activePage === 'cc' ? (
-        <CCCaseStudy onBack={handleGoHome} />
-      ) : activePage === 'ai-portfolio' ? (
-        <AIPortfolioCaseStudy onBack={handleGoHome} />
-      ) : activePage === 'not-found' ? (
-        <NotFound onGoHome={handleGoHome} />
-      ) : (
-        <main id="main-page">
-          <Hero />
-          <CompanyMarquee />
-          <Work onShowCaseStudy={handleShowTakeoff} onShowNTTData={handleShowNTTData} onShowPG={handleShowPG} onShowCC={handleShowCC} onShowAIPortfolio={handleShowAIPortfolio} />
-          <Testimonials />
-          <HowIWork />
-          <Toolkit />
-          <About />
-          <Contact />
-        </main>
-      )}
+      <Outlet context={{ nttAuthed, openNttModal } satisfies LayoutContext} />
 
       <Footer />
-    </>
+      <Analytics />
+      <SpeedInsights />
+    </StrictMode>
   )
 }
+
+// ---------------------------------------------------------------------------
+// Route elements
+// ---------------------------------------------------------------------------
+function HomePage() {
+  const navigate = useNavigate()
+  const location = useLocation()
+  const { openNttModal } = useLayout()
+
+  // After returning home with a pending scroll target, scroll to that section.
+  useEffect(() => {
+    const target = (location.state as { scrollTarget?: string } | null)?.scrollTarget
+    if (!target) return
+    const el = document.querySelector(target)
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }, [location.state])
+
+  return (
+    <main id="main-page">
+      <Hero />
+      <CompanyMarquee />
+      <Work
+        onShowCaseStudy={() => navigate('/work/takeoff-ai')}
+        onShowNTTData={openNttModal}
+        onShowPG={() => navigate('/work/pg')}
+        onShowCC={() => navigate('/work/credit-connection')}
+        onShowAIPortfolio={() => navigate('/work/ai-portfolio')}
+      />
+      <Testimonials />
+      <HowIWork />
+      <Toolkit />
+      <About />
+      <Contact />
+    </main>
+  )
+}
+
+// Generic wrapper for the publicly-accessible case studies.
+function CaseStudyRoute({ Comp }: { Comp: ComponentType<{ onBack: () => void }> }) {
+  const navigate = useNavigate()
+  return <Comp onBack={() => navigate('/')} />
+}
+
+// NDA-gated route: shows the home page (with the password modal) until the
+// visitor authenticates, then renders the case study. Direct visits land here
+// unauthenticated, so the gate opens automatically — matching the old behavior
+// where /work/ntt-data showed the home page beneath the password modal.
+function NTTDataRoute() {
+  const navigate = useNavigate()
+  const { nttAuthed, openNttModal } = useLayout()
+
+  useEffect(() => {
+    if (!nttAuthed) openNttModal()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  if (!nttAuthed) return <HomePage />
+  return <NTTDataCaseStudy onBack={() => navigate('/')} />
+}
+
+function NotFoundRoute() {
+  const navigate = useNavigate()
+  return <NotFound onGoHome={() => navigate('/')} />
+}
+
+// ---------------------------------------------------------------------------
+// Route declarations consumed by ViteReactSSG (see main.tsx). Each static path
+// here is prerendered to fully-rendered HTML at build time; the `*` catch-all
+// is client-only.
+// ---------------------------------------------------------------------------
+export const routes: RouteRecord[] = [
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { index: true, element: <HomePage /> },
+      { path: 'work/takeoff-ai', element: <CaseStudyRoute Comp={TakeoffCaseStudy} /> },
+      { path: 'work/ntt-data', element: <NTTDataRoute /> },
+      { path: 'work/pg', element: <CaseStudyRoute Comp={PGCaseStudy} /> },
+      { path: 'work/credit-connection', element: <CaseStudyRoute Comp={CCCaseStudy} /> },
+      { path: 'work/ai-portfolio', element: <CaseStudyRoute Comp={AIPortfolioCaseStudy} /> },
+      { path: '*', element: <NotFoundRoute /> },
+    ],
+  },
+]
