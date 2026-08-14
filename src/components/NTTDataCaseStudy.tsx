@@ -42,11 +42,22 @@ export function NTTDataCaseStudy({ onBack }: NTTDataCaseStudyProps) {
               <div className="meta-value">iOS &amp; Android</div>
             </div>
             <div className="meta-cell">
-              <span className="meta-label">Status</span>
-              <div className="meta-value">Client Sales Tool</div>
+              <span className="meta-label">Product Status</span>
+              <div className="meta-value">Shipped enterprise<br/>product</div>
+            </div>
+            <div className="meta-cell">
+              <span className="meta-label">Case Materials</span>
+              <div className="meta-value">60+ screen interactive<br/>prototype and Figma source</div>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* NDA disclosure */}
+      <div className="container" style={{ marginBottom: '2.5rem' }}>
+        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: 1.7, borderLeft: '3px solid rgba(99,102,241,0.5)', paddingLeft: '1.25rem', maxWidth: '720px' }}>
+          Healio is a portfolio alias used to protect confidential information. The enterprise product shipped. This case study presents the 60+ screen interactive prototype and Figma source I created, not NTT Data's confidential production implementation. During my tenure, the prototype supported enterprise sales conversations.
+        </p>
       </div>
 
       {/* Prototype CTA */}
@@ -126,7 +137,7 @@ export function NTTDataCaseStudy({ onBack }: NTTDataCaseStudyProps) {
           <p className="cs-body">Most healthcare platforms mirror the structure of internal systems: separate sections for claims, appointments, messaging, records, and benefits. That model makes sense to the organization but fails the member. A patient who feels sick does not think in terms of "scheduling" and "insurance verification"  -  they think "I need to see a doctor."</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '0.75rem', marginTop: '1.5rem' }}>
             {[
-              'Members navigate 3–5 different portals to complete a single healthcare task',
+              'Members navigate 3-5 different portals to complete a single healthcare task',
               'Symptom-to-appointment journeys require manual research, phone calls, and insurance verification as separate steps',
               'Onboarding new members involves multi-page forms that collect information the system already has',
               'No continuity between interactions  -  every session starts from zero context',
@@ -312,8 +323,8 @@ export function NTTDataCaseStudy({ onBack }: NTTDataCaseStudyProps) {
         {/* Outcome */}
         <div className="cs-section" style={{ marginBottom: '6rem' }}>
           <h2 className="cs-section-title">The Outcome: A Product Vision That Sells</h2>
-          <p className="cs-body">As the sole designer on this strategic engagement, I delivered a complete product vision and 60+ screen interactive prototype that NTT Data now uses to pitch enterprise healthcare clients on the future of AI-powered patient experience.</p>
-          <p className="cs-body" style={{ marginTop: '1rem' }}>The Healio prototype demonstrated that a single conversational agent could credibly replace the fragmented multi-portal model that dominates enterprise healthcare today  -  from first contact through confirmed appointment. Post-launch measurement showed a 13% improvement in nurse productivity and a 19% reduction in patient interaction time. The result is an active enterprise sales tool driving new client conversations at NTT Data.</p>
+          <p className="cs-body">As the sole designer on this strategic engagement, I delivered the product vision and a 60+ screen interactive prototype. During my tenure, the prototype supported enterprise sales conversations.</p>
+          <p className="cs-body" style={{ marginTop: '1rem' }}>The Healio prototype demonstrated that a single conversational agent could credibly replace the fragmented multi-portal model that dominates enterprise healthcare today  -  from first contact through confirmed appointment. The shipped product improved nurse productivity by 13% and reduced patient interaction time by 19%.</p>
 
           <div style={{ marginTop: '2.5rem', background: 'rgba(99,102,241,0.06)', border: '1px solid rgba(99,102,241,0.2)', borderRadius: '12px', padding: '2rem', textAlign: 'center' }}>
             <div style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.08em', color: 'var(--accent)', textTransform: 'uppercase', marginBottom: '0.75rem' }}>See It In Action</div>

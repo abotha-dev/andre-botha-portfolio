@@ -96,7 +96,7 @@ export function CaseStudy({ onBack }: CaseStudyProps) {
           <div className="cs-two-col">
             <div className="cs-body">
               <p>Takeoff.ai provides AI-powered construction takeoffs in 30 seconds. For $49/month, a contractor uploads a blueprint and receives a detailed, room-by-room material and cost estimate.</p>
-              <p>It's not designed to be 100% accurate for final bids. Instead, it provides a 70–80% accurate <strong>preliminary estimate</strong>, letting contractors quickly screen projects and decide which ones are worth a full manual bid.</p>
+              <p>It's not designed to be 100% accurate for final bids. Instead, it provides a 70-80% accurate <strong>preliminary estimate</strong>, letting contractors quickly screen projects and decide which ones are worth a full manual bid.</p>
               <p>This positions Takeoff.ai not as a replacement for PlanSwift or QuickBid, but as a fast, cheap, simple screening tool for the 80% of contractors who are priced out or overwhelmed by enterprise software.</p>
             </div>
             <div>
@@ -109,8 +109,8 @@ export function CaseStudy({ onBack }: CaseStudyProps) {
                     <div style={{padding:'10px 12px',background:'var(--surface-2)',fontFamily:'var(--font-mono)',fontSize:'10px',color:'var(--text-2)',textAlign:'center'}}>PlanSwift</div>
                   </div>
                   {[
-                    ['Speed', '30 sec', '30–60 min'],
-                    ['Price', '$49/mo', '$166–375/mo'],
+                    ['Speed', '30 sec', '30-60 min'],
+                    ['Price', '$49/mo', '$166-375/mo'],
                     ['Training', 'None', 'Extensive'],
                     ['Target', 'Small Cos', 'Mid-Large GC'],
                   ].map(([feature, ours, theirs]) => (
@@ -132,12 +132,12 @@ export function CaseStudy({ onBack }: CaseStudyProps) {
         <div className="container">
           <span className="cs-section-number">03</span>
           <h2 className="cs-section-title">AI Design Decisions</h2>
-          <p style={{fontSize:'17px',color:'var(--text-2)',maxWidth:'600px',marginBottom:'40px',lineHeight:1.7}}>The core challenge: how do you build trust when your AI is only 70–80% accurate? My approach was to embrace imperfection as a design constraint, not hide it.</p>
+          <p style={{fontSize:'17px',color:'var(--text-2)',maxWidth:'600px',marginBottom:'40px',lineHeight:1.7}}>The core challenge: how do you build trust when your AI is only 70-80% accurate? My approach was to embrace imperfection as a design constraint, not hide it.</p>
           <div style={{display:'flex',flexDirection:'column',gap:'16px'}}>
             <div className="decision-card">
               <span className="decision-number">DECISION 01</span>
               <h3 className="decision-title">Radical Transparency</h3>
-              <p className="decision-body">Every output is clearly labeled "Preliminary Estimate" and includes a displayed 70–80% accuracy range. The UI never presents AI output as a final, authoritative number.</p>
+              <p className="decision-body">Every output is clearly labeled "Preliminary Estimate" and includes a displayed 70-80% accuracy range. The UI never presents AI output as a final, authoritative number.</p>
             </div>
             <div className="decision-card">
               <span className="decision-number">DECISION 02</span>
@@ -275,7 +275,7 @@ export function CaseStudy({ onBack }: CaseStudyProps) {
         <div className="container">
           <p style={{fontFamily:'var(--font-mono)',fontSize:'11px',color:'var(--text-2)',letterSpacing:'0.1em',textTransform:'uppercase',marginBottom:'16px'}}>Next steps</p>
           <h3 style={{fontFamily:'var(--font-display)',fontWeight:700,fontSize:'28px',color:'var(--text-1)',marginBottom:'12px',letterSpacing:'-0.02em'}}>Interested in this work?</h3>
-          <p style={{fontSize:'16px',color:'var(--text-2)',marginBottom:'32px'}}>I'm open to Lead and Principal Product Designer roles at AI-first companies.</p>
+          <p style={{fontSize:'16px',color:'var(--text-2)',marginBottom:'32px'}}>I'm open to AI Product Designer, Staff, Lead, and Principal Product Designer roles at AI-first companies.</p>
           <div style={{display:'flex',gap:'12px',justifyContent:'center',flexWrap:'wrap'}}>
             <a href="mailto:abotha.ux@gmail.com" className="btn-primary">Send me an email</a>
             <button onClick={onBack} className="btn-ghost-hero">← Back to Work</button>

@@ -54,6 +54,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
           <span className="cs-label">Case Study · AI SaaS · Redesign · Solo Build</span>
           <h1 className="cs-title">Repackaging mytakeoff.ai:<br/>from accuracy-first claims to honest ballpark estimates</h1>
           <p className="cs-subtitle">I redesigned the site to repackage what it actually is: a fast filter that runs before a real takeoff. Not a replacement for one.</p>
+          <p className="cs-body" style={{ marginTop: '1.25rem' }}>In 2026, I solo designed and built Takeoff.ai as a self-directed experiment to test whether I could take an AI SaaS product from concept to a working product.</p>
 
           <div className="metadata-table">
             <div className="meta-cell">
@@ -81,7 +82,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
         </div>
       </div>
 
-      {/* Hero Visual — live product screenshot */}
+      {/* Hero Visual  -  live product screenshot */}
       <div className="container" style={{ marginBottom: '4rem' }}>
         <a
           href={LIVE_URL}
@@ -199,7 +200,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
       </div>
 
       <div className="container">
-        {/* Outcomes — top stat grid */}
+        {/* Outcomes  -  top stat grid */}
         <div className="cs-section">
           <h2 className="cs-section-title">Project Outcomes</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
@@ -219,8 +220,8 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
 
         {/* Lead-in (no heading in markdown) */}
         <div className="cs-section">
-          <p className="cs-body">I shipped mytakeoff.ai solo in four weeks — design, frontend, AI pipeline, the whole stack. The product worked. The positioning didn&apos;t. This case study is about going back six weeks later to fix what the marketing was claiming, not what the engine was doing.</p>
-          <p className="cs-body" style={{ marginTop: '1rem' }}>The site pitched it as &ldquo;accurate construction estimates powered by AI.&rdquo; The actual accuracy data told a more complicated story: 96.7% on clean floor plans rendered from design software, 79.6% on messier inputs, room detection at 100% across both. The cost estimate copy claimed &ldquo;within 4% of contractor benchmarks,&rdquo; which wasn&apos;t defensible — contractor benchmarks themselves span 2x ranges, so &ldquo;within range&rdquo; doesn&apos;t mean &ldquo;4% accurate.&rdquo;</p>
+          <p className="cs-body">I shipped mytakeoff.ai solo in four weeks  -  design, frontend, AI pipeline, the whole stack. The product worked. The positioning didn&apos;t. This case study is about going back six weeks later to fix what the marketing was claiming, not what the engine was doing.</p>
+          <p className="cs-body" style={{ marginTop: '1rem' }}>The site pitched it as &ldquo;accurate construction estimates powered by AI.&rdquo; The actual accuracy data told a more complicated story: 96.7% on clean floor plans rendered from design software, 79.6% on messier inputs, room detection at 100% across both. The cost estimate copy claimed &ldquo;within 4% of contractor benchmarks,&rdquo; which wasn&apos;t defensible  -  contractor benchmarks themselves span 2x ranges, so &ldquo;within range&rdquo; doesn&apos;t mean &ldquo;4% accurate.&rdquo;</p>
           <p className="cs-body" style={{ marginTop: '1rem' }}>A contractor reading the homepage would expect production-grade precision. They&apos;d upload a phone photo of a marked-up plan, get a result that was off by 20%, and never come back.</p>
           <p className="cs-body" style={{ marginTop: '1rem' }}>The promise was wrong, not the product. I redesigned the site to repackage what it actually is: a fast filter that runs before a real takeoff. Not a replacement for one.</p>
         </div>
@@ -267,7 +268,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
           <div className="takeoff-excerpt">
             <img
               src="/takeoff-honesty-block.png"
-              alt="The Honesty Block section of the mytakeoff.ai homepage — three plain-language statements describing what the product is and isn't: 'Ballpark, not a bid,' 'Works best on clean floor plans and single-story residential, especially ADUs,' and 'The quick filter before your real takeoff, not a replacement for one.'"
+              alt="The Honesty Block section of the mytakeoff.ai homepage  -  three plain-language statements describing what the product is and isn't: 'Ballpark, not a bid,' 'Works best on clean floor plans and single-story residential, especially ADUs,' and 'The quick filter before your real takeoff, not a replacement for one.'"
             />
           </div>
           <p className="cs-body">The Honesty Block was the section I was most uncertain about and ended up most committed to. It sits near the bottom of the page and says, in plain language, what the product is and isn&apos;t. <em>&ldquo;Ballpark, not a bid.&rdquo;</em> <em>&ldquo;Works best on clean floor plans and single-story residential, especially ADUs.&rdquo;</em> <em>&ldquo;It&apos;s the quick filter before your real takeoff, not a replacement for one.&rdquo;</em></p>
@@ -277,7 +278,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
           <div className="takeoff-excerpt">
             <img
               src="/takeoff-analyze.png"
-              alt="The Analyze page on mytakeoff.ai — a single drag-and-drop upload area for a floor plan, with no settings panel or configuration in front of it. The processing state cycles through four named steps: parsing rooms and labels, extracting dimensions, calculating material quantities, and building the cost estimate."
+              alt="The Analyze page on mytakeoff.ai  -  a single drag-and-drop upload area for a floor plan, with no settings panel or configuration in front of it. The processing state cycles through four named steps: parsing rooms and labels, extracting dimensions, calculating material quantities, and building the cost estimate."
             />
           </div>
           <p className="cs-body">The original Analyze page had a settings panel  -  project name, region, contingency percentage, quality tier  -  that the user had to fill in before uploading. I deleted it.</p>
@@ -288,7 +289,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
           <div className="takeoff-excerpt">
             <img
               src="/takeoff-results.png"
-              alt="The Results page on mytakeoff.ai — three columns of pricing labeled Budget, Standard, and Premium showing rounded cost ranges instead of a single precise grand total. A persistent context banner sits below the page header explaining that this is a ballpark estimate with low, mid, and high ranges, not a bid or fixed-price quote."
+              alt="The Results page on mytakeoff.ai  -  three columns of pricing labeled Budget, Standard, and Premium showing rounded cost ranges instead of a single precise grand total. A persistent context banner sits below the page header explaining that this is a ballpark estimate with low, mid, and high ranges, not a bid or fixed-price quote."
             />
           </div>
           <p className="cs-body">Three columns of pricing instead of one number is the headline change. Two smaller decisions deserve attention.</p>
@@ -299,7 +300,7 @@ export function TakeoffCaseStudy({ onBack }: TakeoffCaseStudyProps) {
           <div className="takeoff-excerpt">
             <img
               src="/takeoff-pricing.png"
-              alt="The Pricing page on mytakeoff.ai — two cards labeled Free and Pro using an 'Everything in Free, plus...' pattern, with a segmented Monthly/Annual toggle that swaps the Pro price between $79 and $59. The Pro card has a heavier amber border treatment and a soft shadow to mark it as the conversion target."
+              alt="The Pricing page on mytakeoff.ai  -  two cards labeled Free and Pro using an 'Everything in Free, plus...' pattern, with a segmented Monthly/Annual toggle that swaps the Pro price between $79 and $59. The Pro card has a heavier amber border treatment and a soft shadow to mark it as the conversion target."
             />
           </div>
           <p className="cs-body">This page made the riskiest decision in the project: ship real Stripe checkout, not a waitlist mock. The argument for waitlist was operational simplicity. The argument for real Stripe was that &ldquo;shipped a real SaaS with working billing&rdquo; reads stronger than &ldquo;designed mock pricing tiers.&rdquo; I went with real Stripe.</p>

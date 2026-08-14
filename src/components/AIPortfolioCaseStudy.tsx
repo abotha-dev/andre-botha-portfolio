@@ -226,7 +226,7 @@ export function AIPortfolioCaseStudy({ onBack }: AIPortfolioCaseStudyProps) {
         </div>
       </div>
 
-      {/* Inline screenshot — Discord agent status */}
+      {/* Inline screenshot  -  Discord agent status */}
       <div className="container" style={{ marginBottom: '4rem' }}>
         <div className="cs-inline-image">
           <img

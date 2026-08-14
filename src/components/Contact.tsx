@@ -45,7 +45,7 @@ export function Contact() {
         <div ref={content.ref} className={`contact-inner fade-up${content.visible ? ' visible' : ''}`}>
           <span className="section-label" style={{ textAlign: 'center', display: 'block', marginBottom: '20px' }}>Contact</span>
           <h2 className="contact-heading">Let's work together.</h2>
-          <p className="contact-sub">I'm currently open to Lead and Principal Product Designer roles, particularly at AI-first companies. If that sounds like a fit, I'd love to hear from you.</p>
+          <p className="contact-sub">I'm currently open to AI Product Designer, Staff, Lead, and Principal Product Designer roles, particularly at AI-first companies. If that sounds like a fit, I'd love to hear from you.</p>
 
           {status === 'success' ? (
             <div style={{

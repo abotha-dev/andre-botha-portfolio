@@ -40,9 +40,9 @@ export function About() {
 
           <div className="about-content">
             <div className="about-bio-text">
-              <p>I'm a product designer with 9 years of experience, most recently focused on AI-native product development. I've shipped enterprise design systems at Fortune 500 companies (NTT Data, P&G) and built AI SaaS products from scratch as a solo founder.</p>
-              <p>My current focus is <strong>Takeoff.ai</strong>  -  an AI-powered construction estimating tool I conceived, designed, and built end-to-end using Cursor, Claude, Supabase, and Vercel. The hard part wasn't the build. It was designing for an AI that's only 70–80% accurate, and earning trust from a tech-skeptical audience.</p>
-              <p>I'm looking for a Lead or Principal Product Designer role at a company where design and engineering work closely together  -  ideally on AI products that solve real problems for real people.</p>
+              <p>I'm a product designer with 13 years in design and 9 years in product, most recently focused on AI-native product development. I've shipped enterprise design systems at Fortune 500 companies (NTT Data, P&G) and built AI SaaS products from scratch as a solo founder.</p>
+              <p>My current focus is <strong>Takeoff.ai</strong>  -  an AI-powered construction estimating tool I conceived, designed, and built end-to-end using Cursor, Claude, Supabase, and Vercel. The hard part wasn't the build. It was designing for an AI that's only 70-80% accurate, and earning trust from a tech-skeptical audience.</p>
+              <p>I'm looking for AI Product Designer, Staff, Lead, or Principal Product Designer roles at AI-first companies where design and engineering work closely together  -  ideally on AI products that solve real problems for real people.</p>
             </div>
 
             <div className="credentials-row">

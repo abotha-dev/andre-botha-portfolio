@@ -72,7 +72,7 @@ export function Hero() {
         >
           <div className="status-badge">
             <span className="status-dot"></span>
-            Open to new roles · Lead Product Designer
+            Open to new roles · AI Product Designer
           </div>
         </motion.div>
 
