@@ -5,7 +5,7 @@ export function Footer() {
         <span className="footer-copy">© 2026 Andre Botha. Built with care.</span>
         <div className="footer-links">
           <a
-            href="mailto:andre@andrebot.com"
+            href="mailto:abotha.ux@gmail.com"
             aria-label="Email"
             className="footer-icon"
           >

@@ -277,7 +277,7 @@ export function CaseStudy({ onBack }: CaseStudyProps) {
           <h3 style={{fontFamily:'var(--font-display)',fontWeight:700,fontSize:'28px',color:'var(--text-1)',marginBottom:'12px',letterSpacing:'-0.02em'}}>Interested in this work?</h3>
           <p style={{fontSize:'16px',color:'var(--text-2)',marginBottom:'32px'}}>I'm open to Lead and Principal Product Designer roles at AI-first companies.</p>
           <div style={{display:'flex',gap:'12px',justifyContent:'center',flexWrap:'wrap'}}>
-            <a href="mailto:andre@andrebot.com" className="btn-primary">Send me an email</a>
+            <a href="mailto:abotha.ux@gmail.com" className="btn-primary">Send me an email</a>
             <button onClick={onBack} className="btn-ghost-hero">← Back to Work</button>
           </div>
         </div>

@@ -266,7 +266,7 @@ export function Work({ onShowCaseStudy, onShowNTTData, onShowPG, onShowCC, onSho
                 <h3 className="card-title">Healio — NTT Data</h3>
                 <span className="card-arrow">→</span>
               </div>
-              <p className="card-desc">Replaced 5 fragmented healthcare portals with one AI conversation. 50+ screens of agentic UX.</p>
+              <p className="card-desc">Replaced 5 fragmented healthcare portals with one AI conversation. 60+ screens of agentic UX.</p>
               <div className="card-tags">
                 <span className="tag">AI Agent</span>
                 <span className="tag">Healthcare</span>
