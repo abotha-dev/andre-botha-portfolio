@@ -19,13 +19,17 @@ const pgImageSizes: Record<string, { width: number; height: number }> = {
 
   return (
     <div className="cs-page-shell" style={{ paddingTop: '80px' }}>
-      <div className="container">
+      <div className="container cs-top-bar">
         <button className="back-btn" onClick={onBack} aria-label="Back to portfolio">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M9 2 L4 7 L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
           Back to Work
         </button>
+        <a className="screens-btn" href="/work/olay-design-system" target="_blank" rel="noopener">
+          View all screens
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4 2h6v6M10 2L3 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        </a>
       </div>
 
       {/* Hero */}

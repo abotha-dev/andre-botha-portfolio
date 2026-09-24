@@ -417,6 +417,20 @@ section { padding: 96px 0; }
 .back-btn svg { transition: transform 0.2s var(--ease-spring); }
 .back-btn:hover svg { transform: translateX(-3px); }
 
+.cs-top-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap; margin-bottom: 48px;
+}
+.cs-top-bar .back-btn { margin-bottom: 0; }
+.screens-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: #fff; text-decoration: none;
+  padding: 0.6rem 1.1rem; border-radius: 8px;
+  font-size: 0.85rem; font-weight: 600; white-space: nowrap;
+  transition: opacity 0.15s;
+}
+.screens-btn:hover { opacity: 0.88; }
+
 .cs-hero { padding: 60px 0 80px; border-bottom: 1px solid rgba(0,0,0,0.08); }
 .cs-label {
   font-family: var(--font-mono); font-size: 11px; color: var(--accent);

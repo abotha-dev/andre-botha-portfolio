@@ -41,6 +41,13 @@ export default function App() {
 
   const handlePasswordSubmit = useCallback(() => {
     if (passwordInput === NTT_PASSWORD) {
+      // Also unlock /work/healio-screens, which is gated server-side by
+      // middleware.ts: a correct password sets its cookie.
+      fetch('/work/healio-screens', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new URLSearchParams({ password: passwordInput }),
+      }).catch(() => {})
       setShowPasswordModal(false)
       setPasswordError(false)
       setActivePage('ntt-data')

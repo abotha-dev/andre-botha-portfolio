@@ -1,5 +1,13 @@
 {
+  "headers": [
+    {
+      "source": "/work/olay-design-system(.*)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    }
+  ],
   "rewrites": [
+    { "source": "/work/healio-screens", "destination": "/work/healio-screens.html" },
+    { "source": "/work/olay-design-system", "destination": "/work/olay-design-system.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
